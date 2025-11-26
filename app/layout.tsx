@@ -15,7 +15,7 @@ export default function RootLayout({children}: Readonly<{
                 @import
                 url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Geo:ital@0;1&family=Silkscreen&family=VT323&display=swap');
             </style>
-            <title>TITLE</title>
+            <title>Chengxi Luo</title>
         </head>
         <body>
         <AppRouterCacheProvider>
