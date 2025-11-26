@@ -15,7 +15,7 @@ export function ToBeContinue() {
     const text = "to be continue" + ".".repeat(dotCount + 1);
 
     return (
-        <Typography width="100%" textAlign="right">
+        <Typography width="100%" textAlign="right" color={'textSecondary'} fontSize={'x-small'}>
             {text}
         </Typography>
     );

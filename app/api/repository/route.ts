@@ -1,12 +1,13 @@
-import {GITHUB_TOKEN, GITHUB_USERNAME} from "@/app/const";
+import {GITHUB_TOKEN} from "@/app/const";
 import {Octokit} from "@octokit/core";
 
 export async function GET(req: Request) {
     const { searchParams } = new URL(req.url);
     const repo = searchParams.get("repo");
+    const owner = searchParams.get("owner");
 
-    if (!repo) {
-        return  Response.json(null, {status: 401});
+    if (!repo || !owner) {
+        return  Response.json(null, {status: 401, statusText: "repo or owner not provided"});
     }
 
     // Octokit.js
@@ -15,7 +16,7 @@ export async function GET(req: Request) {
         auth: GITHUB_TOKEN
     })
     const response = await octokit.request('GET /repos/{owner}/{repo}', {
-        owner: GITHUB_USERNAME,
+        owner: owner,
         repo: repo,
         headers: {'X-GitHub-Api-Version': '2022-11-28'}
     })

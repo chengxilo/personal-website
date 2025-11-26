@@ -4,27 +4,24 @@ import axios from "axios";
 import {NEXT_PUBLIC_DOMAIN} from "@/app/const";
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
-function ProjectDetail({repo}: { repo: string }) {
+function ProjectDetail({owner, repo}: { owner: string, repo: string }) {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
     const [showArrow, setShowArrow] = useState(false);
     const [svnUrl, setSvnUrl] = useState("");
     const [backgroundColor, setBackgroundColor] = useState("none");
-    const [createdAt, setCreatedAt] = useState(new Date());
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        console.log(repo);
-        console.log(NEXT_PUBLIC_DOMAIN);
         axios.get(`${NEXT_PUBLIC_DOMAIN}/api/repository`, {
             params: {
+                owner: owner,
                 repo: repo
             }
         }).then(res => {
             console.log(res);
-            setName(res.data.name);
+            setName(owner + "/" + repo);
             setDescription(res.data.description);
             setSvnUrl(res.data.svn_url);
-            setCreatedAt(new Date(res.data.created_at))
             setLoading(false);
         })
     }, []);
@@ -33,7 +30,7 @@ function ProjectDetail({repo}: { repo: string }) {
         component={'a'}
         href={svnUrl}
         direction="row"
-        padding={'8px 5px 8px 5px'}
+        padding={'8px 5px 8px 0px'}
         sx={{
             borderBottom: '1px solid gray',
             textDecorationLine: 'none',
@@ -56,9 +53,6 @@ function ProjectDetail({repo}: { repo: string }) {
                     <Stack direction={'row'} justifyContent={'space-between'}>
                         <Typography color={"textPrimary"}>
                             {name}
-                        </Typography>
-                        <Typography color={'textPrimary'} fontSize={13}>
-                            {createdAt.toLocaleDateString()}
                         </Typography>
                     </Stack>
 

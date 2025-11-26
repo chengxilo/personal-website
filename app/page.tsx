@@ -7,9 +7,11 @@ import ProjectDetail from "@/app/component/projectDetail";
 import {SocialMedias} from "@/app/component/socialMedias";
 import {ToBeContinue} from "@/app/component/toBeContinue";
 import {MovingSquid} from "@/app/component/movingSquid";
+import {NEXT_PUBLIC_GITHUB_USERNAME} from "@/app/const";
 
 export default function Home() {
-    const repos = ["better-cuny", "robinhood-note", "steam-scrapy"]
+    const myOpenSourceRepo = ["better-cuny", "robinhood-note", "steam-scrapy"]
+    const contributedRepo = [{owner: "apache", repo: "iggy"}, {owner: "cucumber", repo: "godog"}]
 
     const mousePosRef = useRef([0, 0])
     const [gifPos, setGifPos] = React.useState<[number, number]>([0, 0])
@@ -259,21 +261,13 @@ export default function Home() {
                                             LaTex, Markdown, ApiFox
                                         </Typography>
                                     </Grid>
-
-                                    <Grid size={{xs: 6, md: 3}}>
-                                        <Typography>
-                                            Document
-                                        </Typography>
-                                        <Typography color={'textSecondary'}>
-                                            LaTex, Markdown, ApiFox
-                                        </Typography>
-                                    </Grid>
                                 </Grid>
                             </Stack>
                         </Stack>
 
 
                         <Stack
+                            marginBottom={'10px'}
                             padding={'4px 15px 6px 15px'}
                             sx={{
                                 borderStyle: 'solid',
@@ -288,10 +282,29 @@ export default function Home() {
                                 >
                                     My Open Source Projects
                                 </Typography>
+
+                            </Stack>
+                            {myOpenSourceRepo.map((repo, index) => <ProjectDetail key={`project-${index}`} owner={NEXT_PUBLIC_GITHUB_USERNAME} repo={repo}/>)}
+                            <ToBeContinue/>
+                        </Stack>
+                        <Stack
+                            padding={'4px 15px 6px 15px'}
+                            sx={{
+                                borderStyle: 'solid',
+                                borderWidth: '1px',
+                                borderColor: '#626860'
+                            }}>
+                            <Stack direction={'row'}>
+                                <Typography
+                                    fontSize={'25px'}
+                                    fontFamily={'Geo'}
+                                    sx={{flexShrink: 0}}
+                                >
+                                    I Contributed Code To
+                                </Typography>
                                 <MovingSquid/>
                             </Stack>
-                            {repos.map((repo, index) => <ProjectDetail key={`project-${index}`} repo={repo}/>)}
-                            <br/>
+                            {contributedRepo.map((e, index) => <ProjectDetail key={`project-${index}`} owner={e.owner} repo={e.repo}/>)}
                             <ToBeContinue/>
                         </Stack>
                     </Container>
