@@ -9,39 +9,39 @@ import {ToBeContinue} from "@/app/component/toBeContinue";
 import {MovingSquid} from "@/app/component/movingSquid";
 import {NEXT_PUBLIC_GITHUB_USERNAME} from "@/app/const";
 
+const myOpenSourceRepo = ["better-cuny", "robinhood-note", "steam-scrapy"]
+const contributedRepo = [{owner: "apache", repo: "iggy"}, {owner: "cucumber", repo: "godog"}]
+
 export default function Home() {
-    const myOpenSourceRepo = ["better-cuny", "robinhood-note", "steam-scrapy"]
-    const contributedRepo = [{owner: "apache", repo: "iggy"}, {owner: "cucumber", repo: "godog"}]
 
     const mousePosRef = useRef([0, 0])
     const [gifPos, setGifPos] = React.useState<[number, number]>([0, 0])
-    const [gifSrc, setGifSrc] = React.useState('image/doro-helicopter.gif')
+    const gifPosRef = useRef<[number, number]>([0, 0])
+    const [gifSrc, setGifSrc] = React.useState('/image/doro-helicopter.gif')
     useEffect(() => {
         const speed = 3; // pixels per frame
 
         const interval = setInterval(() => {
             const [mx, my] = mousePosRef.current;
-            const [gx, gy] = gifPos;
+            const [gx, gy] = gifPosRef.current;
 
             const dx = mx - gx;
             const dy = my - gy;
             const distance = Math.hypot(dx, dy);
 
             if (distance < 30 || distance === 0) {
-                // stop moving, close enough
-                setGifSrc('image/doro-nikke.gif')
+                setGifSrc('/image/doro-nikke.gif')
             } else {
-                setGifSrc('image/doro-helicopter.gif')
-                // Move with constant speed toward target
+                setGifSrc('/image/doro-helicopter.gif')
                 const ratio = speed / distance;
-                const newX = gx + dx * ratio;
-                const newY = gy + dy * ratio;
-                setGifPos([newX, newY]);
+                const newPos: [number, number] = [gx + dx * ratio, gy + dy * ratio];
+                gifPosRef.current = newPos;
+                setGifPos(newPos);
             }
-        }, 10); // ~60fps
+        }, 10);
 
         return () => clearInterval(interval);
-    }, [gifPos]); // gifPos needs to be in deps since it's read inside
+    }, []);
     return (
         <div>
             <main>
@@ -72,7 +72,7 @@ export default function Home() {
                             bottom={0}
                                 component={'img'}
                                  position={'absolute'}
-                                src={'image/maodie.gif'}
+                                src={'/image/maodie.gif'}
                                 alt={'maodie'} />
                             <Box
                                 padding={'1px 15px 8px 15px'}
@@ -109,7 +109,7 @@ export default function Home() {
                                         textAlign={'center'}
                                         fontFamily={'Silkscreen'}
                                         fontSize={'7px'}
-                                        color={'5px'}>
+                                        color={'textSecondary'}>
                                         2004 - tomorrow
                                     </Typography>
                                 </Box>
@@ -128,7 +128,7 @@ export default function Home() {
                                 <Stack direction={'row'}>
                                     <Box
                                         component={'img'}
-                                        src={'image/bean.gif'}
+                                        src={'/image/bean.gif'}
                                         width={'30px'}
                                         alt={'bean-gif'}/>
                                     <Typography fontFamily={'Geo'} fontSize={'21px'}>
@@ -284,7 +284,7 @@ export default function Home() {
                                 </Typography>
 
                             </Stack>
-                            {myOpenSourceRepo.map((repo, index) => <ProjectDetail key={`project-${index}`} owner={NEXT_PUBLIC_GITHUB_USERNAME} repo={repo}/>)}
+                            {myOpenSourceRepo.map((repo) => <ProjectDetail key={repo} owner={NEXT_PUBLIC_GITHUB_USERNAME} repo={repo}/>)}
                             <ToBeContinue/>
                         </Stack>
 
@@ -306,7 +306,7 @@ export default function Home() {
                                 </Typography>
                                 <MovingSquid/>
                             </Stack>
-                            {contributedRepo.map((e, index) => <ProjectDetail key={`project-${index}`} owner={e.owner} repo={e.repo}/>)}
+                            {contributedRepo.map((e) => <ProjectDetail key={`${e.owner}/${e.repo}`} owner={e.owner} repo={e.repo}/>)}
                             <ToBeContinue/>
                         </Stack>
                     </Container>

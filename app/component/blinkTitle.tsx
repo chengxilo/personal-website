@@ -4,9 +4,10 @@ import React, {useEffect} from "react";
 function BlinkTitle({title}: { title: string }) {
     const [opacity, setOpacity] = React.useState(1);
     useEffect(() => {
-        setInterval(() => {
+        const interval = setInterval(() => {
             setOpacity((prevOpacity) => (prevOpacity - 0.7) < 0.000001 ? 1 : 0.7);
         }, 10)
+        return () => clearInterval(interval);
     }, [])
 
     return <Stack direction={'row'} width={'100%'} justifyContent={'center'}>

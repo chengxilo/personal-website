@@ -41,11 +41,9 @@ export function MovingSquid() {
                     alt=""
                     width={gifWidth}
                     onMouseEnter={() => {
-                        console.log('pause true')
                         pausedRef.current = true;
                     }}
                     onMouseLeave={() => {
-                        console.log('pause false')
                         pausedRef.current = false;
                     }}
                     sx={{

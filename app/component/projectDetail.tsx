@@ -18,17 +18,18 @@ function ProjectDetail({owner, repo}: { owner: string, repo: string }) {
                 repo: repo
             }
         }).then(res => {
-            console.log(res);
             setName(owner + "/" + repo);
             setDescription(res.data.description);
             setSvnUrl(res.data.svn_url);
             setLoading(false);
+        }).catch(() => {
+            setLoading(false);
         })
-    }, []);
+    }, [owner, repo]);
     return <Stack
         width={'100%'}
-        component={'a'}
-        href={svnUrl}
+        component={svnUrl ? 'a' : 'div'}
+        href={svnUrl || undefined}
         direction="row"
         padding={'8px 5px 8px 0px'}
         sx={{

@@ -15,11 +15,15 @@ export async function GET(req: Request) {
     const octokit = new Octokit({
         auth: GITHUB_TOKEN
     })
-    const response = await octokit.request('GET /repos/{owner}/{repo}', {
-        owner: owner,
-        repo: repo,
-        headers: {'X-GitHub-Api-Version': '2022-11-28'}
-    })
-
-    return Response.json(response.data, {status: 200})
+    try {
+        const response = await octokit.request('GET /repos/{owner}/{repo}', {
+            owner: owner,
+            repo: repo,
+            headers: {'X-GitHub-Api-Version': '2022-11-28'}
+        })
+        return Response.json(response.data, {status: 200})
+    } catch (e: unknown) {
+        const status = (e as {status?: number}).status ?? 500;
+        return Response.json(null, {status})
+    }
 }
