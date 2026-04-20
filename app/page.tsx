@@ -25,7 +25,7 @@ const myOpenSourceRepo = [
         owner: "chengxilo",
         repo: "steam-scrapy",
         description: "A web scraper for Steam game data using Scrapy.",
-        url: "web scraper that collects data from the Steam store"
+        url: "https://github.com/chengxilo/steam-scrapy"
     },
 ]
 const contributedRepo = [
