@@ -7,10 +7,15 @@ import ProjectDetail from "@/app/component/projectDetail";
 import {SocialMedias} from "@/app/component/socialMedias";
 import {ToBeContinue} from "@/app/component/toBeContinue";
 import {MovingSquid} from "@/app/component/movingSquid";
-import {NEXT_PUBLIC_GITHUB_USERNAME} from "@/app/const";
-
-const myOpenSourceRepo = ["better-cuny", "robinhood-note", "steam-scrapy"]
-const contributedRepo = [{owner: "apache", repo: "iggy"}, {owner: "cucumber", repo: "godog"}]
+const myOpenSourceRepo = [
+    {owner: "chengxilo", repo: "better-cuny", description: "A browser extension that enhances the CUNY student experience.", url: "https://github.com/chengxilo/better-cuny"},
+    {owner: "chengxilo", repo: "robinhood-note", description: "A note-taking app for stock trading insights.", url: "https://github.com/chengxilo/robinhood-note"},
+    {owner: "chengxilo", repo: "steam-scrapy", description: "A web scraper for Steam game data using Scrapy.", url: "https://github.com/chengxilo/steam-scrapy"},
+]
+const contributedRepo = [
+    {owner: "apache", repo: "iggy", description: "Persistent message streaming platform written in Rust.", url: "https://github.com/apache/iggy"},
+    {owner: "cucumber", repo: "godog", description: "Cucumber for Golang - a BDD testing framework.", url: "https://github.com/cucumber/godog"},
+]
 
 export default function Home() {
 
@@ -123,39 +128,6 @@ export default function Home() {
                                     impactful projects. If you have something interesting to share or a project idea
                                     you'd like to collaborate on, feel free to reach out. I'm always open to new
                                     opportunities and challenges!
-                                </Typography>
-
-                                <Stack direction={'row'}>
-                                    <Box
-                                        component={'img'}
-                                        src={'/image/bean.gif'}
-                                        width={'30px'}
-                                        alt={'bean-gif'}/>
-                                    <Typography fontFamily={'Geo'} fontSize={'21px'}>
-                                        Some quick facts:
-                                    </Typography>
-                                </Stack>
-
-                                <Typography color={'textSecondary'}>
-                                    1. My avatar has a rainbow background but I am straight.
-                                    <br/>
-                                    2. My main program language is Golang.
-                                    <br/>
-                                    3. I prefer stay at home.
-                                    <br/>
-                                    4. I speak both Chinese and English.
-                                    <br/>
-                                    5. I'm from China.
-                                    <br/>
-                                    6. I learnt some Spanish but I'm not good at it.
-                                    <br/>
-                                    7. I spend 3 hours in commuting each day.
-                                    <br/>
-                                    8. I like Popeye Fried Chicken.🍗
-                                    <br/>
-                                    9. I donate my blood to New York Blood Center.
-                                    <br/>
-                                    10. 我不是二次元
                                 </Typography>
                             </Box>
                             <Box sx={{
@@ -284,7 +256,7 @@ export default function Home() {
                                 </Typography>
 
                             </Stack>
-                            {myOpenSourceRepo.map((repo) => <ProjectDetail key={repo} owner={NEXT_PUBLIC_GITHUB_USERNAME} repo={repo}/>)}
+                            {myOpenSourceRepo.map((e) => <ProjectDetail key={e.repo} owner={e.owner} repo={e.repo} description={e.description} url={e.url}/>)}
                             <ToBeContinue/>
                         </Stack>
 
@@ -306,7 +278,7 @@ export default function Home() {
                                 </Typography>
                                 <MovingSquid/>
                             </Stack>
-                            {contributedRepo.map((e) => <ProjectDetail key={`${e.owner}/${e.repo}`} owner={e.owner} repo={e.repo}/>)}
+                            {contributedRepo.map((e) => <ProjectDetail key={`${e.owner}/${e.repo}`} owner={e.owner} repo={e.repo} description={e.description} url={e.url}/>)}
                             <ToBeContinue/>
                         </Stack>
                     </Container>

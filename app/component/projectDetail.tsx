@@ -1,35 +1,15 @@
-import {Typography, Stack, Skeleton} from "@mui/material";
-import {useEffect, useState} from "react";
-import axios from "axios";
-import {NEXT_PUBLIC_DOMAIN} from "@/app/const";
+import {Typography, Stack} from "@mui/material";
+import {useState} from "react";
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
-function ProjectDetail({owner, repo}: { owner: string, repo: string }) {
-    const [name, setName] = useState("");
-    const [description, setDescription] = useState("");
+function ProjectDetail({owner, repo, description, url}: { owner: string, repo: string, description: string, url: string }) {
     const [showArrow, setShowArrow] = useState(false);
-    const [svnUrl, setSvnUrl] = useState("");
     const [backgroundColor, setBackgroundColor] = useState("none");
-    const [loading, setLoading] = useState(true);
-    useEffect(() => {
-        axios.get(`${NEXT_PUBLIC_DOMAIN}/api/repository`, {
-            params: {
-                owner: owner,
-                repo: repo
-            }
-        }).then(res => {
-            setName(owner + "/" + repo);
-            setDescription(res.data.description);
-            setSvnUrl(res.data.svn_url);
-            setLoading(false);
-        }).catch(() => {
-            setLoading(false);
-        })
-    }, [owner, repo]);
+    const name = `${owner}/${repo}`;
     return <Stack
         width={'100%'}
-        component={svnUrl ? 'a' : 'div'}
-        href={svnUrl || undefined}
+        component={url ? 'a' : 'div'}
+        href={url || undefined}
         direction="row"
         padding={'8px 5px 8px 0px'}
         sx={{
@@ -46,23 +26,17 @@ function ProjectDetail({owner, repo}: { owner: string, repo: string }) {
             setBackgroundColor('none')
         }}
     >
-        {loading ? <Skeleton variant="rectangular" width={'100%'} height={60}/> :
-            <>{showArrow && <ArrowRightIcon sx={{
-                color: '#b4fd98'
-            }}/>}
-                <Stack width={'100%'}>
-                    <Stack direction={'row'} justifyContent={'space-between'}>
-                        <Typography color={"textPrimary"}>
-                            {name}
-                        </Typography>
-                    </Stack>
-
-                    <Typography color="textSecondary">
-                        {description}
-                    </Typography>
-                </Stack>
-            </>}
-
+        {showArrow && <ArrowRightIcon sx={{color: '#b4fd98'}}/>}
+        <Stack width={'100%'}>
+            <Stack direction={'row'} justifyContent={'space-between'}>
+                <Typography color={"textPrimary"}>
+                    {name}
+                </Typography>
+            </Stack>
+            <Typography color="textSecondary">
+                {description}
+            </Typography>
+        </Stack>
     </Stack>
 }
 
