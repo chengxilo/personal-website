@@ -7,14 +7,40 @@ import ProjectDetail from "@/app/component/projectDetail";
 import {SocialMedias} from "@/app/component/socialMedias";
 import {ToBeContinue} from "@/app/component/toBeContinue";
 import {MovingSquid} from "@/app/component/movingSquid";
+
 const myOpenSourceRepo = [
-    {owner: "chengxilo", repo: "better-cuny", description: "A browser extension that enhances the CUNY student experience.", url: "https://github.com/chengxilo/better-cuny"},
-    {owner: "chengxilo", repo: "robinhood-note", description: "A note-taking app for stock trading insights.", url: "https://github.com/chengxilo/robinhood-note"},
-    {owner: "chengxilo", repo: "steam-scrapy", description: "A web scraper for Steam game data using Scrapy.", url: "https://github.com/chengxilo/steam-scrapy"},
+    {
+        owner: "chengxilo",
+        repo: "better-cuny",
+        description: "Provide additional features for the CUNY website",
+        url: "https://github.com/chengxilo/better-cuny"
+    },
+    {
+        owner: "chengxilo",
+        repo: "robinhood-note",
+        description: "A note extension for Robinhood. You can take note on Robinhood website with it.",
+        url: "https://github.com/chengxilo/robinhood-note"
+    },
+    {
+        owner: "chengxilo",
+        repo: "steam-scrapy",
+        description: "A web scraper for Steam game data using Scrapy.",
+        url: "web scraper that collects data from the Steam store"
+    },
 ]
 const contributedRepo = [
-    {owner: "apache", repo: "iggy", description: "Persistent message streaming platform written in Rust.", url: "https://github.com/apache/iggy"},
-    {owner: "cucumber", repo: "godog", description: "Cucumber for Golang - a BDD testing framework.", url: "https://github.com/cucumber/godog"},
+    {
+        owner: "apache",
+        repo: "iggy",
+        description: "Apache Iggy: Hyper-Efficient Message Streaming at Laser Speed",
+        url: "https://github.com/apache/iggy"
+    },
+    {
+        owner: "cucumber",
+        repo: "godog",
+        description: "Cucumber for golang, the official Cucumber BDD framework for Golang",
+        url: "https://github.com/cucumber/godog"
+    },
 ]
 
 export default function Home() {
@@ -72,13 +98,13 @@ export default function Home() {
                             position: 'relative'
                         }}>
                             <Box
-                            width={70}
-                            right={0}
-                            bottom={0}
+                                width={70}
+                                right={0}
+                                bottom={0}
                                 component={'img'}
-                                 position={'absolute'}
+                                position={'absolute'}
                                 src={'/image/maodie.gif'}
-                                alt={'maodie'} />
+                                alt={'maodie'}/>
                             <Box
                                 padding={'1px 15px 8px 15px'}
                                 sx={{
@@ -156,11 +182,11 @@ export default function Home() {
                                 Education Experience
                             </Typography>
 
-
-                            <Education school={'Changsha University of Science & Technology (长沙理工大学)'}
-                                       time={'2022 - 2024'} major={"Software Engineering"}/>
                             <Education school={'Bernard M. Baruch College'} time={'2025 - now'}
                                        major={'Computer Science'}/>
+                            <Education school={'Changsha University of Science & Technology (长沙理工大学)'}
+                                       time={'2022 - 2024'} major={"Software Engineering"}/>
+
                         </Stack>
 
                         <Stack
@@ -256,7 +282,8 @@ export default function Home() {
                                 </Typography>
 
                             </Stack>
-                            {myOpenSourceRepo.map((e) => <ProjectDetail key={e.repo} owner={e.owner} repo={e.repo} description={e.description} url={e.url}/>)}
+                            {myOpenSourceRepo.map((e) => <ProjectDetail key={e.repo} owner={e.owner} repo={e.repo}
+                                                                        description={e.description} url={e.url}/>)}
                             <ToBeContinue/>
                         </Stack>
 
@@ -278,7 +305,9 @@ export default function Home() {
                                 </Typography>
                                 <MovingSquid/>
                             </Stack>
-                            {contributedRepo.map((e) => <ProjectDetail key={`${e.owner}/${e.repo}`} owner={e.owner} repo={e.repo} description={e.description} url={e.url}/>)}
+                            {contributedRepo.map((e) => <ProjectDetail key={`${e.owner}/${e.repo}`} owner={e.owner}
+                                                                       repo={e.repo} description={e.description}
+                                                                       url={e.url}/>)}
                             <ToBeContinue/>
                         </Stack>
                     </Container>
