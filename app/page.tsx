@@ -3,6 +3,7 @@
 import {Container, Typography, Stack, Box, Grid} from "@mui/material"
 import BlinkTitle from "@/app/component/blinkTitle";
 import React, {useEffect, useRef} from "react";
+import {motion, useMotionValue} from "motion/react";
 import ProjectDetail from "@/app/component/projectDetail";
 import {SocialMedias} from "@/app/component/socialMedias";
 import {ToBeContinue} from "@/app/component/toBeContinue";
@@ -46,33 +47,63 @@ const contributedRepo = [
 export default function Home() {
 
     const mousePosRef = useRef([0, 0])
-    const [gifPos, setGifPos] = React.useState<[number, number]>([0, 0])
-    const gifPosRef = useRef<[number, number]>([0, 0])
+    const gifPosRef = useRef([0, 0])
+    const gifX = useMotionValue(0)
+    const gifY = useMotionValue(0)
     const [gifSrc, setGifSrc] = React.useState('/image/doro-helicopter.gif')
-    useEffect(() => {
-        const speed = 3; // pixels per frame
+    const [visible, setVisible] = React.useState(false)
 
-        const interval = setInterval(() => {
+    useEffect(() => {
+        // Spawn from a random position just outside the screen edge
+        const edge = Math.floor(Math.random() * 4)
+        let startX: number, startY: number
+        if (edge === 0) { // top
+            startX = Math.random() * window.innerWidth
+            startY = -60
+        } else if (edge === 1) { // right
+            startX = window.innerWidth + 60
+            startY = Math.random() * window.innerHeight
+        } else if (edge === 2) { // bottom
+            startX = Math.random() * window.innerWidth
+            startY = window.innerHeight + 60
+        } else { // left
+            startX = -60
+            startY = Math.random() * window.innerHeight
+        }
+        gifPosRef.current = [startX, startY]
+        gifX.set(startX - 25)
+        gifY.set(startY - 25)
+
+        const speed = 1;
+        let animId: number;
+        const animate = () => {
             const [mx, my] = mousePosRef.current;
             const [gx, gy] = gifPosRef.current;
-
             const dx = mx - gx;
             const dy = my - gy;
             const distance = Math.hypot(dx, dy);
 
-            if (distance < 30 || distance === 0) {
+            if (distance < 30) {
                 setGifSrc('/image/doro-nikke.gif')
             } else {
                 setGifSrc('/image/doro-helicopter.gif')
                 const ratio = speed / distance;
-                const newPos: [number, number] = [gx + dx * ratio, gy + dy * ratio];
-                gifPosRef.current = newPos;
-                setGifPos(newPos);
+                const nx = gx + dx * ratio;
+                const ny = gy + dy * ratio;
+                gifPosRef.current = [nx, ny]
+                gifX.set(nx - 25)
+                gifY.set(ny - 25)
             }
-        }, 10);
+            animId = requestAnimationFrame(animate)
+        }
+        animId = requestAnimationFrame(animate)
+        return () => cancelAnimationFrame(animId)
+    }, [gifX, gifY])
 
-        return () => clearInterval(interval);
-    }, []);
+    const handleMouseMove = (e: React.MouseEvent) => {
+        mousePosRef.current = [e.pageX, e.pageY]
+        if (!visible) setVisible(true)
+    }
     return (
         <div>
             <main>
@@ -81,17 +112,18 @@ export default function Home() {
                     paddingRight: '30px',
                     backgroundColor: 'black',
                     minWidth: '100%'
-                }} onMouseMove={(e) => {
-                    mousePosRef.current = [e.pageX, e.pageY]
-                }}>
-                    <Box sx={{
-                        position: 'absolute',
-                        left: gifPos[0] - 25,
-                        top: gifPos[1] - 25,
-                        zIndex: 1,
-                        width: 50,
-                        pointerEvents: 'none'
-                    }} component={'img'} src={gifSrc}/>
+                }} onMouseMove={handleMouseMove}>
+                    {visible && <motion.img
+                        src={gifSrc}
+                        style={{
+                            position: 'absolute',
+                            left: gifX,
+                            top: gifY,
+                            zIndex: 1,
+                            width: 50,
+                            pointerEvents: 'none',
+                        }}
+                    />}
                     <Container maxWidth={'md'}>
                         <BlinkTitle title={'Welcome to my website'}/>
                         <Stack sx={{
