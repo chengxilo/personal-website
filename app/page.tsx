@@ -1,34 +1,37 @@
 'use client'
 
-import {Container, Typography, Stack, Box, Grid} from "@mui/material"
-import BlinkTitle from "@/app/component/blinkTitle";
-import React, {useEffect, useRef} from "react";
-import {motion, useMotionValue} from "motion/react";
+import {Box, Container, Divider, Stack, Typography} from "@mui/material";
+import React from "react";
+import {motion} from "motion/react";
 import ProjectDetail from "@/app/component/projectDetail";
 import {SocialMedias} from "@/app/component/socialMedias";
-import {ToBeContinue} from "@/app/component/toBeContinue";
-import {MovingSquid} from "@/app/component/movingSquid";
+import NavBar from "@/app/component/navBar";
+import SectionHeader from "@/app/component/sectionHeader";
+import SkillChip from "@/app/component/skillChip";
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 
 const myOpenSourceRepo = [
     {
         owner: "chengxilo",
         repo: "better-cuny",
-        description: "Provide additional features for the CUNY website",
-        url: "https://github.com/chengxilo/better-cuny"
+        description: "Browser extension providing additional features and quality-of-life improvements for the CUNY student portal.",
+        url: "https://github.com/chengxilo/better-cuny",
     },
     {
         owner: "chengxilo",
         repo: "robinhood-note",
-        description: "A note extension for Robinhood. You can take note on Robinhood website with it.",
-        url: "https://github.com/chengxilo/robinhood-note"
+        description: "A note-taking extension for Robinhood — capture trade ideas and reasoning directly on the Robinhood interface.",
+        url: "https://github.com/chengxilo/robinhood-note",
     },
     {
         owner: "chengxilo",
         repo: "steam-scrapy",
-        description: "A web scraper for Steam game data using Scrapy.",
-        url: "https://github.com/chengxilo/steam-scrapy"
+        description: "Web scraper for Steam game data built on Scrapy, with pipelines for price history and metadata extraction.",
+        url: "https://github.com/chengxilo/steam-scrapy",
     },
-]
+];
+
 const contributedRepo = [
     {
         owner: "apache",
@@ -39,350 +42,335 @@ const contributedRepo = [
     {
         owner: "cucumber",
         repo: "godog",
-        description: "Cucumber for golang, the official Cucumber BDD framework for Golang",
-        url: "https://github.com/cucumber/godog"
+        description: "The official Cucumber BDD framework for Go.",
+        url: "https://github.com/cucumber/godog",
     },
     {
         owner: "grpc",
         repo: "grpc-go",
-        description: "The Go language implementation of gRPC. HTTP/2 based RPC",
-        url: "https://github.com/grpc/grpc-go"
-    }
-]
+        description: "The Go language implementation of gRPC — HTTP/2-based RPC.",
+        url: "https://github.com/grpc/grpc-go",
+    },
+];
+
+const skillGroups: { title: string; items: string[] }[] = [
+    {title: 'Languages', items: ['Go', 'TypeScript', 'JavaScript', 'Python', 'Java', 'Kotlin', 'C++', 'Rust']},
+    {title: 'Frontend', items: ['React', 'Next.js', 'MUI', 'Jetpack Compose', 'WXT', 'Photoshop']},
+    {title: 'Backend', items: ['gRPC', 'SQL', 'Spring Boot', 'Node.js']},
+    {title: 'Data', items: ['Pandas', 'Selenium', 'Scrapy']},
+    {title: 'Tooling', items: ['Docker', 'Git', 'LaTeX', 'ApiFox']},
+];
+
+const fadeUp = {
+    initial: {opacity: 0, y: 16},
+    whileInView: {opacity: 1, y: 0},
+    viewport: {once: true, margin: '-80px'},
+    transition: {duration: 0.5, ease: 'easeOut' as const},
+};
 
 export default function Home() {
-
-    const mousePosRef = useRef([0, 0])
-    const gifPosRef = useRef([0, 0])
-    const gifX = useMotionValue(0)
-    const gifY = useMotionValue(0)
-    const [gifSrc, setGifSrc] = React.useState('/image/doro-helicopter.gif')
-    const [visible, setVisible] = React.useState(false)
-
-    useEffect(() => {
-        // Spawn from a random position just outside the screen edge
-        const edge = Math.floor(Math.random() * 4)
-        let startX: number, startY: number
-        if (edge === 0) { // top
-            startX = Math.random() * window.innerWidth
-            startY = -60
-        } else if (edge === 1) { // right
-            startX = window.innerWidth + 60
-            startY = Math.random() * window.innerHeight
-        } else if (edge === 2) { // bottom
-            startX = Math.random() * window.innerWidth
-            startY = window.innerHeight + 60
-        } else { // left
-            startX = -60
-            startY = Math.random() * window.innerHeight
-        }
-        gifPosRef.current = [startX, startY]
-        gifX.set(startX - 25)
-        gifY.set(startY - 25)
-
-        const speed = 1;
-        let animId: number;
-        const animate = () => {
-            const [mx, my] = mousePosRef.current;
-            const [gx, gy] = gifPosRef.current;
-            const dx = mx - gx;
-            const dy = my - gy;
-            const distance = Math.hypot(dx, dy);
-
-            if (distance < 30) {
-                setGifSrc('/image/doro-nikke.gif')
-            } else {
-                setGifSrc('/image/doro-helicopter.gif')
-                const ratio = speed / distance;
-                const nx = gx + dx * ratio;
-                const ny = gy + dy * ratio;
-                gifPosRef.current = [nx, ny]
-                gifX.set(nx - 25)
-                gifY.set(ny - 25)
-            }
-            animId = requestAnimationFrame(animate)
-        }
-        animId = requestAnimationFrame(animate)
-        return () => cancelAnimationFrame(animId)
-    }, [gifX, gifY])
-
-    const handleMouseMove = (e: React.MouseEvent) => {
-        mousePosRef.current = [e.pageX, e.pageY]
-        if (!visible) setVisible(true)
-    }
     return (
-        <div>
-            <main>
-                <Box width={'100%'} sx={{
-                    paddingLeft: '30px',
-                    paddingRight: '30px',
-                    backgroundColor: 'black',
-                    minWidth: '100%'
-                }} onMouseMove={handleMouseMove}>
-                    {visible && <motion.img
-                        src={gifSrc}
-                        style={{
-                            position: 'absolute',
-                            left: gifX,
-                            top: gifY,
-                            zIndex: 1,
-                            width: 50,
-                            pointerEvents: 'none',
-                        }}
-                    />}
-                    <Container maxWidth={'md'}>
-                        <BlinkTitle title={'Welcome to my website'}/>
-                        <Stack sx={{
-                            position: 'relative'
-                        }}>
-                            <Box
-                                width={70}
-                                right={0}
-                                bottom={0}
-                                component={'img'}
-                                position={'absolute'}
-                                src={'/image/maodie.gif'}
-                                alt={'maodie'}/>
-                            <Box
-                                padding={'1px 15px 8px 15px'}
-                                sx={{
-                                    borderStyle: 'solid',
-                                    borderWidth: '1px',
-                                    borderColor: '#626860',
-                                }}
-                                overflow={'hidden'}>
-                                <Typography
-                                    fontFamily={'Geo'}
-                                    fontSize={'25px'}
-                                    width={'100%'}>
-                                    About Me
-                                </Typography>
-                                <Box sx={{
-                                    float: 'left',
-                                    marginRight: "10px"
-                                }}
-                                     padding={'3px 3px 3px 3px'}
-                                     border={'1px solid'}>
-                                    <Box
-                                        component={"img"}
-                                        src={'https://github.com/chengxilo/chengxilo/blob/main/asset/mouse.jpg?raw=true'}
-                                        width={'95px'}
-                                        height={'auto'}
-                                        alt={"avatar"}
-                                        paddingBottom={'3px'}
-                                        borderBottom={'1px solid'}
-                                        display={'block'}
-                                    />
-                                    <Typography
-                                        width={'100%'}
-                                        textAlign={'center'}
-                                        fontFamily={'Silkscreen'}
-                                        fontSize={'7px'}
-                                        color={'textSecondary'}>
-                                        2004 - tomorrow
-                                    </Typography>
-                                </Box>
+        <Box id="top" sx={{bgcolor: 'background.default', color: 'text.primary', minHeight: '100vh'}}>
+            <NavBar/>
 
-                                <Typography color={'textSecondary'}>
-                                    Hi! I'm Chengxi Luo (罗成熙), an undergraduate student majoring in Computer Science.
-                                    I began my studies in Software Engineering at Changsha University of Science and
-                                    Technology and later transferred to the U.S., where I'm currently continuing my
-                                    education in New York City.
-                                    I'm passionate about learning new technologies and building creative,
-                                    impactful projects. If you have something interesting to share or a project idea
-                                    you'd like to collaborate on, feel free to reach out. I'm always open to new
-                                    opportunities and challenges!
+            <Container maxWidth="md" sx={{px: {xs: 3, sm: 4}, pt: {xs: 14, sm: 18}, pb: 8}}>
+                <motion.section {...fadeUp}>
+                    <Stack spacing={1} sx={{mb: {xs: 10, sm: 14}}} alignItems={'center'}>
+                        <Typography
+                            variant="h1"
+                            sx={{
+                                fontSize: {xs: 23, sm: 46, md: 48},
+                                fontWeight: 500,
+                                lineHeight: 1,
+                                letterSpacing: '-0.03em',
+                            }}
+                        >
+                            Chengxi Luo
+                        </Typography>
+
+                        <Box component="span" sx={{color: 'text.secondary', fontWeight: 400, fontSize: 16}}>
+                            Full-stack Developer · Opensource Contributor
+                        </Box>
+
+                        <Stack direction="row" alignItems="center" spacing={2} sx={{pt: 1}}>
+                            <Stack direction="row" alignItems="center" spacing={0.75}>
+                                <LocationOnOutlinedIcon sx={{fontSize: 16, color: 'text.secondary'}}/>
+                                <Typography sx={{
+                                    fontFamily: `'JetBrains Mono', monospace`,
+                                    fontSize: 13,
+                                    color: 'text.secondary',
+                                }}>
+                                    New York City
                                 </Typography>
-                            </Box>
+                            </Stack>
+                        </Stack>
+
+                        <Stack direction="row" alignItems="center" spacing={1}>
                             <Box sx={{
-                                position: 'absolute',
-                                top: 0,
-                                right: 0,
-                                transform: 'translateX(100%)'
+                                width: 8,
+                                height: 8,
+                                borderRadius: '50%',
+                                bgcolor: 'primary.main',
+                                boxShadow: '0 0 10px rgba(127,231,196,0.8)',
+                                animation: 'pulse 2s ease-in-out infinite',
+                                '@keyframes pulse': {
+                                    '0%, 100%': {opacity: 1},
+                                    '50%': {opacity: 0.4},
+                                },
+                            }}/>
+                            <Typography sx={{
+                                fontFamily: `'JetBrains Mono', monospace`,
+                                fontSize: 13,
+                                color: 'text.secondary',
                             }}>
-                                <SocialMedias/>
-                            </Box>
-
-                        </Stack>
-
-                        <Stack
-                            padding={'4px 15px 10px 15px'}
-                            sx={{
-                                marginTop: '10px',
-                                borderStyle: 'solid',
-                                borderWidth: '1px',
-                                borderColor: '#626860'
-                            }}>
-                            <Typography
-                                fontSize={'25px'}
-                                fontFamily={'Geo'}
-                            >
-                                Education Experience
+                                Available for opportunities
                             </Typography>
-
-                            <Education school={'Bernard M. Baruch College'} time={'2025 - now'}
-                                       major={'Computer Science'}/>
-                            <Education school={'Changsha University of Science & Technology (长沙理工大学)'}
-                                       time={'2022 - 2024'} major={"Software Engineering"}/>
-
                         </Stack>
+                    </Stack>
+                </motion.section>
 
+                {/* About */}
+                <motion.section id="about" {...fadeUp}>
+                    <Box sx={{mb: {xs: 3, sm: 5}}}>
+                        <SectionHeader eyebrow="01 / about"/>
                         <Stack
-                            marginBottom={'10px'}
-                            padding={'4px 15px 10px 15px'}
-                            sx={{
-                                marginTop: '10px',
-                                borderStyle: 'solid',
-                                borderWidth: '1px',
-                                borderColor: '#626860'
-                            }}>
-                            <Stack>
-                                <Typography
-                                    fontSize={'25px'}
-                                    fontFamily={'Geo'}
-                                >
-                                    My Skill
+                            direction={{xs: 'column', sm: 'row'}}
+                            spacing={{xs: 3, sm: 4}}
+                            alignItems={{xs: 'flex-start', sm: 'flex-start'}}
+                        >
+                            <Box
+                                component="img"
+                                src="https://github.com/chengxilo/chengxilo/blob/main/asset/mouse.jpg?raw=true"
+                                alt="Chengxi Luo"
+                                sx={{
+                                    width: {xs: 120, sm: 140},
+                                    height: {xs: 120, sm: 140},
+                                    borderRadius: 2,
+                                    objectFit: 'cover',
+                                    border: '1px solid rgba(255,255,255,0.08)',
+                                    flexShrink: 0,
+                                }}
+                            />
+                            <Stack spacing={2} sx={{color: 'text.secondary'}}>
+                                <Typography>
+                                    Hi! I&apos;m Chengxi Luo, an undergraduate student majoring in Computer
+                                    Science. I began my studies in Software Engineering at Changsha
+                                    University of Science and Technology in China, and later transferred
+                                    to Bernard M. Baruch College in the U.S., where I&apos;m currently
+                                    continuing my education in New York City.
                                 </Typography>
-                                <Grid container spacing={2}>
-                                    <Grid size={{xs: 6, md: 3}}>
-                                        <Typography>
-                                            Program Language
-                                        </Typography>
-                                        <Typography color={'textSecondary'}>
-                                            Golang, Typescript, Javascript, Python, Java, Kotlin, C++
-                                        </Typography>
-                                    </Grid>
-                                    <Grid size={{xs: 6, md: 3}}>
-                                        <Typography>
-                                            Frontend Technologies
-                                        </Typography>
-                                        <Typography color={'textSecondary'}>
-                                            React, PhotoShop, wxt, Android Jetpack Compose
-                                        </Typography>
-                                    </Grid>
-
-                                    <Grid size={{xs: 6, md: 3}}>
-                                        <Typography>
-                                            Backend Technologies
-                                        </Typography>
-                                        <Typography color={'textSecondary'}>
-                                            gRPC, SQL, SpringBoot, Nodejs
-                                        </Typography>
-                                    </Grid>
-
-                                    <Grid size={{xs: 6, md: 3}}>
-                                        <Typography>
-                                            Data Analysis
-                                        </Typography>
-                                        <Typography color={'textSecondary'}>
-                                            Pandas, Selenium, Scrapy
-                                        </Typography>
-                                    </Grid>
-
-                                    <Grid size={{xs: 6, md: 3}}>
-                                        <Typography>
-                                            Tools
-                                        </Typography>
-                                        <Typography color={'textSecondary'}>
-                                            Docker, Git
-                                        </Typography>
-                                    </Grid>
-
-
-                                    <Grid size={{xs: 6, md: 3}}>
-                                        <Typography>
-                                            Document
-                                        </Typography>
-                                        <Typography color={'textSecondary'}>
-                                            LaTex, Markdown, ApiFox
-                                        </Typography>
-                                    </Grid>
-                                </Grid>
+                                <Typography>
+                                    I&apos;m passionate about learning new technologies and building
+                                    creative, impactful projects. If you have something interesting to
+                                    share or a project idea you&apos;d like to collaborate on, feel free
+                                    to reach out — I&apos;m always open to new opportunities and
+                                    challenges.
+                                </Typography>
+                                <Typography>
+                                    Through this website, I hope to document my journey, share insights
+                                    and projects, and reflect on the process of learning, experimenting,
+                                    and creating. This space is a window into my growth as a programmer,
+                                    and I&apos;m excited to see where the journey leads.
+                                </Typography>
                             </Stack>
                         </Stack>
+                    </Box>
+                </motion.section>
 
-                        <Stack
-                            padding={'4px 15px 6px 15px'}
-                            sx={{
-                                borderStyle: 'solid',
-                                borderWidth: '1px',
-                                borderColor: '#626860'
-                            }}>
-                            <Stack direction={'row'}>
-                                <Typography
-                                    fontSize={'25px'}
-                                    fontFamily={'Geo'}
-                                    sx={{flexShrink: 0}}
-                                >
-                                    I'm Contributor Of
-                                </Typography>
-                                <MovingSquid/>
-                            </Stack>
-                            {contributedRepo.map((e) => <ProjectDetail key={`${e.owner}/${e.repo}`} owner={e.owner}
-                                                                       repo={e.repo} description={e.description}
-                                                                       url={e.url}/>)}
-                            <ToBeContinue/>
+                <motion.section id="experience" {...fadeUp}>
+                    <Box sx={{mb: {xs: 3, sm: 5}}}>
+                        <SectionHeader eyebrow="02 / education"/>
+                        <Stack spacing={0}>
+                            <TimelineItem
+                                time="2025 — Present"
+                                title="CUNY Bernard M. Baruch College"
+                                subtitle="Computer Science"
+                                location="New York, USA"
+                            />
+                            <TimelineItem
+                                time="2022 — 2024"
+                                title="长沙理工大学 Changsha University of Science & Technology"
+                                subtitle="Software Engineering"
+                                location="Hunan, China"
+                                last
+                            />
+                        </Stack>
+                    </Box>
+                </motion.section>
+
+                <motion.section id="work" {...fadeUp}>
+                    <SectionHeader eyebrow="03/ work"/>
+
+                    <Box sx={{mb: {xs: 3, sm: 5}}}>
+                        <Typography sx={{
+                            fontFamily: `'JetBrains Mono', monospace`,
+                            fontSize: 12,
+                            letterSpacing: '0.1em',
+                            textTransform: 'uppercase',
+                            color: 'text.secondary',
+                            mb: 2,
+                        }}>
+                            Open-source contributions
+                        </Typography>
+                        <Stack spacing={1.5} sx={{mb: 2}}>
+                            {contributedRepo.map((e) => (
+                                <ProjectDetail key={`${e.owner}/${e.repo}`} {...e}/>
+                            ))}
                         </Stack>
 
-                        <Stack
-                            marginTop={'10px'}
-                            padding={'4px 15px 6px 15px'}
-                            sx={{
-                                borderStyle: 'solid',
-                                borderWidth: '1px',
-                                borderColor: '#626860'
-                            }}>
-                            <Stack direction={'row'}>
-                                <Typography
-                                    fontSize={'25px'}
-                                    fontFamily={'Geo'}
-                                    sx={{flexShrink: 0}}
-                                >
-                                    Personal Projects
-                                </Typography>
-
-                            </Stack>
-                            {myOpenSourceRepo.map((e) => <ProjectDetail key={e.repo} owner={e.owner} repo={e.repo}
-                                                                        description={e.description} url={e.url}/>)}
-                            <ToBeContinue/>
+                        <Typography sx={{
+                            fontFamily: `'JetBrains Mono', monospace`,
+                            fontSize: 12,
+                            letterSpacing: '0.1em',
+                            textTransform: 'uppercase',
+                            color: 'text.secondary',
+                            mb: 2,
+                        }}>
+                            Personal
+                        </Typography>
+                        <Stack spacing={1.5}>
+                            {myOpenSourceRepo.map((e) => (
+                                <ProjectDetail key={e.repo} {...e}/>
+                            ))}
                         </Stack>
-                    </Container>
-                </Box>
-            </main>
-            <footer>
-                <Stack width={'100%'}
-                       direction={'row'}
-                       justifyContent={'center'}
-                       sx={{
-                           paddingBottom: '1vh',
-                           paddingTop: '5vh',
-                           backgroundColor: '#000000',
-                       }}>
-                    <Typography>
-                        © 2025 Chengxi Luo. All Rights Reserved.
+                    </Box>
+                </motion.section>
+
+                <motion.section id="skills" {...fadeUp}>
+                    <Box sx={{mb: {xs: 3, sm: 5}}}>
+                        <SectionHeader eyebrow="04 / skills"/>
+                        <Stack spacing={3}>
+                            {skillGroups.map((group) => (
+                                <Stack
+                                    key={group.title}
+                                    direction={{xs: 'column', sm: 'row'}}
+                                    spacing={{xs: 1, sm: 3}}
+                                    alignItems={{xs: 'flex-start', sm: 'flex-start'}}
+                                >
+                                    <Typography sx={{
+                                        fontFamily: `'JetBrains Mono', monospace`,
+                                        fontSize: 12,
+                                        letterSpacing: '0.1em',
+                                        textTransform: 'uppercase',
+                                        color: 'text.secondary',
+                                        width: {xs: 'auto', sm: 140},
+                                        flexShrink: 0,
+                                        pt: {xs: 0, sm: 0.75},
+                                    }}>
+                                        {group.title}
+                                    </Typography>
+                                    <Stack direction="row" flexWrap="wrap" gap={1}>
+                                        {group.items.map((item) => (
+                                            <SkillChip key={item} label={item}/>
+                                        ))}
+                                    </Stack>
+                                </Stack>
+                            ))}
+                        </Stack>
+                    </Box>
+                </motion.section>
+
+                <motion.section id="contact" {...fadeUp}>
+                    <Box sx={{mb: 3}}>
+                        <SectionHeader eyebrow="05 / contact"/>
+                        <Typography sx={{color: 'text.secondary', mb: 3, maxWidth: 560}}>
+                            The easiest way to reach me is email — I read everything, and usually
+                            reply within a day or two.
+                        </Typography>
+                        <Typography
+                            component="a"
+                            href="mailto:chengxi.luo2004@gmail.com"
+                            sx={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: 1,
+                                fontFamily: `'JetBrains Mono', monospace`,
+                                fontSize: {xs: 16, sm: 18},
+                                color: 'primary.main',
+                                textDecoration: 'none',
+                                borderBottom: '1px solid rgba(127,231,196,0.3)',
+                                pb: 0.5,
+                                transition: 'border-color 160ms ease',
+                                '&:hover': {borderColor: 'primary.main'},
+                                '&:hover .arrow': {transform: 'translate(2px, -2px)'},
+                            }}
+                        >
+                            chengxi.luo2004@gmail.com
+                            <ArrowOutwardIcon className="arrow" sx={{fontSize: 18, transition: 'transform 180ms ease'}}/>
+                        </Typography>
+                        <Box sx={{mt: 4}}>
+                            <SocialMedias/>
+                        </Box>
+                    </Box>
+                </motion.section>
+
+                <Divider sx={{borderColor: 'rgba(255,255,255,0.06)', mb: 3}}/>
+
+                <Stack
+                    direction={{xs: 'column', sm: 'row'}}
+                    justifyContent="space-between"
+                    alignItems={'center'}
+                    spacing={1}
+                    sx={{pb: 4}}
+                >
+                    <Typography sx={{
+                        fontFamily: `'JetBrains Mono', monospace`,
+                        fontSize: 12,
+                        color: 'text.disabled',
+                    }}>
+                        © 2026 Chengxi Luo
                     </Typography>
                 </Stack>
-            </footer>
-        </div>
+            </Container>
+        </Box>
     );
 }
 
-
-function Education({school, time, major}: { school: string, time: string, major: string }) {
-    return <Stack sx={{
-        marginTop: '4px',
-        marginBottom: '4px',
-    }}>
-        <Stack direction={'row'} justifyContent={'space-between'}>
-            <Typography>
-                {school}
-            </Typography>
-            <Typography flexShrink={0}>
-                {time}
-            </Typography>
+function TimelineItem({time, title, subtitle, location, last}: {
+    time: string;
+    title: string;
+    subtitle: string;
+    location?: string;
+    last?: boolean;
+}) {
+    return (
+        <Stack direction="row" spacing={2.5} sx={{position: 'relative'}}>
+            <Stack alignItems="center" sx={{pt: 0.75}}>
+                <Box sx={{
+                    width: 10,
+                    height: 10,
+                    borderRadius: '50%',
+                    border: '2px solid',
+                    borderColor: 'primary.main',
+                    bgcolor: 'background.default',
+                    flexShrink: 0,
+                }}/>
+                {!last && (
+                    <Box sx={{
+                        flex: 1,
+                        width: '1px',
+                        bgcolor: 'rgba(255,255,255,0.1)',
+                        minHeight: 40,
+                        mt: 1,
+                    }}/>
+                )}
+            </Stack>
+            <Stack spacing={0.5} sx={{pb: last ? 0 : 4, flex: 1}}>
+                <Typography sx={{
+                    fontFamily: `'JetBrains Mono', monospace`,
+                    fontSize: 12,
+                    color: 'text.secondary',
+                    letterSpacing: '0.05em',
+                }}>
+                    {time}
+                </Typography>
+                <Typography sx={{fontSize: 17, fontWeight: 500, color: 'text.primary'}}>
+                    {title}
+                </Typography>
+                <Typography sx={{fontSize: 14, color: 'text.secondary'}}>
+                    {subtitle}{location ? ` · ${location}` : ''}
+                </Typography>
+            </Stack>
         </Stack>
-        <Typography color={'textSecondary'}>
-            Major in {major}
-        </Typography>
-    </Stack>
+    );
 }

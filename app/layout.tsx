@@ -7,11 +7,15 @@ export default function RootLayout({children}: Readonly<{
     return (
         <html lang="en">
         <head>
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
             <link
                 rel="stylesheet"
-                href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Geo:ital@0;1&family=Silkscreen&family=VT323&display=swap"
+                href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
             />
-            <title>Chengxi Luo</title>
+            <title>Chengxi Luo — Software Engineer</title>
+            <meta name="description"
+                  content="Chengxi Luo (罗成熙) — Computer Science student and software engineer based in New York City."/>
         </head>
         <body>
         <ThemeRegistry>
