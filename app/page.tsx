@@ -282,6 +282,7 @@ export default function Home() {
                     spacing={3}
                     sx={{pb: 4}}
                 >
+                    <SocialMedias/>
                     <Typography sx={{
                         fontFamily: `'JetBrains Mono', monospace`,
                         fontSize: 12,
@@ -289,7 +290,6 @@ export default function Home() {
                     }}>
                         © 2026 Chengxi Luo
                     </Typography>
-                    <SocialMedias/>
                 </Stack>
             </Container>
         </Box>
