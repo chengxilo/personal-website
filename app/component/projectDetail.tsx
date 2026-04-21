@@ -1,8 +1,9 @@
 import {Stack, Typography, Box} from "@mui/material";
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import {Tech} from "@/app/const";
 
-export default function ProjectDetail({owner, repo, description, url}:
-                                      { owner: string, repo: string, description: string, url: string }) {
+export default function ProjectDetail({owner, repo, description, url, tech}:
+                                      { owner: string, repo: string, description: string, url: string, tech?: Tech[] }) {
     return (
         <Stack
             component={url ? 'a' : 'div'}
@@ -62,6 +63,29 @@ export default function ProjectDetail({owner, repo, description, url}:
                     <Typography sx={{fontSize: 14, color: 'text.secondary'}}>
                         {description}
                     </Typography>
+                    {tech && tech.length > 0 && (
+                        <Stack direction="row" flexWrap="wrap" gap={0.75} sx={{pt: 0.5}}>
+                            {tech.map((t) => (
+                                <Box
+                                    key={t}
+                                    component="span"
+                                    sx={{
+                                        fontFamily: `'JetBrains Mono', monospace`,
+                                        fontSize: 11,
+                                        color: 'text.secondary',
+                                        px: 0.9,
+                                        py: 0.15,
+                                        borderRadius: 999,
+                                        border: '1px solid rgba(255,255,255,0.08)',
+                                        bgcolor: 'rgba(255,255,255,0.015)',
+                                        letterSpacing: '0.02em',
+                                    }}
+                                >
+                                    {t}
+                                </Box>
+                            ))}
+                        </Stack>
+                    )}
                 </Stack>
                 {url && (
                     <ArrowOutwardIcon

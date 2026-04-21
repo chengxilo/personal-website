@@ -9,6 +9,7 @@ import NavBar from "@/app/component/navBar";
 import SectionHeader from "@/app/component/sectionHeader";
 import SkillChip from "@/app/component/skillChip";
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import {SKILL_GROUPS, TECH} from "@/app/const";
 
 const myOpenSourceRepo = [
     {
@@ -16,18 +17,21 @@ const myOpenSourceRepo = [
         repo: "better-cuny",
         description: "Browser extension providing additional features and quality-of-life improvements for the CUNY student portal.",
         url: "https://github.com/chengxilo/better-cuny",
+        tech: [TECH.TypeScript, TECH.WXT, TECH.React, TECH.MUI],
     },
     {
         owner: "chengxilo",
         repo: "robinhood-note",
         description: "A note-taking extension for Robinhood — capture trade ideas and reasoning directly on the Robinhood interface.",
         url: "https://github.com/chengxilo/robinhood-note",
+        tech: [TECH.TypeScript, TECH.WXT, TECH.React, TECH.MUI],
     },
     {
         owner: "chengxilo",
         repo: "steam-scrapy",
         description: "Web scraper for Steam game data built on Scrapy, with pipelines for price history and metadata extraction.",
         url: "https://github.com/chengxilo/steam-scrapy",
+        tech: [TECH.Python, TECH.Scrapy, TECH.Selenium],
     },
 ];
 
@@ -36,28 +40,23 @@ const contributedRepo = [
         owner: "apache",
         repo: "iggy",
         description: "Apache Iggy: Hyper-Efficient Message Streaming at Laser Speed",
-        url: "https://github.com/apache/iggy"
+        url: "https://github.com/apache/iggy",
+        tech: [TECH.Rust, TECH.MessageQueue, TECH.BDD, TECH.Go, TECH.GithubWorkflow],
     },
     {
         owner: "cucumber",
         repo: "godog",
         description: "The official Cucumber BDD framework for Go.",
         url: "https://github.com/cucumber/godog",
+        tech: [TECH.Go, TECH.BDD, TECH.Test],
     },
     {
         owner: "grpc",
         repo: "grpc-go",
         description: "The Go language implementation of gRPC — HTTP/2-based RPC.",
         url: "https://github.com/grpc/grpc-go",
+        tech: [TECH.Go, TECH.gRPC, TECH.HTTP2],
     },
-];
-
-const skillGroups: { title: string; items: string[] }[] = [
-    {title: 'Languages', items: ['Go', 'TypeScript', 'JavaScript', 'Python', 'Java', 'Kotlin', 'C++', 'Rust']},
-    {title: 'Frontend', items: ['React', 'Next.js', 'MUI', 'Jetpack Compose', 'WXT', 'HTML', 'CSS', 'Tauri']},
-    {title: 'Backend', items: ['gRPC', 'SQL', 'Spring Boot', 'Node.js', 'Gin', 'Gorm', 'MyBatis', 'Message Queue(MQ)']},
-    {title: 'Data', items: ['Pandas', 'Selenium', 'Scrapy']},
-    {title: 'Tooling', items: ['Docker', 'Git', 'LaTeX', 'Apifox', 'Linux', 'Photoshop']},
 ];
 
 const fadeUp = {
@@ -242,7 +241,7 @@ export default function Home() {
                     <Box sx={{mb: {xs: 3, sm: 5}}}>
                         <SectionHeader eyebrow="04 / skills"/>
                         <Stack spacing={3}>
-                            {skillGroups.map((group) => (
+                            {SKILL_GROUPS.map((group) => (
                                 <Stack
                                     key={group.title}
                                     direction={{xs: 'column', sm: 'row'}}
