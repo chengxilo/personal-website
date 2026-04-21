@@ -16,11 +16,11 @@ export default function ProjectDetail({owner, repo, description, url, tech}:
                 color: 'inherit',
                 position: 'relative',
                 py: 1,
-                pl: 1,
+                pl: 2.5,
                 pr: 1,
                 borderBottom: '1px solid rgba(255,255,255,0.08)',
                 cursor: url ? 'pointer' : 'default',
-                transition: 'background-color 180ms ease, padding-left 180ms ease',
+                transition: 'background-color 180ms ease',
                 '&::before': {
                     content: '""',
                     position: 'absolute',
@@ -35,8 +35,8 @@ export default function ProjectDetail({owner, repo, description, url, tech}:
                 },
                 '&:hover': {
                     bgcolor: 'rgba(127,231,196,0.03)',
-                    pl: 2.5,
                     '&::before': {transform: 'scaleY(1)'},
+                    '& .project-content': {transform: 'translateX(0)'},
                     '& .project-arrow': {
                         opacity: 1,
                         transform: 'translate(2px, -2px)',
@@ -46,7 +46,16 @@ export default function ProjectDetail({owner, repo, description, url, tech}:
             }}
         >
             <Stack direction="row" justifyContent="space-between" alignItems="flex-start" spacing={2}>
-                <Stack spacing={0.5} flex={1} minWidth={0}>
+                <Stack
+                    className="project-content"
+                    spacing={0.5}
+                    flex={1}
+                    minWidth={0}
+                    sx={{
+                        transform: 'translateX(-12px)',
+                        transition: 'transform 180ms ease',
+                    }}
+                >
                     <Typography
                         className="project-name"
                         sx={{
