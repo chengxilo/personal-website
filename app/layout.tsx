@@ -13,7 +13,7 @@ export default function RootLayout({children}: Readonly<{
                 rel="stylesheet"
                 href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
             />
-            <title>Chengxi Luo — Software Engineer</title>
+            <title>Chengxi Luo</title>
             <meta name="description"
                   content="Chengxi Luo (罗成熙) — Computer Science student and software engineer based in New York City."/>
         </head>
