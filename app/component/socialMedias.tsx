@@ -3,7 +3,6 @@ import InstagramLogo from '@/public/icon/instgram.svg'
 import LinkedinLogo from '@/public/icon/linkedin.svg'
 import {Stack, IconButton, Tooltip} from "@mui/material"
 import EmailIcon from '@mui/icons-material/Email';
-import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import React from "react";
 
 function CustomTooltip({children, title}: { children: React.ReactElement, title: string }) {
@@ -75,17 +74,6 @@ export function SocialMedias({direction = 'row'}: { direction?: 'row' | 'column'
                     sx={iconButtonSx}
                 >
                     <EmailIcon sx={{fontSize: 18}}/>
-                </IconButton>
-            </CustomTooltip>
-
-            <CustomTooltip title="Resume">
-                <IconButton
-                    component="a"
-                    href="/resume.pdf"
-                    download="Chengxi Luo Resume.pdf"
-                    sx={iconButtonSx}
-                >
-                    <FileDownloadIcon sx={{fontSize: 18}}/>
                 </IconButton>
             </CustomTooltip>
         </Stack>

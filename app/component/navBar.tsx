@@ -2,13 +2,13 @@
 
 import {Box, Stack, Typography} from "@mui/material";
 import React, {useEffect, useState} from "react";
+import FileDownloadOutlinedIcon from "@mui/icons-material/FileDownloadOutlined";
 
 const sections = [
     {id: 'about', label: 'About'},
     {id: 'experience', label: 'Experience'},
     {id: 'work', label: 'Work'},
     {id: 'skills', label: 'Skills'},
-    {id: 'contact', label: 'Contact'},
 ];
 
 export default function NavBar() {
@@ -82,6 +82,33 @@ export default function NavBar() {
                 </Typography>
 
                 <Stack direction="row" spacing={{xs: 2, sm: 3}}>
+                    <Box
+                        component="a"
+                        href="/resume.pdf"
+                        download="Chengxi Luo Resume.pdf"
+                        sx={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: 1,
+                            fontFamily: `'JetBrains Mono', monospace`,
+                            fontSize: 13,
+                            fontWeight: 500,
+                            color: '#0A0A0A',
+                            bgcolor: 'primary.main',
+                            textDecoration: 'none',
+                            px: 1,
+                            py: 0.5,
+                            borderRadius: 0.75,
+                            transition: 'all 160ms ease',
+                            '&:hover': {
+                                bgcolor: '#A3F0D3',
+                                transform: 'translateY(-1px)',
+                            },
+                        }}
+                    >
+                        <FileDownloadOutlinedIcon sx={{fontSize: 16}}/>
+                        Resume
+                    </Box>
                     {sections.map((s) => (
                         <Typography
                             key={s.id}
@@ -93,6 +120,7 @@ export default function NavBar() {
                                 fontSize: 13,
                                 color: active === s.id ? 'primary.main' : 'text.secondary',
                                 textDecoration: 'none',
+                                alignContent: 'center',
                                 transition: 'color 160ms ease',
                                 '&:hover': {color: 'primary.main'},
                                 display: {xs: s.id === 'experience' || s.id === 'skills' ? 'none' : 'inline', sm: 'inline'},

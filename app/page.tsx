@@ -8,7 +8,6 @@ import {SocialMedias} from "@/app/component/socialMedias";
 import NavBar from "@/app/component/navBar";
 import SectionHeader from "@/app/component/sectionHeader";
 import SkillChip from "@/app/component/skillChip";
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 
 const myOpenSourceRepo = [
@@ -75,7 +74,7 @@ export default function Home() {
 
             <Container maxWidth="md" sx={{px: {xs: 3, sm: 4}, pt: {xs: 14, sm: 18}, pb: 8}}>
                 <motion.section {...fadeUp}>
-                    <Stack spacing={1} sx={{mb: {xs: 10, sm: 14}}} alignItems={'center'}>
+                    <Stack spacing={1} sx={{mb: {xs: 5, sm: 10 }}} alignItems={'center'}>
                         <Typography
                             variant="h1"
                             sx={{
@@ -133,47 +132,50 @@ export default function Home() {
                 <motion.section id="about" {...fadeUp}>
                     <Box sx={{mb: {xs: 3, sm: 5}}}>
                         <SectionHeader eyebrow="01 / about"/>
-                        <Stack
-                            direction={{xs: 'column', sm: 'row'}}
-                            spacing={{xs: 3, sm: 4}}
-                            alignItems={{xs: 'flex-start', sm: 'flex-start'}}
-                        >
+                        <Box sx={{
+                            color: 'text.secondary',
+                            '&::after': {content: '""', display: 'block', clear: 'both'},
+                            '& p': {margin: 0, marginBottom: 2},
+                            '& p:last-of-type': {marginBottom: 0},
+                        }}>
                             <Box
                                 component="img"
                                 src="https://github.com/chengxilo/chengxilo/blob/main/asset/mouse.jpg?raw=true"
                                 alt="Chengxi Luo"
                                 sx={{
-                                    width: {xs: 120, sm: 140},
-                                    height: {xs: 120, sm: 140},
-                                    borderRadius: 2,
+                                    width: {xs: 110, sm: 140},
+                                    height: {xs: 110, sm: 140},
+                                    borderRadius: 0.5,
                                     objectFit: 'cover',
                                     border: '1px solid rgba(255,255,255,0.08)',
-                                    flexShrink: 0,
+                                    float: 'right',
+                                    ml: 1,
+                                    mr: {xs: 2, sm: 3},
+                                    mb: 1.5,
+                                    shapeOutside: 'inset(0 round 8px)',
                                 }}
                             />
-                            <Stack spacing={2} sx={{color: 'text.secondary'}}>
-                                <Typography>
-                                    Hi! I&apos;m Chengxi Luo, an undergraduate student majoring in Computer
-                                    Science. I began my studies in Software Engineering at Changsha
-                                    University of Science and Technology in China, and later transferred
-                                    to Bernard M. Baruch College in the U.S., where I&apos;m currently
-                                    continuing my education in New York City.
-                                </Typography>
-                                <Typography>
-                                    I&apos;m passionate about learning new technologies and building
-                                    creative, impactful projects. If you have something interesting to
-                                    share or a project idea you&apos;d like to collaborate on, feel free
-                                    to reach out — I&apos;m always open to new opportunities and
-                                    challenges.
-                                </Typography>
-                                <Typography>
-                                    Through this website, I hope to document my journey, share insights
-                                    and projects, and reflect on the process of learning, experimenting,
-                                    and creating. This space is a window into my growth as a programmer,
-                                    and I&apos;m excited to see where the journey leads.
-                                </Typography>
-                            </Stack>
-                        </Stack>
+                            <Typography component="p">
+                                Hi! I&apos;m Chengxi Luo, an undergraduate student majoring in Computer
+                                Science. I began my studies in Software Engineering at Changsha
+                                University of Science and Technology in China, and later transferred
+                                to Bernard M. Baruch College in the U.S., where I&apos;m currently
+                                continuing my education in New York City.
+                            </Typography>
+                            <Typography component="p">
+                                I&apos;m passionate about learning new technologies and building
+                                creative, impactful projects. If you have something interesting to
+                                share or a project idea you&apos;d like to collaborate on, feel free
+                                to reach out — I&apos;m always open to new opportunities and
+                                challenges.
+                            </Typography>
+                            <Typography component="p">
+                                Through this website, I hope to document my journey, share insights
+                                and projects, and reflect on the process of learning, experimenting,
+                                and creating. This space is a window into my growth as a programmer,
+                                and I&apos;m excited to see where the journey leads.
+                            </Typography>
+                        </Box>
                     </Box>
                 </motion.section>
 
@@ -212,7 +214,7 @@ export default function Home() {
                         }}>
                             Open-source contributions
                         </Typography>
-                        <Stack spacing={1.5} sx={{mb: 2}}>
+                        <Stack spacing={0} sx={{mb: 5, borderTop: '1px solid rgba(255,255,255,0.08)'}}>
                             {contributedRepo.map((e) => (
                                 <ProjectDetail key={`${e.owner}/${e.repo}`} {...e}/>
                             ))}
@@ -228,7 +230,7 @@ export default function Home() {
                         }}>
                             Personal
                         </Typography>
-                        <Stack spacing={1.5}>
+                        <Stack spacing={0} sx={{borderTop: '1px solid rgba(255,255,255,0.08)'}}>
                             {myOpenSourceRepo.map((e) => (
                                 <ProjectDetail key={e.repo} {...e}/>
                             ))}
@@ -270,47 +272,14 @@ export default function Home() {
                     </Box>
                 </motion.section>
 
-                <motion.section id="contact" {...fadeUp}>
-                    <Box sx={{mb: 3}}>
-                        <SectionHeader eyebrow="05 / contact"/>
-                        <Typography sx={{color: 'text.secondary', mb: 3, maxWidth: 560}}>
-                            The easiest way to reach me is email — I read everything, and usually
-                            reply within a day or two.
-                        </Typography>
-                        <Typography
-                            component="a"
-                            href="mailto:chengxi.luo2004@gmail.com"
-                            sx={{
-                                display: 'inline-flex',
-                                alignItems: 'center',
-                                gap: 1,
-                                fontFamily: `'JetBrains Mono', monospace`,
-                                fontSize: {xs: 16, sm: 18},
-                                color: 'primary.main',
-                                textDecoration: 'none',
-                                borderBottom: '1px solid rgba(127,231,196,0.3)',
-                                pb: 0.5,
-                                transition: 'border-color 160ms ease',
-                                '&:hover': {borderColor: 'primary.main'},
-                                '&:hover .arrow': {transform: 'translate(2px, -2px)'},
-                            }}
-                        >
-                            chengxi.luo2004@gmail.com
-                            <ArrowOutwardIcon className="arrow" sx={{fontSize: 18, transition: 'transform 180ms ease'}}/>
-                        </Typography>
-                        <Box sx={{mt: 4}}>
-                            <SocialMedias/>
-                        </Box>
-                    </Box>
-                </motion.section>
 
-                <Divider sx={{borderColor: 'rgba(255,255,255,0.06)', mb: 3}}/>
+                <Divider sx={{borderColor: 'rgba(255,255,255,0.06)', mt: 6, mb: 4}}/>
 
                 <Stack
                     direction={{xs: 'column', sm: 'row'}}
                     justifyContent="space-between"
-                    alignItems={'center'}
-                    spacing={1}
+                    alignItems={{xs: 'flex-start', sm: 'center'}}
+                    spacing={3}
                     sx={{pb: 4}}
                 >
                     <Typography sx={{
@@ -320,6 +289,7 @@ export default function Home() {
                     }}>
                         © 2026 Chengxi Luo
                     </Typography>
+                    <SocialMedias/>
                 </Stack>
             </Container>
         </Box>

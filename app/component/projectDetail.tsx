@@ -13,28 +13,39 @@ export default function ProjectDetail({owner, repo, description, url}:
                 display: 'block',
                 textDecoration: 'none',
                 color: 'inherit',
-                p: 2.5,
-                borderRadius: 2,
-                border: '1px solid rgba(255,255,255,0.08)',
-                bgcolor: 'rgba(255,255,255,0.015)',
-                transition: 'all 200ms ease',
+                position: 'relative',
+                py: 1,
+                pl: 1,
+                pr: 1,
+                borderBottom: '1px solid rgba(255,255,255,0.08)',
                 cursor: url ? 'pointer' : 'default',
+                transition: 'background-color 180ms ease, padding-left 180ms ease',
+                '&::before': {
+                    content: '""',
+                    position: 'absolute',
+                    left: 0,
+                    top: 0,
+                    bottom: 0,
+                    width: '2px',
+                    bgcolor: 'primary.main',
+                    transform: 'scaleY(0)',
+                    transformOrigin: 'center',
+                    transition: 'transform 200ms ease',
+                },
                 '&:hover': {
-                    borderColor: 'rgba(127,231,196,0.4)',
                     bgcolor: 'rgba(127,231,196,0.03)',
-                    transform: 'translateY(-2px)',
+                    pl: 2.5,
+                    '&::before': {transform: 'scaleY(1)'},
                     '& .project-arrow': {
                         opacity: 1,
                         transform: 'translate(2px, -2px)',
                     },
-                    '& .project-name': {
-                        color: 'primary.main',
-                    },
+                    '& .project-name': {color: 'primary.main'},
                 },
             }}
         >
             <Stack direction="row" justifyContent="space-between" alignItems="flex-start" spacing={2}>
-                <Stack spacing={0.75} flex={1} minWidth={0}>
+                <Stack spacing={0.5} flex={1} minWidth={0}>
                     <Typography
                         className="project-name"
                         sx={{
@@ -58,9 +69,10 @@ export default function ProjectDetail({owner, repo, description, url}:
                         sx={{
                             fontSize: 18,
                             color: 'primary.main',
-                            opacity: 0.4,
+                            opacity: 0.35,
                             transition: 'all 200ms ease',
                             flexShrink: 0,
+                            mt: 0.25,
                         }}
                     />
                 )}
