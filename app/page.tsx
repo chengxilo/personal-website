@@ -14,6 +14,13 @@ import {SKILL_GROUPS, TECH} from "@/app/const";
 const myOpenSourceRepo = [
     {
         owner: "chengxilo",
+        repo: "countdown",
+        description: "A GitHub Action that generates a themed countdown SVG for your GitHub profile README",
+        url: "https://github.com/chengxilo/countdown",
+        tech: [TECH.GithubWorkflow, TECH.Python],
+    },
+    {
+        owner: "chengxilo",
         repo: "better-cuny",
         description: "Browser extension providing additional features and quality-of-life improvements for the CUNY student portal.",
         url: "https://github.com/chengxilo/better-cuny",

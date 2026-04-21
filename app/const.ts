@@ -44,7 +44,7 @@ export const TECH = {
     Photoshop: 'Photoshop',
     BDD: 'Behavior-Driven Development(BDD)',
     Test: 'Test',
-    GithubWorkflow: 'Github Workflow(CI/CD)',
+    GithubWorkflow: 'Github Workflow',
 } as const;
 
 export type Tech = typeof TECH[keyof typeof TECH];
