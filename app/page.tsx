@@ -54,10 +54,10 @@ const contributedRepo = [
 
 const skillGroups: { title: string; items: string[] }[] = [
     {title: 'Languages', items: ['Go', 'TypeScript', 'JavaScript', 'Python', 'Java', 'Kotlin', 'C++', 'Rust']},
-    {title: 'Frontend', items: ['React', 'Next.js', 'MUI', 'Jetpack Compose', 'WXT', 'Photoshop']},
-    {title: 'Backend', items: ['gRPC', 'SQL', 'Spring Boot', 'Node.js']},
+    {title: 'Frontend', items: ['React', 'Next.js', 'MUI', 'Jetpack Compose', 'WXT', 'HTML', 'CSS', 'Tauri']},
+    {title: 'Backend', items: ['gRPC', 'SQL', 'Spring Boot', 'Node.js', 'Gin', 'Gorm', 'MyBatis', 'Message Queue(MQ)']},
     {title: 'Data', items: ['Pandas', 'Selenium', 'Scrapy']},
-    {title: 'Tooling', items: ['Docker', 'Git', 'LaTeX', 'ApiFox']},
+    {title: 'Tooling', items: ['Docker', 'Git', 'LaTeX', 'Apifox', 'Linux', 'Photoshop']},
 ];
 
 const fadeUp = {
