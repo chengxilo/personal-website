@@ -42,6 +42,12 @@ const contributedRepo = [
         description: "Cucumber for golang, the official Cucumber BDD framework for Golang",
         url: "https://github.com/cucumber/godog"
     },
+    {
+        owner: "grpc",
+        repo: "grpc-go",
+        description: "The Go language implementation of gRPC. HTTP/2 based RPC",
+        url: "https://github.com/grpc/grpc-go"
+    }
 ]
 
 export default function Home() {
@@ -295,9 +301,31 @@ export default function Home() {
                             </Stack>
                         </Stack>
 
+                        <Stack
+                            padding={'4px 15px 6px 15px'}
+                            sx={{
+                                borderStyle: 'solid',
+                                borderWidth: '1px',
+                                borderColor: '#626860'
+                            }}>
+                            <Stack direction={'row'}>
+                                <Typography
+                                    fontSize={'25px'}
+                                    fontFamily={'Geo'}
+                                    sx={{flexShrink: 0}}
+                                >
+                                    I'm Contributor Of
+                                </Typography>
+                                <MovingSquid/>
+                            </Stack>
+                            {contributedRepo.map((e) => <ProjectDetail key={`${e.owner}/${e.repo}`} owner={e.owner}
+                                                                       repo={e.repo} description={e.description}
+                                                                       url={e.url}/>)}
+                            <ToBeContinue/>
+                        </Stack>
 
                         <Stack
-                            marginBottom={'10px'}
+                            marginTop={'10px'}
                             padding={'4px 15px 6px 15px'}
                             sx={{
                                 borderStyle: 'solid',
@@ -316,30 +344,6 @@ export default function Home() {
                             </Stack>
                             {myOpenSourceRepo.map((e) => <ProjectDetail key={e.repo} owner={e.owner} repo={e.repo}
                                                                         description={e.description} url={e.url}/>)}
-                            <ToBeContinue/>
-                        </Stack>
-
-
-                        <Stack
-                            padding={'4px 15px 6px 15px'}
-                            sx={{
-                                borderStyle: 'solid',
-                                borderWidth: '1px',
-                                borderColor: '#626860'
-                            }}>
-                            <Stack direction={'row'}>
-                                <Typography
-                                    fontSize={'25px'}
-                                    fontFamily={'Geo'}
-                                    sx={{flexShrink: 0}}
-                                >
-                                    I Contributed Code To
-                                </Typography>
-                                <MovingSquid/>
-                            </Stack>
-                            {contributedRepo.map((e) => <ProjectDetail key={`${e.owner}/${e.repo}`} owner={e.owner}
-                                                                       repo={e.repo} description={e.description}
-                                                                       url={e.url}/>)}
                             <ToBeContinue/>
                         </Stack>
                     </Container>
