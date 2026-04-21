@@ -207,7 +207,7 @@ export default function Home() {
                 </motion.section>
 
                 <motion.section id="work" {...fadeUp}>
-                    <SectionHeader eyebrow="03/ work"/>
+                    <SectionHeader eyebrow="03 / work"/>
 
                     <Box sx={{mb: {xs: 3, sm: 5}}}>
                         <Typography sx={{
