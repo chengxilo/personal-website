@@ -338,7 +338,7 @@ export default function Home() {
                                     fontFamily={'Geo'}
                                     sx={{flexShrink: 0}}
                                 >
-                                    My Open Source Projects
+                                    Personal Projects
                                 </Typography>
 
                             </Stack>
