@@ -1,0 +1,348 @@
+{
+  "contributed": {
+    "apache/iggy": {
+      "dateRange": "Jun 2025 — Present",
+      "prs": [
+        {
+          "number": 2964,
+          "title": "feat(go): introduce context.Context to client methods",
+          "url": "https://github.com/apache/iggy/pull/2964",
+          "merged": false
+        },
+        {
+          "number": 3032,
+          "title": "fix(go): update stats field and its deserialization logic to align with rust SDK",
+          "url": "https://github.com/apache/iggy/pull/3032",
+          "merged": true
+        },
+        {
+          "number": 3065,
+          "title": "chore(go): delete redundant script run_tcp_e2e.sh",
+          "url": "https://github.com/apache/iggy/pull/3065",
+          "merged": true
+        },
+        {
+          "number": 2986,
+          "title": "feat(go): implement binary reader/writer",
+          "url": "https://github.com/apache/iggy/pull/2986",
+          "merged": true
+        },
+        {
+          "number": 2972,
+          "title": "docs(go): solve typo in DeleteStream method.",
+          "url": "https://github.com/apache/iggy/pull/2972",
+          "merged": true
+        },
+        {
+          "number": 2957,
+          "title": "refactor(go): refactor WithTLS",
+          "url": "https://github.com/apache/iggy/pull/2957",
+          "merged": true
+        },
+        {
+          "number": 2884,
+          "title": "refactor(go): upgrade go-retry to v5 and enable infinite reconnection",
+          "url": "https://github.com/apache/iggy/pull/2884",
+          "merged": true
+        },
+        {
+          "number": 2881,
+          "title": "refactor(go): move command /foreign/go/internal/command",
+          "url": "https://github.com/apache/iggy/pull/2881",
+          "merged": true
+        },
+        {
+          "number": 2860,
+          "title": "fix(go): fix tcp client connect method",
+          "url": "https://github.com/apache/iggy/pull/2860",
+          "merged": true
+        },
+        {
+          "number": 2862,
+          "title": "ci(go): improve go bdd Dockerfile to leverage Docker layer caching",
+          "url": "https://github.com/apache/iggy/pull/2862",
+          "merged": true
+        },
+        {
+          "number": 2737,
+          "title": "refactor(go): Introduce Command interface to improve Go client request handling",
+          "url": "https://github.com/apache/iggy/pull/2737",
+          "merged": true
+        },
+        {
+          "number": 2752,
+          "title": "fix(sdk): add leader redirection logic for `login_with_personal_access_token`",
+          "url": "https://github.com/apache/iggy/pull/2752",
+          "merged": true
+        },
+        {
+          "number": 2580,
+          "title": "feat(go): implement Go leader redirection scenario",
+          "url": "https://github.com/apache/iggy/pull/2580",
+          "merged": true
+        },
+        {
+          "number": 2159,
+          "title": "refactor(go): refactor go sdk errors",
+          "url": "https://github.com/apache/iggy/pull/2159",
+          "merged": true
+        },
+        {
+          "number": 2147,
+          "title": "feat(go): add DeleteConsumerOffset function.",
+          "url": "https://github.com/apache/iggy/pull/2147",
+          "merged": true
+        },
+        {
+          "number": 2109,
+          "title": "feat(go): implement deserialize topics logic in DeserializeStream function",
+          "url": "https://github.com/apache/iggy/pull/2109",
+          "merged": true
+        },
+        {
+          "number": 2107,
+          "title": "feat(go): implement logic to deserialize the members.",
+          "url": "https://github.com/apache/iggy/pull/2107",
+          "merged": true
+        },
+        {
+          "number": 2021,
+          "title": "feat(go): add godog go bdd test according to scenarios.",
+          "url": "https://github.com/apache/iggy/pull/2021",
+          "merged": true
+        },
+        {
+          "number": 2059,
+          "title": "fix(ci): run bdd test when sdk changed",
+          "url": "https://github.com/apache/iggy/pull/2059",
+          "merged": true
+        },
+        {
+          "number": 2017,
+          "title": "chore(go): add go getting-started example and test script",
+          "url": "https://github.com/apache/iggy/pull/2017",
+          "merged": true
+        },
+        {
+          "number": 2049,
+          "title": "fix(ci): fix the incorrect regex in ci-publish-go.yml",
+          "url": "https://github.com/apache/iggy/pull/2049",
+          "merged": true
+        },
+        {
+          "number": 2046,
+          "title": "chore(ci): update regex of ci-publish-go.yml to support special Pre-release suffix.",
+          "url": "https://github.com/apache/iggy/pull/2046",
+          "merged": true
+        },
+        {
+          "number": 2037,
+          "title": "feat: add golang publish workflow",
+          "url": "https://github.com/apache/iggy/pull/2037",
+          "merged": true
+        },
+        {
+          "number": 2009,
+          "title": "refactor(sdk): change PartitionId argument type to uint32",
+          "url": "https://github.com/apache/iggy/pull/2009",
+          "merged": true
+        },
+        {
+          "number": 2010,
+          "title": "feat(sdk): add some construct function for iggcon.Consumer to align with rust sdk",
+          "url": "https://github.com/apache/iggy/pull/2010",
+          "merged": true
+        },
+        {
+          "number": 2004,
+          "title": "refactor(sdk): change argument of CreateTopic and UpdateTopic method.",
+          "url": "https://github.com/apache/iggy/pull/2004",
+          "merged": true
+        },
+        {
+          "number": 1995,
+          "title": "refactor(sdk): change int attribute to int32 and refactor identifier.",
+          "url": "https://github.com/apache/iggy/pull/1995",
+          "merged": true
+        },
+        {
+          "number": 1970,
+          "title": "chore(ci): add lint for golang sdk and bdd.",
+          "url": "https://github.com/apache/iggy/pull/1970",
+          "merged": true
+        },
+        {
+          "number": 1961,
+          "title": "chore(sdk): delete `cli` folder in golang sdk.",
+          "url": "https://github.com/apache/iggy/pull/1961",
+          "merged": true
+        },
+        {
+          "number": 1916,
+          "title": "refactor(sdk): refactor Go SDK client",
+          "url": "https://github.com/apache/iggy/pull/1916",
+          "merged": true
+        },
+        {
+          "number": 1922,
+          "title": "feat: Add Go BDD and CI",
+          "url": "https://github.com/apache/iggy/pull/1922",
+          "merged": true
+        },
+        {
+          "number": 1904,
+          "title": "refactor(foreign/go): replace the previous implementation of IggyMessage to option pattern",
+          "url": "https://github.com/apache/iggy/pull/1904",
+          "merged": true
+        }
+      ]
+    },
+    "cucumber/godog": {
+      "dateRange": "Jul 2025",
+      "prs": [
+        {
+          "number": 699,
+          "title": "fix: avoid panic when post hook panic",
+          "url": "https://github.com/cucumber/godog/pull/699",
+          "merged": false
+        },
+        {
+          "number": 701,
+          "title": "fix: Validate the handler function param types when registering steps.",
+          "url": "https://github.com/cucumber/godog/pull/701",
+          "merged": false
+        },
+        {
+          "number": 698,
+          "title": "ci: use golangci lint",
+          "url": "https://github.com/cucumber/godog/pull/698",
+          "merged": false
+        },
+        {
+          "number": 700,
+          "title": "doc: update the doc as unsigned int are supported now.",
+          "url": "https://github.com/cucumber/godog/pull/700",
+          "merged": true
+        },
+        {
+          "number": 695,
+          "title": "feat: support uint types",
+          "url": "https://github.com/cucumber/godog/pull/695",
+          "merged": true
+        }
+      ]
+    },
+    "grpc/grpc-go": {
+      "dateRange": "Feb 2026 — Present",
+      "prs": [
+        {
+          "number": 8929,
+          "title": "transport: surface subsequent data when receiving non-gRPC header",
+          "url": "https://github.com/grpc/grpc-go/pull/8929",
+          "merged": false
+        },
+        {
+          "number": 9023,
+          "title": "xds: remove HealthStatus field from xdsresource.Endpoint struct",
+          "url": "https://github.com/grpc/grpc-go/pull/9023",
+          "merged": false
+        },
+        {
+          "number": 9025,
+          "title": "xds: remove `MetaData` field from `xdsresource.Endpoint` struct",
+          "url": "https://github.com/grpc/grpc-go/pull/9025",
+          "merged": false
+        },
+        {
+          "number": 9026,
+          "title": "xds: fix typo in `xdsresource.Metadata`",
+          "url": "https://github.com/grpc/grpc-go/pull/9026",
+          "merged": true
+        },
+        {
+          "number": 8909,
+          "title": "xds: replace net with netip in `xds/xdsclient` and `xds/server`",
+          "url": "https://github.com/grpc/grpc-go/pull/8909",
+          "merged": true
+        }
+      ]
+    },
+    "xournalpp/xournalpp": {
+      "dateRange": "Dec 2025",
+      "prs": [
+        {
+          "number": 6935,
+          "title": "feat: improve windows installer directory handling",
+          "url": "https://github.com/xournalpp/xournalpp/pull/6935",
+          "merged": true
+        }
+      ]
+    },
+    "wxt-dev/wxt": {
+      "dateRange": "Jan 2025",
+      "prs": [
+        {
+          "number": 1368,
+          "title": "feat: Add `storage.clear`",
+          "url": "https://github.com/wxt-dev/wxt/pull/1368",
+          "merged": true
+        }
+      ]
+    },
+    "schollz/progressbar": {
+      "dateRange": "Aug 2024 — Jan 2025",
+      "prs": [
+        {
+          "number": 214,
+          "title": "fix: when setMaxDetailRow() but not use AddDetail(), cause index out of range.",
+          "url": "https://github.com/schollz/progressbar/pull/214",
+          "merged": true
+        },
+        {
+          "number": 199,
+          "title": "feat: make progressbar could update according to an interval or updat…",
+          "url": "https://github.com/schollz/progressbar/pull/199",
+          "merged": true
+        },
+        {
+          "number": 193,
+          "title": "fix:fixed the bug that changMax isn't working.",
+          "url": "https://github.com/schollz/progressbar/pull/193",
+          "merged": true
+        },
+        {
+          "number": 196,
+          "title": "fix: change some attribute about time to time.Time{}",
+          "url": "https://github.com/schollz/progressbar/pull/196",
+          "merged": true
+        },
+        {
+          "number": 194,
+          "title": "Feature scrolling detail",
+          "url": "https://github.com/schollz/progressbar/pull/194",
+          "merged": true
+        },
+        {
+          "number": 192,
+          "title": "fix: aimed to fix the ChangeMax not working problem.",
+          "url": "https://github.com/schollz/progressbar/pull/192",
+          "merged": false
+        }
+      ]
+    }
+  },
+  "own": {
+    "chengxilo/countdown": {
+      "dateRange": "Apr 2026 — Present"
+    },
+    "chengxilo/better-cuny": {
+      "dateRange": "May 2025 — Jan 2026"
+    },
+    "chengxilo/robinhood-note": {
+      "dateRange": "Jan 2025 — Present"
+    },
+    "chengxilo/steam-scrapy": {
+      "dateRange": "Dec 2024 — Jun 2025"
+    }
+  }
+}

@@ -10,21 +10,43 @@ import SectionHeader from "@/app/component/sectionHeader";
 import SkillChip from "@/app/component/skillChip";
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import {SKILL_GROUPS, TECH} from "@/app/const";
+import portfolioData from "@/app/data/contributedPrs.json";
+import {PullRequest} from "@/app/component/projectDetail";
+
+type PortfolioData = {
+    contributed: Record<string, { dateRange: string; prs: PullRequest[] }>;
+    own: Record<string, { dateRange: string }>;
+};
+
+const data = portfolioData as PortfolioData;
+
+const prsFor = (repo: string): PullRequest[] => data.contributed[repo]?.prs ?? [];
+const dateFor = (repo: string): string | undefined =>
+    data.contributed[repo]?.dateRange || data.own[repo]?.dateRange || undefined;
 
 const myOpenSourceRepo = [
     {
         owner: "chengxilo",
         repo: "countdown",
-        description: "A GitHub Action that generates a themed countdown SVG for your GitHub profile README",
+        description: "A GitHub Action that generates a themed countdown SVG for your GitHub profile README.",
         url: "https://github.com/chengxilo/countdown",
         tech: [TECH.GithubWorkflow, TECH.Python],
+        date: dateFor("chengxilo/countdown"),
     },
     {
         owner: "chengxilo",
         repo: "better-cuny",
-        description: "Browser extension providing additional features and quality-of-life improvements for the CUNY student portal.",
+        description: "Open-source browser extension providing additional features and quality-of-life improvements for CUNY websites.",
         url: "https://github.com/chengxilo/better-cuny",
         tech: [TECH.TypeScript, TECH.WXT, TECH.React, TECH.MUI],
+        date: dateFor("chengxilo/better-cuny"),
+    },
+    {
+        owner: "private",
+        repo: "ddhelper-grubhelper",
+        description: "Android automation tool built on AccessibilityService API to optimize schedule management for Doordash/Grubhub drivers.",
+        tech: [TECH.Kotlin, TECH.JetpackCompose],
+        date: "Jan 2025 — Oct 2025",
     },
     {
         owner: "chengxilo",
@@ -32,6 +54,7 @@ const myOpenSourceRepo = [
         description: "A note-taking extension for Robinhood — capture trade ideas and reasoning directly on the Robinhood interface.",
         url: "https://github.com/chengxilo/robinhood-note",
         tech: [TECH.TypeScript, TECH.WXT, TECH.React, TECH.MUI],
+        date: dateFor("chengxilo/robinhood-note"),
     },
     {
         owner: "chengxilo",
@@ -39,6 +62,14 @@ const myOpenSourceRepo = [
         description: "Web scraper for Steam game data built on Scrapy, with pipelines for price history and metadata extraction.",
         url: "https://github.com/chengxilo/steam-scrapy",
         tech: [TECH.Python, TECH.Scrapy, TECH.Selenium],
+        date: dateFor("chengxilo/steam-scrapy"),
+    },
+    {
+        owner: "private",
+        repo: "hold-cloud-desktop",
+        description: "Cloud desktop service platform built on Docker with gRPC — final-year project at Changsha University of Science and Technology.",
+        tech: [TECH.Docker, TECH.gRPC, TECH.Go, TECH.Gin, TECH.SQL, TECH.Linux],
+        date: "Jan 2024 — Apr 2024",
     },
 ];
 
@@ -46,9 +77,11 @@ const contributedRepo = [
     {
         owner: "apache",
         repo: "iggy",
-        description: "Apache Iggy: Hyper-Efficient Message Streaming at Laser Speed",
+        description: "Apache Iggy: hyper-efficient persistent message streaming platform. Contributor & reviewer on the Go SDK — built the BDD framework, leader redirection, binary reader/writer, and publish workflow.",
         url: "https://github.com/apache/iggy",
-        tech: [TECH.Rust, TECH.MessageQueue, TECH.BDD, TECH.Go, TECH.GithubWorkflow],
+        tech: [TECH.Go, TECH.Rust, TECH.MessageQueue, TECH.BDD, TECH.GithubWorkflow],
+        date: dateFor("apache/iggy"),
+        prs: prsFor("apache/iggy"),
     },
     {
         owner: "cucumber",
@@ -56,6 +89,8 @@ const contributedRepo = [
         description: "The official Cucumber BDD framework for Go.",
         url: "https://github.com/cucumber/godog",
         tech: [TECH.Go, TECH.BDD, TECH.Test],
+        date: dateFor("cucumber/godog"),
+        prs: prsFor("cucumber/godog"),
     },
     {
         owner: "grpc",
@@ -63,6 +98,35 @@ const contributedRepo = [
         description: "The Go language implementation of gRPC — HTTP/2-based RPC.",
         url: "https://github.com/grpc/grpc-go",
         tech: [TECH.Go, TECH.gRPC, TECH.HTTP2],
+        date: dateFor("grpc/grpc-go"),
+        prs: prsFor("grpc/grpc-go"),
+    },
+    {
+        owner: "xournalpp",
+        repo: "xournalpp",
+        description: "Handwriting notetaking software with PDF annotation support.",
+        url: "https://github.com/xournalpp/xournalpp",
+        tech: [TECH.Cpp],
+        date: dateFor("xournalpp/xournalpp"),
+        prs: prsFor("xournalpp/xournalpp"),
+    },
+    {
+        owner: "wxt-dev",
+        repo: "wxt",
+        description: "Next-gen web extension framework used by the Better CUNY and Robinhood Note extensions.",
+        url: "https://github.com/wxt-dev/wxt",
+        tech: [TECH.TypeScript, TECH.WXT],
+        date: dateFor("wxt-dev/wxt"),
+        prs: prsFor("wxt-dev/wxt"),
+    },
+    {
+        owner: "schollz",
+        repo: "progressbar",
+        description: "A Go progress bar library — added scrolling detail rows, interval-based updates, and bug fixes.",
+        url: "https://github.com/schollz/progressbar",
+        tech: [TECH.Go],
+        date: dateFor("schollz/progressbar"),
+        prs: prsFor("schollz/progressbar"),
     },
 ];
 
