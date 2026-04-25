@@ -197,6 +197,8 @@ export default function Home() {
                                 Available for opportunities
                             </Typography>
                         </Stack>
+
+                        <SocialMedias/>
                     </Stack>
                 </motion.section>
 
@@ -357,13 +359,11 @@ export default function Home() {
                 <Divider sx={{borderColor: 'rgba(255,255,255,0.06)', mt: 6, mb: 4}}/>
 
                 <Stack
-                    direction={{xs: 'column', sm: 'row'}}
-                    justifyContent="space-between"
-                    alignItems={{xs: 'flex-start', sm: 'center'}}
-                    spacing={3}
+                    direction="row"
+                    justifyContent="center"
+                    alignItems="center"
                     sx={{pb: 4}}
                 >
-                    <SocialMedias/>
                     <Typography sx={{
                         fontFamily: `'JetBrains Mono', monospace`,
                         fontSize: 12,
