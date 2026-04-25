@@ -9,6 +9,7 @@ const sections = [
     {id: 'experience', label: 'Experience'},
     {id: 'work', label: 'Work'},
     {id: 'skills', label: 'Skills'},
+    {id: 'activity', label: 'Activity'},
 ];
 
 export default function NavBar() {
@@ -123,7 +124,7 @@ export default function NavBar() {
                                 alignContent: 'center',
                                 transition: 'color 160ms ease',
                                 '&:hover': {color: 'primary.main'},
-                                display: {xs: s.id === 'experience' || s.id === 'skills' ? 'none' : 'inline', sm: 'inline'},
+                                display: {xs: ['experience', 'skills', 'activity'].includes(s.id) ? 'none' : 'inline', sm: 'inline'},
                             }}
                         >
                             {s.label}

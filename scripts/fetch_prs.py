@@ -41,6 +41,15 @@ OWN_REPOS = [
     "chengxilo/steam-scrapy",
 ]
 
+# Repos to skip in the "latest activity" feed (profile readme + this site).
+ACTIVITY_EXCLUDED_REPOS = {
+    "chengxilo/chengxilo",
+    "chengxilo/personal-website",
+}
+
+# How many activity items to keep in the JSON payload.
+ACTIVITY_LIMIT = 8
+
 # A repo counts as ongoing if its latest activity is within this many days.
 PRESENT_WINDOW_DAYS = 90
 
@@ -136,6 +145,170 @@ def build_contributed(all_prs: dict[str, list[dict]]) -> dict[str, dict]:
     return out
 
 
+_title_cache: dict[tuple[str, int], str] = {}
+
+
+def lookup_title(repo: str, number: int, kind: str) -> str:
+    """Return PR/issue title for repo#number. Caches by (repo, number)."""
+    if not repo or not number:
+        return ""
+    key = (repo, number)
+    if key in _title_cache:
+        return _title_cache[key]
+    path = "pulls" if kind in ("pr", "review") else "issues"
+    try:
+        data = fetch_json(f"https://api.github.com/repos/{repo}/{path}/{number}")
+        title = data.get("title", "") or ""
+    except SystemExit:
+        title = ""
+    _title_cache[key] = title
+    return title
+
+
+def seed_title_cache(all_prs: dict[str, list[dict]]) -> None:
+    for repo, prs in all_prs.items():
+        for p in prs:
+            _title_cache[(repo, p["number"])] = p["title"]
+
+
+def fetch_events() -> list[dict]:
+    items: list[dict] = []
+    for page in range(1, 4):  # /events caps at ~300 events / 3 pages of 100
+        url = f"https://api.github.com/users/{USER}/events/public?per_page=100&page={page}"
+        data = fetch_json(url)
+        if not isinstance(data, list):
+            break
+        items.extend(data)
+        if len(data) < 100:
+            break
+    return items
+
+
+def normalize_event(ev: dict) -> dict | None:
+    repo = ev.get("repo", {}).get("name", "")
+    if not repo or repo in ACTIVITY_EXCLUDED_REPOS:
+        return None
+    payload = ev.get("payload") or {}
+    etype = ev.get("type")
+    created = ev.get("created_at")
+
+    if etype == "PullRequestEvent":
+        pr = payload.get("pull_request") or {}
+        action = payload.get("action")
+        if action == "closed":
+            kind = "pr_merged" if pr.get("merged") else None  # skip closed-not-merged
+        elif action in ("opened", "reopened"):
+            kind = "pr_opened"
+        else:
+            kind = None
+        if not kind:
+            return None
+        return {
+            "type": kind,
+            "repo": repo,
+            "number": pr.get("number"),
+            "title": pr.get("title", ""),
+            "url": pr.get("html_url", ""),
+            "createdAt": created,
+        }
+
+    if etype == "IssuesEvent":
+        issue = payload.get("issue") or {}
+        action = payload.get("action")
+        if action not in ("opened", "closed", "reopened"):
+            return None
+        return {
+            "type": "issue_closed" if action == "closed" else "issue_opened",
+            "repo": repo,
+            "number": issue.get("number"),
+            "title": issue.get("title", ""),
+            "url": issue.get("html_url", ""),
+            "createdAt": created,
+        }
+
+    if etype == "IssueCommentEvent":
+        issue = payload.get("issue") or {}
+        comment = payload.get("comment") or {}
+        is_pr = "pull_request" in issue
+        return {
+            "type": "pr_comment" if is_pr else "issue_comment",
+            "repo": repo,
+            "number": issue.get("number"),
+            "title": issue.get("title", ""),
+            "url": comment.get("html_url") or issue.get("html_url", ""),
+            "createdAt": created,
+        }
+
+    if etype == "PullRequestReviewEvent":
+        pr = payload.get("pull_request") or {}
+        review = payload.get("review") or {}
+        number = pr.get("number")
+        return {
+            "type": "review",
+            "repo": repo,
+            "number": number,
+            "title": pr.get("title") or lookup_title(repo, number, "review"),
+            "url": review.get("html_url") or pr.get("html_url", ""),
+            "createdAt": created,
+        }
+
+    if etype == "PullRequestReviewCommentEvent":
+        pr = payload.get("pull_request") or {}
+        comment = payload.get("comment") or {}
+        number = pr.get("number")
+        return {
+            "type": "review_comment",
+            "repo": repo,
+            "number": number,
+            "title": pr.get("title") or lookup_title(repo, number, "review"),
+            "url": comment.get("html_url") or pr.get("html_url", ""),
+            "createdAt": created,
+        }
+
+    if etype == "DiscussionEvent":
+        disc = payload.get("discussion") or {}
+        return {
+            "type": "discussion",
+            "repo": repo,
+            "number": disc.get("number"),
+            "title": disc.get("title", ""),
+            "url": disc.get("html_url", ""),
+            "createdAt": created,
+        }
+
+    if etype == "DiscussionCommentEvent":
+        disc = payload.get("discussion") or {}
+        comment = payload.get("comment") or {}
+        return {
+            "type": "discussion_comment",
+            "repo": repo,
+            "number": disc.get("number"),
+            "title": disc.get("title", ""),
+            "url": comment.get("html_url") or disc.get("html_url", ""),
+            "createdAt": created,
+        }
+
+    return None
+
+
+def build_latest_activity() -> list[dict]:
+    seen: set[tuple] = set()
+    out: list[dict] = []
+    for ev in fetch_events():
+        norm = normalize_event(ev)
+        if not norm:
+            continue
+        # collapse repeated activity on the same PR/issue (e.g. a review thread)
+        key = (norm["type"], norm["repo"], norm.get("number"))
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(norm)
+        if len(out) >= ACTIVITY_LIMIT:
+            break
+    return out
+
+
 def build_own() -> dict[str, dict]:
     out: dict[str, dict] = {}
     for repo in OWN_REPOS:
@@ -150,8 +323,10 @@ def main() -> None:
     all_prs = group_prs(search_prs())
     contributed = build_contributed(all_prs)
     own = build_own()
+    seed_title_cache(all_prs)
+    latest_activity = build_latest_activity()
 
-    payload = {"contributed": contributed, "own": own}
+    payload = {"contributed": contributed, "own": own, "latestActivity": latest_activity}
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(
@@ -163,6 +338,7 @@ def main() -> None:
     print(f"Updated {OUTPUT}")
     print(f"  contributed: {len(contributed)} repos, {total_prs} PRs")
     print(f"  own: {len(own)} repos")
+    print(f"  latest activity: {len(latest_activity)} items")
 
     untracked = [r for r in all_prs if r not in CONTRIBUTED_REPOS]
     if untracked:

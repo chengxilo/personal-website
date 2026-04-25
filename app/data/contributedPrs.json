@@ -326,5 +326,71 @@
     "chengxilo/steam-scrapy": {
       "dateRange": "Dec 2024 — Jun 2025"
     }
-  }
+  },
+  "latestActivity": [
+    {
+      "type": "pr_comment",
+      "repo": "grpc/grpc-go",
+      "number": 8929,
+      "title": "transport: surface subsequent data when receiving non-gRPC header",
+      "url": "https://github.com/grpc/grpc-go/pull/8929#issuecomment-4317611711",
+      "createdAt": "2026-04-25T02:35:04Z"
+    },
+    {
+      "type": "review",
+      "repo": "grpc/grpc-go",
+      "number": 8929,
+      "title": "transport: surface subsequent data when receiving non-gRPC header",
+      "url": "https://github.com/grpc/grpc-go/pull/8929#pullrequestreview-4150947435",
+      "createdAt": "2026-04-21T21:47:36Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "grpc/grpc-go",
+      "number": 8929,
+      "title": "transport: surface subsequent data when receiving non-gRPC header",
+      "url": "https://github.com/grpc/grpc-go/pull/8929#discussion_r3120477737",
+      "createdAt": "2026-04-21T21:47:35Z"
+    },
+    {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 3032,
+      "title": "fix(go): update stats field and its deserialization logic to align with rust SDK",
+      "url": "https://github.com/apache/iggy/pull/3032#pullrequestreview-4100808766",
+      "createdAt": "2026-04-13T17:49:51Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "apache/iggy",
+      "number": 3032,
+      "title": "fix(go): update stats field and its deserialization logic to align with rust SDK",
+      "url": "https://github.com/apache/iggy/pull/3032#discussion_r3074811395",
+      "createdAt": "2026-04-13T17:49:49Z"
+    },
+    {
+      "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 3063,
+      "title": "feat(bdd): add shared stream operations scenario for Go SDK",
+      "url": "https://github.com/apache/iggy/pull/3063#issuecomment-4185194030",
+      "createdAt": "2026-04-03T21:04:33Z"
+    },
+    {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 3063,
+      "title": "feat(bdd): add shared stream operations scenario for Go SDK",
+      "url": "https://github.com/apache/iggy/pull/3063#pullrequestreview-4057285975",
+      "createdAt": "2026-04-03T21:02:37Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "apache/iggy",
+      "number": 3063,
+      "title": "feat(bdd): add shared stream operations scenario for Go SDK",
+      "url": "https://github.com/apache/iggy/pull/3063#discussion_r3034356863",
+      "createdAt": "2026-04-03T20:55:50Z"
+    }
+  ]
 }
