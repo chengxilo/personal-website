@@ -1,5 +1,6 @@
 'use client'
 
+import {useEffect, useState} from 'react';
 import {Box, Stack, Typography} from "@mui/material";
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 import CallMergeIcon from '@mui/icons-material/CallMerge';
@@ -38,15 +39,28 @@ const STYLE: Record<ActivityType, { color: string; Icon: typeof CallMergeIcon; v
     discussion_comment: { color: '#7FE7C4', Icon: ForumOutlinedIcon,        verb: 'replied to discussion' },
 };
 
-function relativeTime(iso: string): string {
+const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+function staticDate(iso: string): string {
+    const d = new Date(iso);
+    return `${MONTHS_SHORT[d.getUTCMonth()]} ${d.getUTCDate()}`;
+}
+
+function relativeTime(iso: string, now: number): string {
     const then = new Date(iso).getTime();
-    const diff = Date.now() - then;
+    const diff = now - then;
     const min = 60 * 1000, hr = 60 * min, day = 24 * hr;
     if (diff < hr) return `${Math.max(1, Math.floor(diff / min))}m ago`;
     if (diff < day) return `${Math.floor(diff / hr)}h ago`;
     if (diff < 30 * day) return `${Math.floor(diff / day)}d ago`;
     if (diff < 365 * day) return `${Math.floor(diff / (30 * day))}mo ago`;
     return `${Math.floor(diff / (365 * day))}y ago`;
+}
+
+function TimeStamp({iso}: { iso: string }) {
+    const [now, setNow] = useState<number | null>(null);
+    useEffect(() => { setNow(Date.now()); }, []);
+    return <>{now === null ? staticDate(iso) : relativeTime(iso, now)}</>;
 }
 
 export default function LatestActivity({items}: { items: ActivityItem[] }) {
@@ -120,7 +134,7 @@ export default function LatestActivity({items}: { items: ActivityItem[] }) {
                                     color: 'text.disabled',
                                     flexShrink: 0,
                                 }}>
-                                    {relativeTime(it.createdAt)}
+                                    <TimeStamp iso={it.createdAt}/>
                                 </Typography>
                             </Stack>
                             <Typography

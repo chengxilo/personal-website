@@ -16,9 +16,15 @@ function shade(count: number): string {
     return '#7FE7C4';
 }
 
+const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
 function formatDate(iso: string): string {
     const d = new Date(iso + 'T00:00:00Z');
-    return d.toLocaleDateString(undefined, {month: 'short', day: 'numeric', year: 'numeric'});
+    return `${MONTHS_SHORT[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`;
+}
+
+function formatNumber(n: number): string {
+    return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
 export default function ContributionCalendar({calendar}: { calendar: ContributionCalendar | null | undefined }) {
@@ -35,7 +41,7 @@ export default function ContributionCalendar({calendar}: { calendar: Contributio
         if (m !== prevMonth) {
             monthLabels.push({
                 weekIndex: i,
-                label: new Date(first.date + 'T00:00:00Z').toLocaleDateString(undefined, {month: 'short'}),
+                label: MONTHS_SHORT[m],
             });
             prevMonth = m;
         }
@@ -55,7 +61,7 @@ export default function ContributionCalendar({calendar}: { calendar: Contributio
                     fontSize: 12.5,
                     color: 'text.secondary',
                 }}>
-                    {calendar.totalContributions.toLocaleString()} contributions in the last year
+                    {formatNumber(calendar.totalContributions)} contributions in the last year
                 </Typography>
                 <Stack direction="row" alignItems="center" spacing={0.5}>
                     <Typography sx={{fontFamily: `'JetBrains Mono', monospace`, fontSize: 11, color: 'text.disabled'}}>
