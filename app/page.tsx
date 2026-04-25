@@ -1,13 +1,11 @@
-'use client'
-
 import {Box, Container, Divider, Stack, Typography} from "@mui/material";
 import React from "react";
-import {motion} from "motion/react";
 import ProjectDetail from "@/app/component/projectDetail";
 import {SocialMedias} from "@/app/component/socialMedias";
 import NavBar from "@/app/component/navBar";
 import SectionHeader from "@/app/component/sectionHeader";
 import SkillChip from "@/app/component/skillChip";
+import FadeSection from "@/app/component/fadeSection";
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import {SKILL_GROUPS, TECH} from "@/app/const";
 import portfolioData from "@/app/data/portfolio.json";
@@ -134,20 +132,13 @@ const contributedRepo = [
     },
 ];
 
-const fadeUp = {
-    initial: {opacity: 0, y: 16},
-    whileInView: {opacity: 1, y: 0},
-    viewport: {once: true, margin: '-80px'},
-    transition: {duration: 0.5, ease: 'easeOut' as const},
-};
-
 export default function Home() {
     return (
         <Box id="top" sx={{bgcolor: 'background.default', color: 'text.primary', minHeight: '100vh'}}>
             <NavBar/>
 
             <Container maxWidth="md" sx={{px: {xs: 3, sm: 4}, pt: {xs: 14, sm: 18}, pb: 8}}>
-                <motion.section {...fadeUp}>
+                <FadeSection>
                     <Stack spacing={1} sx={{mb: {xs: 5, sm: 10 }}} alignItems={'center'}>
                         <Typography
                             variant="h1"
@@ -202,10 +193,10 @@ export default function Home() {
 
                         <SocialMedias/>
                     </Stack>
-                </motion.section>
+                </FadeSection>
 
                 {/* About */}
-                <motion.section id="about" {...fadeUp}>
+                <FadeSection id="about">
                     <Box sx={{mb: {xs: 3, sm: 5}}}>
                         <SectionHeader eyebrow="01 / about"/>
                         <Box sx={{
@@ -253,9 +244,9 @@ export default function Home() {
                             </Typography>
                         </Box>
                     </Box>
-                </motion.section>
+                </FadeSection>
 
-                <motion.section id="experience" {...fadeUp}>
+                <FadeSection id="experience">
                     <Box sx={{mb: {xs: 3, sm: 5}}}>
                         <SectionHeader eyebrow="02 / education"/>
                         <Stack spacing={0}>
@@ -274,9 +265,9 @@ export default function Home() {
                             />
                         </Stack>
                     </Box>
-                </motion.section>
+                </FadeSection>
 
-                <motion.section id="work" {...fadeUp}>
+                <FadeSection id="work">
                     <SectionHeader eyebrow="03 / work"/>
 
                     <Box sx={{mb: {xs: 3, sm: 5}}}>
@@ -312,9 +303,9 @@ export default function Home() {
                             ))}
                         </Stack>
                     </Box>
-                </motion.section>
+                </FadeSection>
 
-                <motion.section id="skills" {...fadeUp}>
+                <FadeSection id="skills">
                     <Box sx={{mb: {xs: 3, sm: 5}}}>
                         <SectionHeader eyebrow="04 / skills"/>
                         <Stack spacing={3}>
@@ -346,11 +337,11 @@ export default function Home() {
                             ))}
                         </Stack>
                     </Box>
-                </motion.section>
+                </FadeSection>
 
 
                 {((data.latestActivity && data.latestActivity.length > 0) || data.contributionCalendar) && (
-                    <motion.section id="activity" {...fadeUp}>
+                    <FadeSection id="activity">
                         <Box sx={{mb: {xs: 3, sm: 5}}}>
                             <SectionHeader eyebrow="05 / activity"/>
                             {data.contributionCalendar && (
@@ -362,7 +353,7 @@ export default function Home() {
                                 <LatestActivity items={data.latestActivity}/>
                             )}
                         </Box>
-                    </motion.section>
+                    </FadeSection>
                 )}
 
                 <Divider sx={{borderColor: 'rgba(255,255,255,0.06)', mt: 6, mb: 4}}/>
