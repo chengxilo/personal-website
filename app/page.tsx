@@ -10,14 +10,16 @@ import SectionHeader from "@/app/component/sectionHeader";
 import SkillChip from "@/app/component/skillChip";
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import {SKILL_GROUPS, TECH} from "@/app/const";
-import portfolioData from "@/app/data/contributedPrs.json";
+import portfolioData from "@/app/data/portfolio.json";
 import {PullRequest} from "@/app/component/projectDetail";
 import LatestActivity, {ActivityItem} from "@/app/component/latestActivity";
+import ContributionCalendar, {ContributionCalendar as ContributionCalendarData} from "@/app/component/contributionCalendar";
 
 type PortfolioData = {
     contributed: Record<string, { dateRange: string; prs: PullRequest[] }>;
     own: Record<string, { dateRange: string }>;
     latestActivity?: ActivityItem[];
+    contributionCalendar?: ContributionCalendarData | null;
 };
 
 const data = portfolioData as PortfolioData;
@@ -347,11 +349,18 @@ export default function Home() {
                 </motion.section>
 
 
-                {data.latestActivity && data.latestActivity.length > 0 && (
+                {((data.latestActivity && data.latestActivity.length > 0) || data.contributionCalendar) && (
                     <motion.section id="activity" {...fadeUp}>
                         <Box sx={{mb: {xs: 3, sm: 5}}}>
                             <SectionHeader eyebrow="05 / activity"/>
-                            <LatestActivity items={data.latestActivity}/>
+                            {data.contributionCalendar && (
+                                <Box sx={{mb: 4}}>
+                                    <ContributionCalendar calendar={data.contributionCalendar}/>
+                                </Box>
+                            )}
+                            {data.latestActivity && data.latestActivity.length > 0 && (
+                                <LatestActivity items={data.latestActivity}/>
+                            )}
                         </Box>
                     </motion.section>
                 )}

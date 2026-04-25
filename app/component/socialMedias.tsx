@@ -37,6 +37,7 @@ export function SocialMedias({direction = 'row'}: { direction?: 'row' | 'column'
                     href="https://github.com/chengxilo"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="GitHub"
                     sx={iconButtonSx}
                 >
                     <GithubLogo width={18} height={18}/>
@@ -49,6 +50,7 @@ export function SocialMedias({direction = 'row'}: { direction?: 'row' | 'column'
                     href="https://www.linkedin.com/in/chengxi-luo-41b750322/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="LinkedIn"
                     sx={iconButtonSx}
                 >
                     <LinkedinLogo width={18} height={18}/>
@@ -61,6 +63,7 @@ export function SocialMedias({direction = 'row'}: { direction?: 'row' | 'column'
                     href="https://www.instagram.com/chengxi_luo/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Instagram"
                     sx={iconButtonSx}
                 >
                     <InstagramLogo width={18} height={18}/>
@@ -71,6 +74,7 @@ export function SocialMedias({direction = 'row'}: { direction?: 'row' | 'column'
                 <IconButton
                     component="a"
                     href="mailto:chengxi.luo2004@gmail.com"
+                    aria-label="Email"
                     sx={iconButtonSx}
                 >
                     <EmailIcon sx={{fontSize: 18}}/>

@@ -22,7 +22,7 @@ from pathlib import Path
 USER = os.environ.get("GITHUB_USER", "chengxilo")
 TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
 ROOT = Path(__file__).resolve().parent.parent
-OUTPUT = ROOT / "app" / "data" / "contributedPrs.json"
+OUTPUT = ROOT / "app" / "data" / "portfolio.json"
 
 # Repos the portfolio page tracks. Keep this list in sync with page.tsx.
 CONTRIBUTED_REPOS = [
@@ -319,14 +319,78 @@ def build_own() -> dict[str, dict]:
     return out
 
 
+def fetch_contribution_calendar() -> dict | None:
+    """Fetch the 52-week contribution heatmap via GitHub GraphQL. Requires a token."""
+    if not TOKEN:
+        print("  contribution calendar: skipped (no GITHUB_TOKEN/GH_TOKEN)")
+        return None
+    query = """
+    query($login: String!) {
+      user(login: $login) {
+        contributionsCollection {
+          contributionCalendar {
+            totalContributions
+            weeks {
+              contributionDays {
+                date
+                contributionCount
+                weekday
+              }
+            }
+          }
+        }
+      }
+    }
+    """
+    body = json.dumps({"query": query, "variables": {"login": USER}}).encode("utf-8")
+    req = urllib.request.Request(
+        "https://api.github.com/graphql",
+        data=body,
+        headers={**HEADERS, "Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=30) as res:
+            payload = json.loads(res.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        body_text = e.read().decode("utf-8", errors="replace")
+        print(f"  contribution calendar: failed ({e.code}: {body_text[:200]})")
+        return None
+    cal = (
+        payload.get("data", {})
+        .get("user", {})
+        .get("contributionsCollection", {})
+        .get("contributionCalendar")
+    )
+    if not cal:
+        print("  contribution calendar: empty response")
+        return None
+    return {
+        "totalContributions": cal["totalContributions"],
+        "weeks": [
+            [
+                {"date": d["date"], "count": d["contributionCount"]}
+                for d in w["contributionDays"]
+            ]
+            for w in cal["weeks"]
+        ],
+    }
+
+
 def main() -> None:
     all_prs = group_prs(search_prs())
     contributed = build_contributed(all_prs)
     own = build_own()
     seed_title_cache(all_prs)
     latest_activity = build_latest_activity()
+    contribution_calendar = fetch_contribution_calendar()
 
-    payload = {"contributed": contributed, "own": own, "latestActivity": latest_activity}
+    payload = {
+        "contributed": contributed,
+        "own": own,
+        "latestActivity": latest_activity,
+        "contributionCalendar": contribution_calendar,
+    }
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(
@@ -339,6 +403,8 @@ def main() -> None:
     print(f"  contributed: {len(contributed)} repos, {total_prs} PRs")
     print(f"  own: {len(own)} repos")
     print(f"  latest activity: {len(latest_activity)} items")
+    if contribution_calendar:
+        print(f"  contribution calendar: {contribution_calendar['totalContributions']} contributions / {len(contribution_calendar['weeks'])} weeks")
 
     untracked = [r for r in all_prs if r not in CONTRIBUTED_REPOS]
     if untracked:

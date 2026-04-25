@@ -1,0 +1,43 @@
+name: Refresh portfolio data
+
+on:
+  schedule:
+    - cron: '17 6 * * *'   # daily at 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-portfolio
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run fetch_prs.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: chengxilo
+        run: python scripts/fetch_prs.py
+
+      - name: Commit changes (only if data changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- app/data/portfolio.json; then
+            echo "No changes to portfolio.json"
+            exit 0
+          fi
+          git add app/data/portfolio.json
+          git commit -m "chore: refresh portfolio data"
+          git push
