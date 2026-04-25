@@ -1,3 +1,5 @@
+'use client'
+
 import GithubLogo from '@/public/icon/github.svg'
 import InstagramLogo from '@/public/icon/instgram.svg'
 import LinkedinLogo from '@/public/icon/linkedin.svg'
