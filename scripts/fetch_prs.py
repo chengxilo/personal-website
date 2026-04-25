@@ -81,12 +81,15 @@ def group_prs(items: list[dict]) -> dict[str, list[dict]]:
     for it in items:
         repo = it["repository_url"].split("/repos/")[1]
         pr = it.get("pull_request") or {}
-        merged = it.get("state") == "closed" and bool(pr.get("merged_at"))
+        if it.get("state") == "closed":
+            state = "merged" if pr.get("merged_at") else "closed"
+        else:
+            state = "open"
         by_repo.setdefault(repo, []).append({
             "number": it["number"],
             "title": it["title"],
             "url": it["html_url"],
-            "merged": merged,
+            "state": state,
             "_createdAt": it["created_at"],   # stripped before writing (date range only)
             "_updatedAt": it["updated_at"],   # stripped before writing (sort key)
         })
@@ -126,8 +129,8 @@ def build_contributed(all_prs: dict[str, list[dict]]) -> dict[str, dict]:
         out[repo] = {
             "dateRange": date_range,
             "prs": [
-                {"number": p["number"], "title": p["title"], "url": p["url"], "merged": p["merged"]}
-                for p in prs
+                {"number": p["number"], "title": p["title"], "url": p["url"], "state": p["state"]}
+                for p in prs if p["state"] != "closed"
             ],
         }
     return out

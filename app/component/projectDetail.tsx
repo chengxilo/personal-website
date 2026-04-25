@@ -4,15 +4,25 @@ import {useState} from 'react';
 import {Stack, Typography, Box} from "@mui/material";
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import CallMergeIcon from '@mui/icons-material/CallMerge';
+import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
+import CancelIcon from '@mui/icons-material/Cancel';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import {Tech} from "@/app/const";
+
+export type PrState = 'open' | 'closed' | 'merged';
 
 export type PullRequest = {
     number: number;
     title: string;
     url: string;
-    merged?: boolean;
+    state?: PrState;
+};
+
+const PR_STATE_STYLE: Record<PrState, { color: string; Icon: typeof CallMergeIcon }> = {
+    open:   { color: '#3fb950', Icon: RadioButtonUncheckedIcon },
+    merged: { color: '#a371f7', Icon: CallMergeIcon },
+    closed: { color: '#f85149', Icon: CancelIcon },
 };
 
 const COLLAPSED_COUNT = 5;
@@ -148,7 +158,9 @@ export default function ProjectDetail({owner, repo, description, url, tech, prs,
                     )}
                     {prs && prs.length > 0 && (
                         <Stack spacing={0.25} sx={{pt: 1}}>
-                            {visiblePrs.map((pr) => (
+                            {visiblePrs.map((pr) => {
+                                const {color: stateColor, Icon: StateIcon} = PR_STATE_STYLE[pr.state ?? 'open'];
+                                return (
                                 <Box
                                     key={pr.number}
                                     component="a"
@@ -170,10 +182,10 @@ export default function ProjectDetail({owner, repo, description, url, tech, prs,
                                         '&:hover': {color: 'primary.main'},
                                     }}
                                 >
-                                    <CallMergeIcon sx={{
+                                    <StateIcon sx={{
                                         fontSize: 14,
                                         mt: '3px',
-                                        color: pr.merged ? 'primary.main' : 'text.disabled',
+                                        color: stateColor,
                                         flexShrink: 0,
                                     }}/>
                                     <Box component="span" sx={{
@@ -188,7 +200,8 @@ export default function ProjectDetail({owner, repo, description, url, tech, prs,
                                         {pr.title}
                                     </Box>
                                 </Box>
-                            ))}
+                                );
+                            })}
                             {hasMore && !expanded && (
                                 <Box
                                     component="button"
