@@ -394,7 +394,7 @@
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 253,
+    "totalContributions": 252,
     "weeks": [
       [
         {
@@ -1959,6 +1959,10 @@
       [
         {
           "date": "2026-04-26",
+          "count": 0
+        },
+        {
+          "date": "2026-04-27",
           "count": 0
         }
       ]
