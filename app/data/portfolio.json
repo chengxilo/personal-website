@@ -16,18 +16,6 @@
           "state": "merged"
         },
         {
-          "number": 3065,
-          "title": "chore(go): delete redundant script run_tcp_e2e.sh",
-          "url": "https://github.com/apache/iggy/pull/3065",
-          "state": "merged"
-        },
-        {
-          "number": 2986,
-          "title": "feat(go): implement binary reader/writer",
-          "url": "https://github.com/apache/iggy/pull/2986",
-          "state": "merged"
-        },
-        {
           "number": 2972,
           "title": "docs(go): solve typo in DeleteStream method.",
           "url": "https://github.com/apache/iggy/pull/2972",
@@ -70,12 +58,6 @@
           "state": "merged"
         },
         {
-          "number": 2752,
-          "title": "fix(sdk): add leader redirection logic for `login_with_personal_access_token`",
-          "url": "https://github.com/apache/iggy/pull/2752",
-          "state": "merged"
-        },
-        {
           "number": 2580,
           "title": "feat(go): implement Go leader redirection scenario",
           "url": "https://github.com/apache/iggy/pull/2580",
@@ -103,18 +85,6 @@
           "number": 2107,
           "title": "feat(go): implement logic to deserialize the members.",
           "url": "https://github.com/apache/iggy/pull/2107",
-          "state": "merged"
-        },
-        {
-          "number": 2021,
-          "title": "feat(go): add godog go bdd test according to scenarios.",
-          "url": "https://github.com/apache/iggy/pull/2021",
-          "state": "merged"
-        },
-        {
-          "number": 2059,
-          "title": "fix(ci): run bdd test when sdk changed",
-          "url": "https://github.com/apache/iggy/pull/2059",
           "state": "merged"
         },
         {
@@ -201,21 +171,9 @@
       "dateRange": "Jul 2025",
       "prs": [
         {
-          "number": 699,
-          "title": "fix: avoid panic when post hook panic",
-          "url": "https://github.com/cucumber/godog/pull/699",
-          "state": "open"
-        },
-        {
           "number": 701,
           "title": "fix: Validate the handler function param types when registering steps.",
           "url": "https://github.com/cucumber/godog/pull/701",
-          "state": "open"
-        },
-        {
-          "number": 698,
-          "title": "ci: use golangci lint",
-          "url": "https://github.com/cucumber/godog/pull/698",
           "state": "open"
         },
         {
@@ -267,47 +225,16 @@
       ]
     },
     "wxt-dev/wxt": {
-      "dateRange": "Jan 2025",
-      "prs": [
-        {
-          "number": 1368,
-          "title": "feat: Add `storage.clear`",
-          "url": "https://github.com/wxt-dev/wxt/pull/1368",
-          "state": "merged"
-        }
-      ]
+      "dateRange": "",
+      "prs": []
     },
     "schollz/progressbar": {
-      "dateRange": "Aug 2024 — Jan 2025",
+      "dateRange": "Jan 2025",
       "prs": [
         {
           "number": 214,
           "title": "fix: when setMaxDetailRow() but not use AddDetail(), cause index out of range.",
           "url": "https://github.com/schollz/progressbar/pull/214",
-          "state": "merged"
-        },
-        {
-          "number": 199,
-          "title": "feat: make progressbar could update according to an interval or updat…",
-          "url": "https://github.com/schollz/progressbar/pull/199",
-          "state": "merged"
-        },
-        {
-          "number": 193,
-          "title": "fix:fixed the bug that changMax isn't working.",
-          "url": "https://github.com/schollz/progressbar/pull/193",
-          "state": "merged"
-        },
-        {
-          "number": 196,
-          "title": "fix: change some attribute about time to time.Time{}",
-          "url": "https://github.com/schollz/progressbar/pull/196",
-          "state": "merged"
-        },
-        {
-          "number": 194,
-          "title": "Feature scrolling detail",
-          "url": "https://github.com/schollz/progressbar/pull/194",
           "state": "merged"
         }
       ]
@@ -394,7 +321,7 @@
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 252,
+    "totalContributions": 253,
     "weeks": [
       [
         {
@@ -1963,6 +1890,10 @@
         },
         {
           "date": "2026-04-27",
+          "count": 1
+        },
+        {
+          "date": "2026-04-28",
           "count": 0
         }
       ]
