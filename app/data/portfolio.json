@@ -329,6 +329,14 @@
   },
   "latestActivity": [
     {
+      "type": "issue_comment",
+      "repo": "apache/iggy",
+      "number": 2148,
+      "title": "Add more BDD test scenarios.",
+      "url": "https://github.com/apache/iggy/issues/2148#issuecomment-4367807357",
+      "createdAt": "2026-05-04T02:13:21Z"
+    },
+    {
       "type": "pr_comment",
       "repo": "apache/iggy",
       "number": 3191,
@@ -383,14 +391,6 @@
       "title": "transport: surface subsequent data when receiving non-gRPC header",
       "url": "https://github.com/grpc/grpc-go/pull/8929#issuecomment-4317611711",
       "createdAt": "2026-04-25T02:35:04Z"
-    },
-    {
-      "type": "review",
-      "repo": "grpc/grpc-go",
-      "number": 8929,
-      "title": "transport: surface subsequent data when receiving non-gRPC header",
-      "url": "https://github.com/grpc/grpc-go/pull/8929#pullrequestreview-4150947435",
-      "createdAt": "2026-04-21T21:47:36Z"
     }
   ],
   "contributionCalendar": {
@@ -1959,6 +1959,10 @@
       [
         {
           "date": "2026-05-03",
+          "count": 0
+        },
+        {
+          "date": "2026-05-04",
           "count": 0
         }
       ]
