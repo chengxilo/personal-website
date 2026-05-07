@@ -331,6 +331,30 @@
     {
       "type": "issue_comment",
       "repo": "apache/iggy",
+      "number": 3219,
+      "title": "feat(go): add diagnostic event subscription to client",
+      "url": "https://github.com/apache/iggy/issues/3219#issuecomment-4394312893",
+      "createdAt": "2026-05-07T05:14:49Z"
+    },
+    {
+      "type": "review",
+      "repo": "grpc/grpc-go",
+      "number": 8929,
+      "title": "transport: surface subsequent data when receiving non-gRPC header",
+      "url": "https://github.com/grpc/grpc-go/pull/8929#pullrequestreview-4232609735",
+      "createdAt": "2026-05-06T01:33:48Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "grpc/grpc-go",
+      "number": 8929,
+      "title": "transport: surface subsequent data when receiving non-gRPC header",
+      "url": "https://github.com/grpc/grpc-go/pull/8929#discussion_r3192496180",
+      "createdAt": "2026-05-06T01:33:45Z"
+    },
+    {
+      "type": "issue_comment",
+      "repo": "apache/iggy",
       "number": 2148,
       "title": "Add more BDD test scenarios.",
       "url": "https://github.com/apache/iggy/issues/2148#issuecomment-4367807357",
@@ -367,30 +391,6 @@
       "title": "feat(go): add delete segments support",
       "url": "https://github.com/apache/iggy/pull/3191#pullrequestreview-4202559231",
       "createdAt": "2026-04-30T05:07:43Z"
-    },
-    {
-      "type": "review_comment",
-      "repo": "apache/iggy",
-      "number": 3191,
-      "title": "feat(go): add delete segments support",
-      "url": "https://github.com/apache/iggy/pull/3191#discussion_r3165738426",
-      "createdAt": "2026-04-30T05:03:31Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 3063,
-      "title": "feat(bdd): add shared stream operations scenario for Go SDK",
-      "url": "https://github.com/apache/iggy/pull/3063#issuecomment-4344002658",
-      "createdAt": "2026-04-29T13:17:35Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "grpc/grpc-go",
-      "number": 8929,
-      "title": "transport: surface subsequent data when receiving non-gRPC header",
-      "url": "https://github.com/grpc/grpc-go/pull/8929#issuecomment-4317611711",
-      "createdAt": "2026-04-25T02:35:04Z"
     }
   ],
   "contributionCalendar": {
@@ -1967,6 +1967,14 @@
         },
         {
           "date": "2026-05-05",
+          "count": 0
+        },
+        {
+          "date": "2026-05-06",
+          "count": 0
+        },
+        {
+          "date": "2026-05-07",
           "count": 0
         }
       ]
