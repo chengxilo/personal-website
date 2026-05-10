@@ -329,6 +329,14 @@
   },
   "latestActivity": [
     {
+      "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 3063,
+      "title": "feat(bdd): add shared stream operations scenario for Go SDK",
+      "url": "https://github.com/apache/iggy/pull/3063#issuecomment-4412642455",
+      "createdAt": "2026-05-09T13:34:30Z"
+    },
+    {
       "type": "issue_comment",
       "repo": "apache/iggy",
       "number": 3219,
@@ -383,49 +391,11 @@
       "title": "fix(go): return error instead of panic on S2 decode failure",
       "url": "https://github.com/apache/iggy/pull/3166#discussion_r3165780501",
       "createdAt": "2026-04-30T05:18:19Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3191,
-      "title": "feat(go): add delete segments support",
-      "url": "https://github.com/apache/iggy/pull/3191#pullrequestreview-4202559231",
-      "createdAt": "2026-04-30T05:07:43Z"
     }
   ],
   "contributionCalendar": {
     "totalContributions": 255,
     "weeks": [
-      [
-        {
-          "date": "2025-05-04",
-          "count": 3
-        },
-        {
-          "date": "2025-05-05",
-          "count": 4
-        },
-        {
-          "date": "2025-05-06",
-          "count": 1
-        },
-        {
-          "date": "2025-05-07",
-          "count": 0
-        },
-        {
-          "date": "2025-05-08",
-          "count": 0
-        },
-        {
-          "date": "2025-05-09",
-          "count": 0
-        },
-        {
-          "date": "2025-05-10",
-          "count": 0
-        }
-      ],
       [
         {
           "date": "2025-05-11",
@@ -1983,6 +1953,12 @@
         },
         {
           "date": "2026-05-09",
+          "count": 0
+        }
+      ],
+      [
+        {
+          "date": "2026-05-10",
           "count": 0
         }
       ]
