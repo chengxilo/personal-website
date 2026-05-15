@@ -329,6 +329,30 @@
   },
   "latestActivity": [
     {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 2964,
+      "title": "feat(go): introduce context.Context to client methods",
+      "url": "https://github.com/apache/iggy/pull/2964#pullrequestreview-4291652101",
+      "createdAt": "2026-05-14T16:48:29Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "apache/iggy",
+      "number": 2964,
+      "title": "feat(go): introduce context.Context to client methods",
+      "url": "https://github.com/apache/iggy/pull/2964#discussion_r3242821757",
+      "createdAt": "2026-05-14T16:35:34Z"
+    },
+    {
+      "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 2964,
+      "title": "feat(go): introduce context.Context to client methods",
+      "url": "https://github.com/apache/iggy/pull/2964#issuecomment-4452620896",
+      "createdAt": "2026-05-14T16:33:36Z"
+    },
+    {
       "type": "pr_comment",
       "repo": "apache/iggy",
       "number": 3063,
@@ -367,30 +391,6 @@
       "title": "Add more BDD test scenarios.",
       "url": "https://github.com/apache/iggy/issues/2148#issuecomment-4367807357",
       "createdAt": "2026-05-04T02:13:21Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 3191,
-      "title": "feat(go): add delete segments support",
-      "url": "https://github.com/apache/iggy/pull/3191#issuecomment-4354884674",
-      "createdAt": "2026-04-30T17:57:48Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3166,
-      "title": "fix(go): return error instead of panic on S2 decode failure",
-      "url": "https://github.com/apache/iggy/pull/3166#pullrequestreview-4202592345",
-      "createdAt": "2026-04-30T05:18:27Z"
-    },
-    {
-      "type": "review_comment",
-      "repo": "apache/iggy",
-      "number": 3166,
-      "title": "fix(go): return error instead of panic on S2 decode failure",
-      "url": "https://github.com/apache/iggy/pull/3166#discussion_r3165780501",
-      "createdAt": "2026-04-30T05:18:19Z"
     }
   ],
   "contributionCalendar": {
@@ -1975,6 +1975,10 @@
         },
         {
           "date": "2026-05-14",
+          "count": 0
+        },
+        {
+          "date": "2026-05-15",
           "count": 0
         }
       ]
