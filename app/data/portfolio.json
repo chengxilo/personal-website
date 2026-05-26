@@ -7,7 +7,7 @@
           "number": 2964,
           "title": "feat(go): introduce context.Context to client methods",
           "url": "https://github.com/apache/iggy/pull/2964",
-          "state": "open"
+          "state": "merged"
         },
         {
           "number": 3032,
@@ -333,24 +333,32 @@
       "repo": "apache/iggy",
       "number": 2964,
       "title": "feat(go): introduce context.Context to client methods",
-      "url": "https://github.com/apache/iggy/pull/2964#issuecomment-4531556763",
-      "createdAt": "2026-05-25T04:35:52Z"
+      "url": "https://github.com/apache/iggy/pull/2964#issuecomment-4540054542",
+      "createdAt": "2026-05-26T04:32:28Z"
     },
     {
       "type": "review",
       "repo": "apache/iggy",
       "number": 2964,
       "title": "feat(go): introduce context.Context to client methods",
-      "url": "https://github.com/apache/iggy/pull/2964#pullrequestreview-4354102340",
-      "createdAt": "2026-05-25T03:55:25Z"
+      "url": "https://github.com/apache/iggy/pull/2964#pullrequestreview-4360556824",
+      "createdAt": "2026-05-26T04:26:22Z"
     },
     {
       "type": "review_comment",
       "repo": "apache/iggy",
       "number": 2964,
       "title": "feat(go): introduce context.Context to client methods",
-      "url": "https://github.com/apache/iggy/pull/2964#discussion_r3295975064",
-      "createdAt": "2026-05-25T03:55:23Z"
+      "url": "https://github.com/apache/iggy/pull/2964#discussion_r3301209589",
+      "createdAt": "2026-05-26T04:26:20Z"
+    },
+    {
+      "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 2973,
+      "title": "feat(go): add comprehensive unit tests for command serialization",
+      "url": "https://github.com/apache/iggy/pull/2973#issuecomment-4539716627",
+      "createdAt": "2026-05-26T03:26:17Z"
     },
     {
       "type": "pr_comment",
@@ -383,18 +391,10 @@
       "title": "transport: surface subsequent data when receiving non-gRPC header",
       "url": "https://github.com/grpc/grpc-go/pull/8929#discussion_r3192496180",
       "createdAt": "2026-05-06T01:33:45Z"
-    },
-    {
-      "type": "issue_comment",
-      "repo": "apache/iggy",
-      "number": 2148,
-      "title": "Add more BDD test scenarios.",
-      "url": "https://github.com/apache/iggy/issues/2148#issuecomment-4367807357",
-      "createdAt": "2026-05-04T02:13:21Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 243,
+    "totalContributions": 244,
     "weeks": [
       [
         {
@@ -1964,6 +1964,10 @@
         {
           "date": "2026-05-25",
           "count": 0
+        },
+        {
+          "date": "2026-05-26",
+          "count": 1
         }
       ]
     ]
