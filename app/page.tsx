@@ -251,7 +251,7 @@ export default function Home() {
                         <SectionHeader eyebrow="02 / education"/>
                         <Stack spacing={0}>
                             <TimelineItem
-                                time="2026-Present"
+                                time="2026 — Present"
                                 title="University at Buffalo"
                                 subtitle="Computer Science"
                                 location="New York, USA"
