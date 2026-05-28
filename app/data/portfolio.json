@@ -329,6 +329,22 @@
   },
   "latestActivity": [
     {
+      "type": "review",
+      "repo": "grpc/grpc-go",
+      "number": 8929,
+      "title": "transport: surface subsequent data when receiving non-gRPC header",
+      "url": "https://github.com/grpc/grpc-go/pull/8929#pullrequestreview-4378792711",
+      "createdAt": "2026-05-28T07:27:16Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "grpc/grpc-go",
+      "number": 8929,
+      "title": "transport: surface subsequent data when receiving non-gRPC header",
+      "url": "https://github.com/grpc/grpc-go/pull/8929#discussion_r3316040889",
+      "createdAt": "2026-05-28T07:27:14Z"
+    },
+    {
       "type": "pr_comment",
       "repo": "apache/iggy",
       "number": 2964,
@@ -375,26 +391,10 @@
       "title": "feat(go): add diagnostic event subscription to client",
       "url": "https://github.com/apache/iggy/issues/3219#issuecomment-4394312893",
       "createdAt": "2026-05-07T05:14:49Z"
-    },
-    {
-      "type": "review",
-      "repo": "grpc/grpc-go",
-      "number": 8929,
-      "title": "transport: surface subsequent data when receiving non-gRPC header",
-      "url": "https://github.com/grpc/grpc-go/pull/8929#pullrequestreview-4232609735",
-      "createdAt": "2026-05-06T01:33:48Z"
-    },
-    {
-      "type": "review_comment",
-      "repo": "grpc/grpc-go",
-      "number": 8929,
-      "title": "transport: surface subsequent data when receiving non-gRPC header",
-      "url": "https://github.com/grpc/grpc-go/pull/8929#discussion_r3192496180",
-      "createdAt": "2026-05-06T01:33:45Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 244,
+    "totalContributions": 246,
     "weeks": [
       [
         {
@@ -1971,6 +1971,10 @@
         },
         {
           "date": "2026-05-27",
+          "count": 2
+        },
+        {
+          "date": "2026-05-28",
           "count": 0
         }
       ]
