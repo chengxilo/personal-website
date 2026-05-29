@@ -329,6 +329,14 @@
   },
   "latestActivity": [
     {
+      "type": "issue_opened",
+      "repo": "apache/iggy",
+      "number": 3364,
+      "title": "Implement Golang SDK logger",
+      "url": "https://github.com/apache/iggy/issues/3364",
+      "createdAt": "2026-05-29T03:09:03Z"
+    },
+    {
       "type": "review",
       "repo": "grpc/grpc-go",
       "number": 8929,
@@ -383,18 +391,10 @@
       "title": "feat(bdd): add shared stream operations scenario for Go SDK",
       "url": "https://github.com/apache/iggy/pull/3063#issuecomment-4412642455",
       "createdAt": "2026-05-09T13:34:30Z"
-    },
-    {
-      "type": "issue_comment",
-      "repo": "apache/iggy",
-      "number": 3219,
-      "title": "feat(go): add diagnostic event subscription to client",
-      "url": "https://github.com/apache/iggy/issues/3219#issuecomment-4394312893",
-      "createdAt": "2026-05-07T05:14:49Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 246,
+    "totalContributions": 247,
     "weeks": [
       [
         {
@@ -1975,6 +1975,10 @@
         },
         {
           "date": "2026-05-28",
+          "count": 1
+        },
+        {
+          "date": "2026-05-29",
           "count": 0
         }
       ]
