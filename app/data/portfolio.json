@@ -198,8 +198,14 @@
       ]
     },
     "cucumber/godog": {
-      "dateRange": "Jul 2025",
+      "dateRange": "Jul 2025 — Present",
       "prs": [
+        {
+          "number": 747,
+          "title": "feat: support optional arguments for int/uint/float types",
+          "url": "https://github.com/cucumber/godog/pull/747",
+          "state": "open"
+        },
         {
           "number": 699,
           "title": "fix: avoid panic when post hook panic",
@@ -329,6 +335,22 @@
   },
   "latestActivity": [
     {
+      "type": "pr_opened",
+      "repo": "cucumber/godog",
+      "number": 747,
+      "title": "",
+      "url": "",
+      "createdAt": "2026-05-30T01:09:59Z"
+    },
+    {
+      "type": "issue_comment",
+      "repo": "apache/iggy",
+      "number": 3364,
+      "title": "Implement Golang SDK logger",
+      "url": "https://github.com/apache/iggy/issues/3364#issuecomment-4580982406",
+      "createdAt": "2026-05-30T00:49:05Z"
+    },
+    {
       "type": "issue_opened",
       "repo": "apache/iggy",
       "number": 3364,
@@ -375,26 +397,10 @@
       "title": "feat(go): introduce context.Context to client methods",
       "url": "https://github.com/apache/iggy/pull/2964#discussion_r3301209589",
       "createdAt": "2026-05-26T04:26:20Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 2973,
-      "title": "feat(go): add comprehensive unit tests for command serialization",
-      "url": "https://github.com/apache/iggy/pull/2973#issuecomment-4539716627",
-      "createdAt": "2026-05-26T03:26:17Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 3063,
-      "title": "feat(bdd): add shared stream operations scenario for Go SDK",
-      "url": "https://github.com/apache/iggy/pull/3063#issuecomment-4412642455",
-      "createdAt": "2026-05-09T13:34:30Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 247,
+    "totalContributions": 248,
     "weeks": [
       [
         {
@@ -1979,6 +1985,10 @@
         },
         {
           "date": "2026-05-29",
+          "count": 1
+        },
+        {
+          "date": "2026-05-30",
           "count": 0
         }
       ]
