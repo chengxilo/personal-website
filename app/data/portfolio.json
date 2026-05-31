@@ -335,6 +335,30 @@
   },
   "latestActivity": [
     {
+      "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 3379,
+      "title": "feat(go-sdk): implement golang sdk logger",
+      "url": "https://github.com/apache/iggy/pull/3379#issuecomment-4585517592",
+      "createdAt": "2026-05-31T02:50:33Z"
+    },
+    {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 3379,
+      "title": "feat(go-sdk): implement golang sdk logger",
+      "url": "https://github.com/apache/iggy/pull/3379#pullrequestreview-4396257840",
+      "createdAt": "2026-05-31T02:03:01Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "apache/iggy",
+      "number": 3379,
+      "title": "feat(go-sdk): implement golang sdk logger",
+      "url": "https://github.com/apache/iggy/pull/3379#discussion_r3329586937",
+      "createdAt": "2026-05-31T02:02:59Z"
+    },
+    {
       "type": "pr_opened",
       "repo": "cucumber/godog",
       "number": 747,
@@ -373,65 +397,11 @@
       "title": "transport: surface subsequent data when receiving non-gRPC header",
       "url": "https://github.com/grpc/grpc-go/pull/8929#discussion_r3316040889",
       "createdAt": "2026-05-28T07:27:14Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 2964,
-      "title": "feat(go): introduce context.Context to client methods",
-      "url": "https://github.com/apache/iggy/pull/2964#issuecomment-4540054542",
-      "createdAt": "2026-05-26T04:32:28Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 2964,
-      "title": "feat(go): introduce context.Context to client methods",
-      "url": "https://github.com/apache/iggy/pull/2964#pullrequestreview-4360556824",
-      "createdAt": "2026-05-26T04:26:22Z"
-    },
-    {
-      "type": "review_comment",
-      "repo": "apache/iggy",
-      "number": 2964,
-      "title": "feat(go): introduce context.Context to client methods",
-      "url": "https://github.com/apache/iggy/pull/2964#discussion_r3301209589",
-      "createdAt": "2026-05-26T04:26:20Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 248,
+    "totalContributions": 249,
     "weeks": [
-      [
-        {
-          "date": "2025-05-25",
-          "count": 0
-        },
-        {
-          "date": "2025-05-26",
-          "count": 0
-        },
-        {
-          "date": "2025-05-27",
-          "count": 0
-        },
-        {
-          "date": "2025-05-28",
-          "count": 0
-        },
-        {
-          "date": "2025-05-29",
-          "count": 0
-        },
-        {
-          "date": "2025-05-30",
-          "count": 0
-        },
-        {
-          "date": "2025-05-31",
-          "count": 9
-        }
-      ],
       [
         {
           "date": "2025-06-01",
@@ -1990,6 +1960,12 @@
         {
           "date": "2026-05-30",
           "count": 0
+        }
+      ],
+      [
+        {
+          "date": "2026-05-31",
+          "count": 1
         }
       ]
     ]
