@@ -4,6 +4,12 @@
       "dateRange": "Jun 2025 — Present",
       "prs": [
         {
+          "number": 3384,
+          "title": "fix(bdd): make ./scripts/run-bdd-tests.sh actually support FEATURE flag",
+          "url": "https://github.com/apache/iggy/pull/3384",
+          "state": "open"
+        },
+        {
           "number": 2964,
           "title": "feat(go): introduce context.Context to client methods",
           "url": "https://github.com/apache/iggy/pull/2964",
@@ -335,10 +341,26 @@
   },
   "latestActivity": [
     {
+      "type": "issue_comment",
+      "repo": "alexei-led/pumba",
+      "number": 179,
+      "title": "Support list of regexes similar to list of names",
+      "url": "https://github.com/alexei-led/pumba/issues/179#issuecomment-4589025949",
+      "createdAt": "2026-06-01T02:06:46Z"
+    },
+    {
+      "type": "pr_opened",
+      "repo": "apache/iggy",
+      "number": 3384,
+      "title": "",
+      "url": "",
+      "createdAt": "2026-05-31T22:24:19Z"
+    },
+    {
       "type": "pr_comment",
       "repo": "apache/iggy",
       "number": 3379,
-      "title": "feat(go-sdk): implement golang sdk logger",
+      "title": "feat(go): implement golang sdk logger",
       "url": "https://github.com/apache/iggy/pull/3379#issuecomment-4585517592",
       "createdAt": "2026-05-31T02:50:33Z"
     },
@@ -346,7 +368,7 @@
       "type": "review",
       "repo": "apache/iggy",
       "number": 3379,
-      "title": "feat(go-sdk): implement golang sdk logger",
+      "title": "feat(go): implement golang sdk logger",
       "url": "https://github.com/apache/iggy/pull/3379#pullrequestreview-4396257840",
       "createdAt": "2026-05-31T02:03:01Z"
     },
@@ -354,7 +376,7 @@
       "type": "review_comment",
       "repo": "apache/iggy",
       "number": 3379,
-      "title": "feat(go-sdk): implement golang sdk logger",
+      "title": "feat(go): implement golang sdk logger",
       "url": "https://github.com/apache/iggy/pull/3379#discussion_r3329586937",
       "createdAt": "2026-05-31T02:02:59Z"
     },
@@ -381,26 +403,10 @@
       "title": "Implement Golang SDK logger",
       "url": "https://github.com/apache/iggy/issues/3364",
       "createdAt": "2026-05-29T03:09:03Z"
-    },
-    {
-      "type": "review",
-      "repo": "grpc/grpc-go",
-      "number": 8929,
-      "title": "transport: surface subsequent data when receiving non-gRPC header",
-      "url": "https://github.com/grpc/grpc-go/pull/8929#pullrequestreview-4378792711",
-      "createdAt": "2026-05-28T07:27:16Z"
-    },
-    {
-      "type": "review_comment",
-      "repo": "grpc/grpc-go",
-      "number": 8929,
-      "title": "transport: surface subsequent data when receiving non-gRPC header",
-      "url": "https://github.com/grpc/grpc-go/pull/8929#discussion_r3316040889",
-      "createdAt": "2026-05-28T07:27:14Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 249,
+    "totalContributions": 242,
     "weeks": [
       [
         {
@@ -1965,6 +1971,10 @@
       [
         {
           "date": "2026-05-31",
+          "count": 2
+        },
+        {
+          "date": "2026-06-01",
           "count": 1
         }
       ]
