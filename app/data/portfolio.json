@@ -341,68 +341,68 @@
   },
   "latestActivity": [
     {
-      "type": "issue_comment",
-      "repo": "alexei-led/pumba",
-      "number": 179,
-      "title": "Support list of regexes similar to list of names",
-      "url": "https://github.com/alexei-led/pumba/issues/179#issuecomment-4589025949",
-      "createdAt": "2026-06-01T02:06:46Z"
-    },
-    {
-      "type": "pr_opened",
-      "repo": "apache/iggy",
-      "number": 3384,
-      "title": "",
-      "url": "",
-      "createdAt": "2026-05-31T22:24:19Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 3379,
-      "title": "feat(go): implement golang sdk logger",
-      "url": "https://github.com/apache/iggy/pull/3379#issuecomment-4585517592",
-      "createdAt": "2026-05-31T02:50:33Z"
-    },
-    {
       "type": "review",
       "repo": "apache/iggy",
       "number": 3379,
       "title": "feat(go): implement golang sdk logger",
-      "url": "https://github.com/apache/iggy/pull/3379#pullrequestreview-4396257840",
-      "createdAt": "2026-05-31T02:03:01Z"
+      "url": "https://github.com/apache/iggy/pull/3379#pullrequestreview-4406569333",
+      "createdAt": "2026-06-02T04:44:11Z"
     },
     {
       "type": "review_comment",
       "repo": "apache/iggy",
       "number": 3379,
       "title": "feat(go): implement golang sdk logger",
-      "url": "https://github.com/apache/iggy/pull/3379#discussion_r3329586937",
-      "createdAt": "2026-05-31T02:02:59Z"
+      "url": "https://github.com/apache/iggy/pull/3379#discussion_r3338734515",
+      "createdAt": "2026-06-02T04:44:09Z"
     },
     {
-      "type": "pr_opened",
-      "repo": "cucumber/godog",
-      "number": 747,
-      "title": "",
-      "url": "",
-      "createdAt": "2026-05-30T01:09:59Z"
+      "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 3384,
+      "title": "fix(bdd): make ./scripts/run-bdd-tests.sh actually support FEATURE flag",
+      "url": "https://github.com/apache/iggy/pull/3384#issuecomment-4597218445",
+      "createdAt": "2026-06-01T23:10:01Z"
+    },
+    {
+      "type": "review",
+      "repo": "grpc/grpc-go",
+      "number": 8929,
+      "title": "transport: surface subsequent data when receiving non-gRPC header",
+      "url": "https://github.com/grpc/grpc-go/pull/8929#pullrequestreview-4405241873",
+      "createdAt": "2026-06-01T23:05:02Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "grpc/grpc-go",
+      "number": 8929,
+      "title": "transport: surface subsequent data when receiving non-gRPC header",
+      "url": "https://github.com/grpc/grpc-go/pull/8929#discussion_r3337648358",
+      "createdAt": "2026-06-01T23:05:00Z"
+    },
+    {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 3384,
+      "title": "fix(bdd): make ./scripts/run-bdd-tests.sh actually support FEATURE flag",
+      "url": "https://github.com/apache/iggy/pull/3384#pullrequestreview-4403467446",
+      "createdAt": "2026-06-01T17:54:18Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "apache/iggy",
+      "number": 3384,
+      "title": "fix(bdd): make ./scripts/run-bdd-tests.sh actually support FEATURE flag",
+      "url": "https://github.com/apache/iggy/pull/3384#discussion_r3336131930",
+      "createdAt": "2026-06-01T17:54:16Z"
     },
     {
       "type": "issue_comment",
-      "repo": "apache/iggy",
-      "number": 3364,
-      "title": "Implement Golang SDK logger",
-      "url": "https://github.com/apache/iggy/issues/3364#issuecomment-4580982406",
-      "createdAt": "2026-05-30T00:49:05Z"
-    },
-    {
-      "type": "issue_opened",
-      "repo": "apache/iggy",
-      "number": 3364,
-      "title": "Implement Golang SDK logger",
-      "url": "https://github.com/apache/iggy/issues/3364",
-      "createdAt": "2026-05-29T03:09:03Z"
+      "repo": "alexei-led/pumba",
+      "number": 179,
+      "title": "Support list of regexes similar to list of names",
+      "url": "https://github.com/alexei-led/pumba/issues/179#issuecomment-4589025949",
+      "createdAt": "2026-06-01T02:06:46Z"
     }
   ],
   "contributionCalendar": {
@@ -1971,10 +1971,14 @@
       [
         {
           "date": "2026-05-31",
-          "count": 2
+          "count": 1
         },
         {
           "date": "2026-06-01",
+          "count": 1
+        },
+        {
+          "date": "2026-06-02",
           "count": 1
         }
       ]
