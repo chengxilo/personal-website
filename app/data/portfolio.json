@@ -251,7 +251,7 @@
           "number": 8929,
           "title": "transport: surface subsequent data when receiving non-gRPC header",
           "url": "https://github.com/grpc/grpc-go/pull/8929",
-          "state": "open"
+          "state": "merged"
         },
         {
           "number": 9026,
@@ -341,6 +341,46 @@
   },
   "latestActivity": [
     {
+      "type": "issue_opened",
+      "repo": "apache/iggy",
+      "number": 3419,
+      "title": "feat(sdk): support per-request timeout to TCP/QUIC/WebSocket clients",
+      "url": "https://github.com/apache/iggy/issues/3419",
+      "createdAt": "2026-06-04T03:37:32Z"
+    },
+    {
+      "type": "pr_comment",
+      "repo": "grpc/grpc-go",
+      "number": 8929,
+      "title": "transport: surface subsequent data when receiving non-gRPC header",
+      "url": "https://github.com/grpc/grpc-go/pull/8929#issuecomment-4614176619",
+      "createdAt": "2026-06-03T15:43:18Z"
+    },
+    {
+      "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 3379,
+      "title": "feat(go): implement golang sdk logger",
+      "url": "https://github.com/apache/iggy/pull/3379#issuecomment-4613733379",
+      "createdAt": "2026-06-03T14:59:01Z"
+    },
+    {
+      "type": "review",
+      "repo": "grpc/grpc-go",
+      "number": 8929,
+      "title": "transport: surface subsequent data when receiving non-gRPC header",
+      "url": "https://github.com/grpc/grpc-go/pull/8929#pullrequestreview-4419691014",
+      "createdAt": "2026-06-03T14:50:37Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "grpc/grpc-go",
+      "number": 8929,
+      "title": "transport: surface subsequent data when receiving non-gRPC header",
+      "url": "https://github.com/grpc/grpc-go/pull/8929#discussion_r3349447178",
+      "createdAt": "2026-06-03T14:45:51Z"
+    },
+    {
       "type": "review",
       "repo": "apache/iggy",
       "number": 3379,
@@ -363,50 +403,10 @@
       "title": "fix(bdd): make ./scripts/run-bdd-tests.sh actually support FEATURE flag",
       "url": "https://github.com/apache/iggy/pull/3384#pullrequestreview-4411328323",
       "createdAt": "2026-06-02T17:24:41Z"
-    },
-    {
-      "type": "review_comment",
-      "repo": "apache/iggy",
-      "number": 3379,
-      "title": "feat(go): implement golang sdk logger",
-      "url": "https://github.com/apache/iggy/pull/3379#discussion_r3338734515",
-      "createdAt": "2026-06-02T04:44:09Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 3384,
-      "title": "fix(bdd): make ./scripts/run-bdd-tests.sh actually support FEATURE flag",
-      "url": "https://github.com/apache/iggy/pull/3384#issuecomment-4597218445",
-      "createdAt": "2026-06-01T23:10:01Z"
-    },
-    {
-      "type": "review",
-      "repo": "grpc/grpc-go",
-      "number": 8929,
-      "title": "transport: surface subsequent data when receiving non-gRPC header",
-      "url": "https://github.com/grpc/grpc-go/pull/8929#pullrequestreview-4405241873",
-      "createdAt": "2026-06-01T23:05:02Z"
-    },
-    {
-      "type": "review_comment",
-      "repo": "grpc/grpc-go",
-      "number": 8929,
-      "title": "transport: surface subsequent data when receiving non-gRPC header",
-      "url": "https://github.com/grpc/grpc-go/pull/8929#discussion_r3337648358",
-      "createdAt": "2026-06-01T23:05:00Z"
-    },
-    {
-      "type": "issue_comment",
-      "repo": "alexei-led/pumba",
-      "number": 179,
-      "title": "Support list of regexes similar to list of names",
-      "url": "https://github.com/alexei-led/pumba/issues/179#issuecomment-4589025949",
-      "createdAt": "2026-06-01T02:06:46Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 244,
+    "totalContributions": 246,
     "weeks": [
       [
         {
@@ -1983,7 +1983,11 @@
         },
         {
           "date": "2026-06-03",
-          "count": 2
+          "count": 4
+        },
+        {
+          "date": "2026-06-04",
+          "count": 0
         }
       ]
     ]
