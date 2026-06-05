@@ -341,10 +341,26 @@
   },
   "latestActivity": [
     {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 3379,
+      "title": "feat(go): implement golang sdk logger",
+      "url": "https://github.com/apache/iggy/pull/3379#pullrequestreview-4432994022",
+      "createdAt": "2026-06-05T03:58:20Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "apache/iggy",
+      "number": 3379,
+      "title": "feat(go): implement golang sdk logger",
+      "url": "https://github.com/apache/iggy/pull/3379#discussion_r3360241176",
+      "createdAt": "2026-06-05T03:53:10Z"
+    },
+    {
       "type": "issue_opened",
       "repo": "apache/iggy",
       "number": 3419,
-      "title": "feat(sdk): support per-request timeout to TCP/QUIC/WebSocket clients",
+      "title": "Support per-request timeout to TCP/QUIC/WebSocket clients",
       "url": "https://github.com/apache/iggy/issues/3419",
       "createdAt": "2026-06-04T03:37:32Z"
     },
@@ -381,28 +397,12 @@
       "createdAt": "2026-06-03T14:45:51Z"
     },
     {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3379,
-      "title": "feat(go): implement golang sdk logger",
-      "url": "https://github.com/apache/iggy/pull/3379#pullrequestreview-4405430991",
-      "createdAt": "2026-06-02T17:47:12Z"
-    },
-    {
       "type": "review_comment",
       "repo": "apache/iggy",
       "number": 3384,
       "title": "fix(bdd): make ./scripts/run-bdd-tests.sh actually support FEATURE flag",
       "url": "https://github.com/apache/iggy/pull/3384#discussion_r3342524453",
       "createdAt": "2026-06-02T15:44:42Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3384,
-      "title": "fix(bdd): make ./scripts/run-bdd-tests.sh actually support FEATURE flag",
-      "url": "https://github.com/apache/iggy/pull/3384#pullrequestreview-4411328323",
-      "createdAt": "2026-06-02T17:24:41Z"
     }
   ],
   "contributionCalendar": {
@@ -1979,7 +1979,7 @@
         },
         {
           "date": "2026-06-02",
-          "count": 1
+          "count": 0
         },
         {
           "date": "2026-06-03",
@@ -1988,6 +1988,10 @@
         {
           "date": "2026-06-04",
           "count": 0
+        },
+        {
+          "date": "2026-06-05",
+          "count": 1
         }
       ]
     ]
