@@ -4,6 +4,12 @@
       "dateRange": "Jun 2025 — Present",
       "prs": [
         {
+          "number": 3429,
+          "title": "feat(sdk): support per-request timeout to TCP/QUIC/WebSocket clients",
+          "url": "https://github.com/apache/iggy/pull/3429",
+          "state": "open"
+        },
+        {
           "number": 3384,
           "title": "fix(bdd): make ./scripts/run-bdd-tests.sh actually support FEATURE flag",
           "url": "https://github.com/apache/iggy/pull/3384",
@@ -341,20 +347,36 @@
   },
   "latestActivity": [
     {
+      "type": "pr_opened",
+      "repo": "apache/iggy",
+      "number": 3429,
+      "title": "",
+      "url": "",
+      "createdAt": "2026-06-06T02:06:06Z"
+    },
+    {
+      "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 3379,
+      "title": "feat(go): implement golang sdk logger",
+      "url": "https://github.com/apache/iggy/pull/3379#issuecomment-4634084721",
+      "createdAt": "2026-06-05T17:52:00Z"
+    },
+    {
       "type": "review",
       "repo": "apache/iggy",
       "number": 3379,
       "title": "feat(go): implement golang sdk logger",
-      "url": "https://github.com/apache/iggy/pull/3379#pullrequestreview-4432994022",
-      "createdAt": "2026-06-05T03:58:20Z"
+      "url": "https://github.com/apache/iggy/pull/3379#pullrequestreview-4438321707",
+      "createdAt": "2026-06-05T17:35:53Z"
     },
     {
       "type": "review_comment",
       "repo": "apache/iggy",
       "number": 3379,
       "title": "feat(go): implement golang sdk logger",
-      "url": "https://github.com/apache/iggy/pull/3379#discussion_r3360241176",
-      "createdAt": "2026-06-05T03:53:10Z"
+      "url": "https://github.com/apache/iggy/pull/3379#discussion_r3364334301",
+      "createdAt": "2026-06-05T17:35:51Z"
     },
     {
       "type": "issue_opened",
@@ -373,14 +395,6 @@
       "createdAt": "2026-06-03T15:43:18Z"
     },
     {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 3379,
-      "title": "feat(go): implement golang sdk logger",
-      "url": "https://github.com/apache/iggy/pull/3379#issuecomment-4613733379",
-      "createdAt": "2026-06-03T14:59:01Z"
-    },
-    {
       "type": "review",
       "repo": "grpc/grpc-go",
       "number": 8929,
@@ -395,18 +409,10 @@
       "title": "transport: surface subsequent data when receiving non-gRPC header",
       "url": "https://github.com/grpc/grpc-go/pull/8929#discussion_r3349447178",
       "createdAt": "2026-06-03T14:45:51Z"
-    },
-    {
-      "type": "review_comment",
-      "repo": "apache/iggy",
-      "number": 3384,
-      "title": "fix(bdd): make ./scripts/run-bdd-tests.sh actually support FEATURE flag",
-      "url": "https://github.com/apache/iggy/pull/3384#discussion_r3342524453",
-      "createdAt": "2026-06-02T15:44:42Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 246,
+    "totalContributions": 248,
     "weeks": [
       [
         {
@@ -1991,7 +1997,11 @@
         },
         {
           "date": "2026-06-05",
-          "count": 1
+          "count": 3
+        },
+        {
+          "date": "2026-06-06",
+          "count": 0
         }
       ]
     ]
