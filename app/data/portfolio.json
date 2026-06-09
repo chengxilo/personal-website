@@ -347,6 +347,14 @@
   },
   "latestActivity": [
     {
+      "type": "issue_comment",
+      "repo": "apache/iggy",
+      "number": 3441,
+      "title": "feat(go-sdk): high per-RPC allocation pressure on TCP poll path",
+      "url": "https://github.com/apache/iggy/issues/3441#issuecomment-4657244560",
+      "createdAt": "2026-06-09T07:24:44Z"
+    },
+    {
       "type": "pr_opened",
       "repo": "apache/iggy",
       "number": 3429,
@@ -401,14 +409,6 @@
       "title": "transport: surface subsequent data when receiving non-gRPC header",
       "url": "https://github.com/grpc/grpc-go/pull/8929#pullrequestreview-4419691014",
       "createdAt": "2026-06-03T14:50:37Z"
-    },
-    {
-      "type": "review_comment",
-      "repo": "grpc/grpc-go",
-      "number": 8929,
-      "title": "transport: surface subsequent data when receiving non-gRPC header",
-      "url": "https://github.com/grpc/grpc-go/pull/8929#discussion_r3349447178",
-      "createdAt": "2026-06-03T14:45:51Z"
     }
   ],
   "contributionCalendar": {
@@ -1981,6 +1981,10 @@
         },
         {
           "date": "2026-06-08",
+          "count": 0
+        },
+        {
+          "date": "2026-06-09",
           "count": 0
         }
       ]
