@@ -4,15 +4,15 @@
       "dateRange": "Jun 2025 — Present",
       "prs": [
         {
-          "number": 3429,
-          "title": "feat(sdk): support per-request timeout to TCP/QUIC/WebSocket clients",
-          "url": "https://github.com/apache/iggy/pull/3429",
-          "state": "open"
-        },
-        {
           "number": 3384,
           "title": "fix(bdd): make ./scripts/run-bdd-tests.sh actually support FEATURE flag",
           "url": "https://github.com/apache/iggy/pull/3384",
+          "state": "open"
+        },
+        {
+          "number": 3429,
+          "title": "feat(sdk): support per-request timeout to TCP/QUIC/WebSocket clients",
+          "url": "https://github.com/apache/iggy/pull/3429",
           "state": "open"
         },
         {
@@ -1993,6 +1993,10 @@
         },
         {
           "date": "2026-06-11",
+          "count": 0
+        },
+        {
+          "date": "2026-06-12",
           "count": 0
         }
       ]
