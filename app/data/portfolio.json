@@ -4,15 +4,15 @@
       "dateRange": "Jun 2025 — Present",
       "prs": [
         {
-          "number": 3384,
-          "title": "fix(bdd): make ./scripts/run-bdd-tests.sh actually support FEATURE flag",
-          "url": "https://github.com/apache/iggy/pull/3384",
-          "state": "open"
-        },
-        {
           "number": 3429,
           "title": "feat(sdk): support per-request timeout to TCP/QUIC/WebSocket clients",
           "url": "https://github.com/apache/iggy/pull/3429",
+          "state": "open"
+        },
+        {
+          "number": 3384,
+          "title": "fix(bdd): make ./scripts/run-bdd-tests.sh actually support FEATURE flag",
+          "url": "https://github.com/apache/iggy/pull/3384",
           "state": "open"
         },
         {
@@ -339,13 +339,37 @@
       "dateRange": "May 2025 — Jan 2026"
     },
     "chengxilo/robinhood-note": {
-      "dateRange": "Jan 2025 — Present"
+      "dateRange": "Jan 2025 — Mar 2026"
     },
     "chengxilo/steam-scrapy": {
       "dateRange": "Dec 2024 — Jun 2025"
     }
   },
   "latestActivity": [
+    {
+      "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 3384,
+      "title": "fix(bdd): make ./scripts/run-bdd-tests.sh actually support FEATURE flag",
+      "url": "https://github.com/apache/iggy/pull/3384#issuecomment-4700682761",
+      "createdAt": "2026-06-14T04:25:16Z"
+    },
+    {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 3442,
+      "title": "perf(go): pool the request-path wire payload",
+      "url": "https://github.com/apache/iggy/pull/3442#pullrequestreview-4492319463",
+      "createdAt": "2026-06-14T04:01:28Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "apache/iggy",
+      "number": 3442,
+      "title": "perf(go): pool the request-path wire payload",
+      "url": "https://github.com/apache/iggy/pull/3442#discussion_r3408962777",
+      "createdAt": "2026-06-14T03:36:12Z"
+    },
     {
       "type": "issue_comment",
       "repo": "apache/iggy",
@@ -385,65 +409,11 @@
       "title": "feat(go): implement golang sdk logger",
       "url": "https://github.com/apache/iggy/pull/3379#discussion_r3364334301",
       "createdAt": "2026-06-05T17:35:51Z"
-    },
-    {
-      "type": "issue_opened",
-      "repo": "apache/iggy",
-      "number": 3419,
-      "title": "Support per-request timeout to TCP/QUIC/WebSocket clients",
-      "url": "https://github.com/apache/iggy/issues/3419",
-      "createdAt": "2026-06-04T03:37:32Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "grpc/grpc-go",
-      "number": 8929,
-      "title": "transport: surface subsequent data when receiving non-gRPC header",
-      "url": "https://github.com/grpc/grpc-go/pull/8929#issuecomment-4614176619",
-      "createdAt": "2026-06-03T15:43:18Z"
-    },
-    {
-      "type": "review",
-      "repo": "grpc/grpc-go",
-      "number": 8929,
-      "title": "transport: surface subsequent data when receiving non-gRPC header",
-      "url": "https://github.com/grpc/grpc-go/pull/8929#pullrequestreview-4419691014",
-      "createdAt": "2026-06-03T14:50:37Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 242,
+    "totalContributions": 243,
     "weeks": [
-      [
-        {
-          "date": "2025-06-08",
-          "count": 0
-        },
-        {
-          "date": "2025-06-09",
-          "count": 0
-        },
-        {
-          "date": "2025-06-10",
-          "count": 1
-        },
-        {
-          "date": "2025-06-11",
-          "count": 0
-        },
-        {
-          "date": "2025-06-12",
-          "count": 1
-        },
-        {
-          "date": "2025-06-13",
-          "count": 5
-        },
-        {
-          "date": "2025-06-14",
-          "count": 0
-        }
-      ],
       [
         {
           "date": "2025-06-15",
@@ -2002,6 +1972,12 @@
         {
           "date": "2026-06-13",
           "count": 0
+        }
+      ],
+      [
+        {
+          "date": "2026-06-14",
+          "count": 1
         }
       ]
     ]
