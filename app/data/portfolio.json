@@ -4,16 +4,16 @@
       "dateRange": "Jun 2025 — Present",
       "prs": [
         {
-          "number": 3384,
-          "title": "fix(bdd): make ./scripts/run-bdd-tests.sh actually support FEATURE flag",
-          "url": "https://github.com/apache/iggy/pull/3384",
-          "state": "merged"
-        },
-        {
           "number": 3429,
           "title": "feat(sdk): support per-request timeout to TCP/QUIC/WebSocket clients",
           "url": "https://github.com/apache/iggy/pull/3429",
           "state": "open"
+        },
+        {
+          "number": 3384,
+          "title": "fix(bdd): make ./scripts/run-bdd-tests.sh actually support FEATURE flag",
+          "url": "https://github.com/apache/iggy/pull/3384",
+          "state": "merged"
         },
         {
           "number": 2964,
@@ -349,6 +349,14 @@
     {
       "type": "review",
       "repo": "apache/iggy",
+      "number": 3464,
+      "title": "feat(go): align TCP client logging with Rust SDK",
+      "url": "https://github.com/apache/iggy/pull/3464#pullrequestreview-4503815412",
+      "createdAt": "2026-06-16T06:33:42Z"
+    },
+    {
+      "type": "review",
+      "repo": "apache/iggy",
       "number": 3429,
       "title": "feat(sdk): support per-request timeout to TCP/QUIC/WebSocket clients",
       "url": "https://github.com/apache/iggy/pull/3429#pullrequestreview-4493856567",
@@ -401,18 +409,10 @@
       "title": "",
       "url": "",
       "createdAt": "2026-06-06T02:06:06Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 3379,
-      "title": "feat(go): implement golang sdk logger",
-      "url": "https://github.com/apache/iggy/pull/3379#issuecomment-4634084721",
-      "createdAt": "2026-06-05T17:52:00Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 237,
+    "totalContributions": 238,
     "weeks": [
       [
         {
@@ -1981,6 +1981,10 @@
         },
         {
           "date": "2026-06-15",
+          "count": 1
+        },
+        {
+          "date": "2026-06-16",
           "count": 1
         }
       ]
