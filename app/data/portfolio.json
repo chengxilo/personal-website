@@ -213,9 +213,9 @@
       "dateRange": "Jul 2025 — Present",
       "prs": [
         {
-          "number": 747,
-          "title": "feat: support optional arguments for int/uint/float types",
-          "url": "https://github.com/cucumber/godog/pull/747",
+          "number": 698,
+          "title": "ci: use golangci lint",
+          "url": "https://github.com/cucumber/godog/pull/698",
           "state": "open"
         },
         {
@@ -225,15 +225,15 @@
           "state": "open"
         },
         {
-          "number": 701,
-          "title": "fix: Validate the handler function param types when registering steps.",
-          "url": "https://github.com/cucumber/godog/pull/701",
+          "number": 747,
+          "title": "feat: support optional arguments for int/uint/float types",
+          "url": "https://github.com/cucumber/godog/pull/747",
           "state": "open"
         },
         {
-          "number": 698,
-          "title": "ci: use golangci lint",
-          "url": "https://github.com/cucumber/godog/pull/698",
+          "number": 701,
+          "title": "fix: Validate the handler function param types when registering steps.",
+          "url": "https://github.com/cucumber/godog/pull/701",
           "state": "open"
         },
         {
@@ -347,28 +347,52 @@
   },
   "latestActivity": [
     {
+      "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 3429,
+      "title": "feat(sdk): support per-request timeout to TCP/QUIC/WebSocket clients",
+      "url": "https://github.com/apache/iggy/pull/3429#issuecomment-4725000661",
+      "createdAt": "2026-06-17T01:10:04Z"
+    },
+    {
       "type": "review",
       "repo": "apache/iggy",
       "number": 3464,
       "title": "feat(go): align TCP client logging with Rust SDK",
-      "url": "https://github.com/apache/iggy/pull/3464#pullrequestreview-4503815412",
-      "createdAt": "2026-06-16T06:33:42Z"
+      "url": "https://github.com/apache/iggy/pull/3464#pullrequestreview-4511205692",
+      "createdAt": "2026-06-17T00:02:43Z"
     },
     {
       "type": "review",
       "repo": "apache/iggy",
       "number": 3429,
       "title": "feat(sdk): support per-request timeout to TCP/QUIC/WebSocket clients",
-      "url": "https://github.com/apache/iggy/pull/3429#pullrequestreview-4493856567",
-      "createdAt": "2026-06-15T00:26:40Z"
+      "url": "https://github.com/apache/iggy/pull/3429#pullrequestreview-4510972021",
+      "createdAt": "2026-06-16T23:13:29Z"
     },
     {
       "type": "review_comment",
       "repo": "apache/iggy",
       "number": 3429,
       "title": "feat(sdk): support per-request timeout to TCP/QUIC/WebSocket clients",
-      "url": "https://github.com/apache/iggy/pull/3429#discussion_r3410510683",
-      "createdAt": "2026-06-15T00:26:38Z"
+      "url": "https://github.com/apache/iggy/pull/3429#discussion_r3424558692",
+      "createdAt": "2026-06-16T23:13:28Z"
+    },
+    {
+      "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 3499,
+      "title": "feat(go): Add PollMessagesInto",
+      "url": "https://github.com/apache/iggy/pull/3499#issuecomment-4722637965",
+      "createdAt": "2026-06-16T19:27:27Z"
+    },
+    {
+      "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 3464,
+      "title": "feat(go): align TCP client logging with Rust SDK",
+      "url": "https://github.com/apache/iggy/pull/3464#issuecomment-4722072237",
+      "createdAt": "2026-06-16T18:33:43Z"
     },
     {
       "type": "review",
@@ -385,30 +409,6 @@
       "title": "perf(go): pool the request-path wire payload",
       "url": "https://github.com/apache/iggy/pull/3442#discussion_r3409731337",
       "createdAt": "2026-06-14T15:01:18Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 3384,
-      "title": "fix(bdd): make ./scripts/run-bdd-tests.sh actually support FEATURE flag",
-      "url": "https://github.com/apache/iggy/pull/3384#issuecomment-4700682761",
-      "createdAt": "2026-06-14T04:25:16Z"
-    },
-    {
-      "type": "issue_comment",
-      "repo": "apache/iggy",
-      "number": 3441,
-      "title": "feat(go-sdk): high per-RPC allocation pressure on TCP poll path",
-      "url": "https://github.com/apache/iggy/issues/3441#issuecomment-4657244560",
-      "createdAt": "2026-06-09T07:24:44Z"
-    },
-    {
-      "type": "pr_opened",
-      "repo": "apache/iggy",
-      "number": 3429,
-      "title": "",
-      "url": "",
-      "createdAt": "2026-06-06T02:06:06Z"
     }
   ],
   "contributionCalendar": {
@@ -1985,6 +1985,10 @@
         },
         {
           "date": "2026-06-16",
+          "count": 0
+        },
+        {
+          "date": "2026-06-17",
           "count": 1
         }
       ]
