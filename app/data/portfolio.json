@@ -349,6 +349,14 @@
     {
       "type": "pr_comment",
       "repo": "apache/iggy",
+      "number": 3499,
+      "title": "feat(go): Add PollMessagesInto",
+      "url": "https://github.com/apache/iggy/pull/3499#issuecomment-4735204723",
+      "createdAt": "2026-06-17T20:45:36Z"
+    },
+    {
+      "type": "pr_comment",
+      "repo": "apache/iggy",
       "number": 3429,
       "title": "feat(sdk): support per-request timeout to TCP/QUIC/WebSocket clients",
       "url": "https://github.com/apache/iggy/pull/3429#issuecomment-4725000661",
@@ -377,14 +385,6 @@
       "title": "feat(sdk): support per-request timeout to TCP/QUIC/WebSocket clients",
       "url": "https://github.com/apache/iggy/pull/3429#discussion_r3424558692",
       "createdAt": "2026-06-16T23:13:28Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 3499,
-      "title": "feat(go): Add PollMessagesInto",
-      "url": "https://github.com/apache/iggy/pull/3499#issuecomment-4722637965",
-      "createdAt": "2026-06-16T19:27:27Z"
     },
     {
       "type": "pr_comment",
@@ -1990,6 +1990,10 @@
         {
           "date": "2026-06-17",
           "count": 1
+        },
+        {
+          "date": "2026-06-18",
+          "count": 0
         }
       ]
     ]
