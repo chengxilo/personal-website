@@ -213,6 +213,12 @@
       "dateRange": "Jul 2025 — Present",
       "prs": [
         {
+          "number": 701,
+          "title": "fix: Validate the handler function param types when registering steps.",
+          "url": "https://github.com/cucumber/godog/pull/701",
+          "state": "open"
+        },
+        {
           "number": 698,
           "title": "ci: use golangci lint",
           "url": "https://github.com/cucumber/godog/pull/698",
@@ -228,12 +234,6 @@
           "number": 747,
           "title": "feat: support optional arguments for int/uint/float types",
           "url": "https://github.com/cucumber/godog/pull/747",
-          "state": "open"
-        },
-        {
-          "number": 701,
-          "title": "fix: Validate the handler function param types when registering steps.",
-          "url": "https://github.com/cucumber/godog/pull/701",
           "state": "open"
         },
         {
@@ -351,8 +351,8 @@
       "repo": "apache/iggy",
       "number": 3499,
       "title": "feat(go): Add PollMessagesInto",
-      "url": "https://github.com/apache/iggy/pull/3499#issuecomment-4735204723",
-      "createdAt": "2026-06-17T20:45:36Z"
+      "url": "https://github.com/apache/iggy/pull/3499#issuecomment-4748082801",
+      "createdAt": "2026-06-19T02:55:12Z"
     },
     {
       "type": "pr_comment",
@@ -1993,6 +1993,10 @@
         },
         {
           "date": "2026-06-18",
+          "count": 0
+        },
+        {
+          "date": "2026-06-19",
           "count": 0
         }
       ]
