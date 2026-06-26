@@ -251,7 +251,7 @@
       ]
     },
     "grpc/grpc-go": {
-      "dateRange": "Feb 2026 — Present",
+      "dateRange": "Feb 2026 — Mar 2026",
       "prs": [
         {
           "number": 8929,
@@ -1993,6 +1993,10 @@
         },
         {
           "date": "2026-06-25",
+          "count": 0
+        },
+        {
+          "date": "2026-06-26",
           "count": 0
         }
       ]
