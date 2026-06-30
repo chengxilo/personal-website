@@ -213,6 +213,12 @@
       "dateRange": "Jul 2025 — Present",
       "prs": [
         {
+          "number": 699,
+          "title": "fix: avoid panic when post hook panic",
+          "url": "https://github.com/cucumber/godog/pull/699",
+          "state": "open"
+        },
+        {
           "number": 698,
           "title": "ci: use golangci lint",
           "url": "https://github.com/cucumber/godog/pull/698",
@@ -222,12 +228,6 @@
           "number": 701,
           "title": "fix: Validate the handler function param types when registering steps.",
           "url": "https://github.com/cucumber/godog/pull/701",
-          "state": "open"
-        },
-        {
-          "number": 699,
-          "title": "fix: avoid panic when post hook panic",
-          "url": "https://github.com/cucumber/godog/pull/699",
           "state": "open"
         },
         {
@@ -1981,6 +1981,10 @@
         },
         {
           "date": "2026-06-29",
+          "count": 0
+        },
+        {
+          "date": "2026-06-30",
           "count": 0
         }
       ]
