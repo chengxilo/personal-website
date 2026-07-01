@@ -4,6 +4,12 @@
       "dateRange": "Jun 2025 — Present",
       "prs": [
         {
+          "number": 3590,
+          "title": "chore(deps): fix dependabot PR for go SDK, add a workflow to avoid it from happening again ",
+          "url": "https://github.com/apache/iggy/pull/3590",
+          "state": "open"
+        },
+        {
           "number": 3429,
           "title": "feat(sdk): support per-request timeout to TCP/QUIC/WebSocket clients",
           "url": "https://github.com/apache/iggy/pull/3429",
@@ -347,6 +353,14 @@
   },
   "latestActivity": [
     {
+      "type": "pr_opened",
+      "repo": "apache/iggy",
+      "number": 3590,
+      "title": "",
+      "url": "",
+      "createdAt": "2026-07-01T09:08:19Z"
+    },
+    {
       "type": "pr_comment",
       "repo": "apache/iggy",
       "number": 3429,
@@ -401,18 +415,10 @@
       "title": "perf(go): pool the request-path wire payload",
       "url": "https://github.com/apache/iggy/pull/3442#pullrequestreview-4493091946",
       "createdAt": "2026-06-14T15:38:50Z"
-    },
-    {
-      "type": "review_comment",
-      "repo": "apache/iggy",
-      "number": 3442,
-      "title": "perf(go): pool the request-path wire payload",
-      "url": "https://github.com/apache/iggy/pull/3442#discussion_r3409731337",
-      "createdAt": "2026-06-14T15:01:18Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 224,
+    "totalContributions": 225,
     "weeks": [
       [
         {
@@ -1986,6 +1992,10 @@
         {
           "date": "2026-06-30",
           "count": 0
+        },
+        {
+          "date": "2026-07-01",
+          "count": 1
         }
       ]
     ]
