@@ -4,16 +4,16 @@
       "dateRange": "Jun 2025 — Present",
       "prs": [
         {
-          "number": 3590,
-          "title": "chore(deps): fix dependabot PR for go SDK, add a workflow to avoid it from happening again ",
-          "url": "https://github.com/apache/iggy/pull/3590",
+          "number": 3429,
+          "title": "feat(sdk): support per-request timeout",
+          "url": "https://github.com/apache/iggy/pull/3429",
           "state": "open"
         },
         {
-          "number": 3429,
-          "title": "feat(sdk): support per-request timeout to TCP/QUIC/WebSocket clients",
-          "url": "https://github.com/apache/iggy/pull/3429",
-          "state": "open"
+          "number": 3590,
+          "title": "chore(deps): fix dependabot PR for go SDK",
+          "url": "https://github.com/apache/iggy/pull/3590",
+          "state": "merged"
         },
         {
           "number": 3384,
@@ -257,8 +257,14 @@
       ]
     },
     "grpc/grpc-go": {
-      "dateRange": "Feb 2026 — Mar 2026",
+      "dateRange": "Feb 2026 — Present",
       "prs": [
+        {
+          "number": 9217,
+          "title": "fix: surface data when received non-grpc header, end stream without trailers",
+          "url": "https://github.com/grpc/grpc-go/pull/9217",
+          "state": "open"
+        },
         {
           "number": 8929,
           "title": "transport: surface subsequent data when receiving non-gRPC header",
@@ -354,6 +360,22 @@
   "latestActivity": [
     {
       "type": "pr_opened",
+      "repo": "grpc/grpc-go",
+      "number": 9217,
+      "title": "",
+      "url": "",
+      "createdAt": "2026-07-01T21:58:35Z"
+    },
+    {
+      "type": "issue_comment",
+      "repo": "grpc/grpc-go",
+      "number": 7406,
+      "title": "Surface response body when receiving an unexpected status code and content-type",
+      "url": "https://github.com/grpc/grpc-go/issues/7406#issuecomment-4858687754",
+      "createdAt": "2026-07-01T17:58:29Z"
+    },
+    {
+      "type": "pr_opened",
       "repo": "apache/iggy",
       "number": 3590,
       "title": "",
@@ -364,7 +386,7 @@
       "type": "pr_comment",
       "repo": "apache/iggy",
       "number": 3429,
-      "title": "feat(sdk): support per-request timeout to TCP/QUIC/WebSocket clients",
+      "title": "feat(sdk): support per-request timeout",
       "url": "https://github.com/apache/iggy/pull/3429#issuecomment-4760905636",
       "createdAt": "2026-06-21T04:29:44Z"
     },
@@ -388,7 +410,7 @@
       "type": "review",
       "repo": "apache/iggy",
       "number": 3429,
-      "title": "feat(sdk): support per-request timeout to TCP/QUIC/WebSocket clients",
+      "title": "feat(sdk): support per-request timeout",
       "url": "https://github.com/apache/iggy/pull/3429#pullrequestreview-4510972021",
       "createdAt": "2026-06-16T23:13:29Z"
     },
@@ -396,29 +418,13 @@
       "type": "review_comment",
       "repo": "apache/iggy",
       "number": 3429,
-      "title": "feat(sdk): support per-request timeout to TCP/QUIC/WebSocket clients",
+      "title": "feat(sdk): support per-request timeout",
       "url": "https://github.com/apache/iggy/pull/3429#discussion_r3424558692",
       "createdAt": "2026-06-16T23:13:28Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 3464,
-      "title": "feat(go): align TCP client logging with Rust SDK",
-      "url": "https://github.com/apache/iggy/pull/3464#issuecomment-4722072237",
-      "createdAt": "2026-06-16T18:33:43Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3442,
-      "title": "perf(go): pool the request-path wire payload",
-      "url": "https://github.com/apache/iggy/pull/3442#pullrequestreview-4493091946",
-      "createdAt": "2026-06-14T15:38:50Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 225,
+    "totalContributions": 228,
     "weeks": [
       [
         {
@@ -1995,7 +2001,11 @@
         },
         {
           "date": "2026-07-01",
-          "count": 1
+          "count": 4
+        },
+        {
+          "date": "2026-07-02",
+          "count": 0
         }
       ]
     ]
