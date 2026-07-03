@@ -5,7 +5,7 @@
       "prs": [
         {
           "number": 3429,
-          "title": "feat(sdk): support per-request timeout",
+          "title": "feat(sdk): support client-level and per-request timeouts (default: not timeout -> 30 s)",
           "url": "https://github.com/apache/iggy/pull/3429",
           "state": "open"
         },
@@ -219,9 +219,9 @@
       "dateRange": "Jul 2025 — Present",
       "prs": [
         {
-          "number": 699,
-          "title": "fix: avoid panic when post hook panic",
-          "url": "https://github.com/cucumber/godog/pull/699",
+          "number": 701,
+          "title": "fix: Validate the handler function param types when registering steps.",
+          "url": "https://github.com/cucumber/godog/pull/701",
           "state": "open"
         },
         {
@@ -231,9 +231,9 @@
           "state": "open"
         },
         {
-          "number": 701,
-          "title": "fix: Validate the handler function param types when registering steps.",
-          "url": "https://github.com/cucumber/godog/pull/701",
+          "number": 699,
+          "title": "fix: avoid panic when post hook panic",
+          "url": "https://github.com/cucumber/godog/pull/699",
           "state": "open"
         },
         {
@@ -359,6 +359,38 @@
   },
   "latestActivity": [
     {
+      "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 3429,
+      "title": "feat(sdk): support client-level and per-request timeouts (default: not timeout -> 30 s)",
+      "url": "https://github.com/apache/iggy/pull/3429#issuecomment-4872283361",
+      "createdAt": "2026-07-03T03:19:48Z"
+    },
+    {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 3429,
+      "title": "feat(sdk): support client-level and per-request timeouts (default: not timeout -> 30 s)",
+      "url": "https://github.com/apache/iggy/pull/3429#pullrequestreview-4622193240",
+      "createdAt": "2026-07-03T01:50:56Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "apache/iggy",
+      "number": 3429,
+      "title": "feat(sdk): support client-level and per-request timeouts (default: not timeout -> 30 s)",
+      "url": "https://github.com/apache/iggy/pull/3429#discussion_r3516994804",
+      "createdAt": "2026-07-03T01:50:54Z"
+    },
+    {
+      "type": "issue_comment",
+      "repo": "grpc/grpc-go",
+      "number": 7406,
+      "title": "Surface response body when receiving an unexpected status code and content-type",
+      "url": "https://github.com/grpc/grpc-go/issues/7406#issuecomment-4871584175",
+      "createdAt": "2026-07-03T00:37:43Z"
+    },
+    {
       "type": "pr_opened",
       "repo": "grpc/grpc-go",
       "number": 9217,
@@ -367,28 +399,12 @@
       "createdAt": "2026-07-01T21:58:35Z"
     },
     {
-      "type": "issue_comment",
-      "repo": "grpc/grpc-go",
-      "number": 7406,
-      "title": "Surface response body when receiving an unexpected status code and content-type",
-      "url": "https://github.com/grpc/grpc-go/issues/7406#issuecomment-4858687754",
-      "createdAt": "2026-07-01T17:58:29Z"
-    },
-    {
       "type": "pr_opened",
       "repo": "apache/iggy",
       "number": 3590,
       "title": "",
       "url": "",
       "createdAt": "2026-07-01T09:08:19Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 3429,
-      "title": "feat(sdk): support per-request timeout",
-      "url": "https://github.com/apache/iggy/pull/3429#issuecomment-4760905636",
-      "createdAt": "2026-06-21T04:29:44Z"
     },
     {
       "type": "pr_comment",
@@ -405,22 +421,6 @@
       "title": "feat(go): align TCP client logging with Rust SDK",
       "url": "https://github.com/apache/iggy/pull/3464#pullrequestreview-4511205692",
       "createdAt": "2026-06-17T00:02:43Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3429,
-      "title": "feat(sdk): support per-request timeout",
-      "url": "https://github.com/apache/iggy/pull/3429#pullrequestreview-4510972021",
-      "createdAt": "2026-06-16T23:13:29Z"
-    },
-    {
-      "type": "review_comment",
-      "repo": "apache/iggy",
-      "number": 3429,
-      "title": "feat(sdk): support per-request timeout",
-      "url": "https://github.com/apache/iggy/pull/3429#discussion_r3424558692",
-      "createdAt": "2026-06-16T23:13:28Z"
     }
   ],
   "contributionCalendar": {
@@ -2005,6 +2005,10 @@
         },
         {
           "date": "2026-07-02",
+          "count": 0
+        },
+        {
+          "date": "2026-07-03",
           "count": 0
         }
       ]
