@@ -4,9 +4,9 @@
       "dateRange": "Jun 2025 — Present",
       "prs": [
         {
-          "number": 3429,
-          "title": "feat(sdk): support client-level and per-request timeouts (default: not timeout -> 30 s)",
-          "url": "https://github.com/apache/iggy/pull/3429",
+          "number": 3604,
+          "title": "chore(go): remove legacy example in foreign/go/samples",
+          "url": "https://github.com/apache/iggy/pull/3604",
           "state": "open"
         },
         {
@@ -359,6 +359,30 @@
   },
   "latestActivity": [
     {
+      "type": "issue_comment",
+      "repo": "apache/iggy",
+      "number": 3419,
+      "title": "Support per-request timeout to TCP/QUIC/WebSocket/Http clients",
+      "url": "https://github.com/apache/iggy/issues/3419#issuecomment-4880636653",
+      "createdAt": "2026-07-04T04:29:25Z"
+    },
+    {
+      "type": "pr_opened",
+      "repo": "apache/iggy",
+      "number": 3604,
+      "title": "",
+      "url": "",
+      "createdAt": "2026-07-03T19:17:07Z"
+    },
+    {
+      "type": "pr_comment",
+      "repo": "grpc/grpc-go",
+      "number": 9217,
+      "title": "fix: surface data when received non-grpc header, end stream without trailers",
+      "url": "https://github.com/grpc/grpc-go/pull/9217#issuecomment-4877966707",
+      "createdAt": "2026-07-03T16:18:18Z"
+    },
+    {
       "type": "pr_comment",
       "repo": "apache/iggy",
       "number": 3429,
@@ -397,34 +421,10 @@
       "title": "",
       "url": "",
       "createdAt": "2026-07-01T21:58:35Z"
-    },
-    {
-      "type": "pr_opened",
-      "repo": "apache/iggy",
-      "number": 3590,
-      "title": "",
-      "url": "",
-      "createdAt": "2026-07-01T09:08:19Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 3499,
-      "title": "feat(go): Add PollMessagesInto",
-      "url": "https://github.com/apache/iggy/pull/3499#issuecomment-4755051083",
-      "createdAt": "2026-06-19T22:15:01Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3464,
-      "title": "feat(go): align TCP client logging with Rust SDK",
-      "url": "https://github.com/apache/iggy/pull/3464#pullrequestreview-4511205692",
-      "createdAt": "2026-06-17T00:02:43Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 228,
+    "totalContributions": 229,
     "weeks": [
       [
         {
@@ -2009,6 +2009,10 @@
         },
         {
           "date": "2026-07-03",
+          "count": 1
+        },
+        {
+          "date": "2026-07-04",
           "count": 0
         }
       ]
