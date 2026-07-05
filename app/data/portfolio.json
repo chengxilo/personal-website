@@ -4,6 +4,12 @@
       "dateRange": "Jun 2025 — Present",
       "prs": [
         {
+          "number": 3608,
+          "title": "feat(go): add stream/topic purge API with BDD tests and fix server purge bug",
+          "url": "https://github.com/apache/iggy/pull/3608",
+          "state": "open"
+        },
+        {
           "number": 3604,
           "title": "chore(go): remove legacy example in foreign/go/samples",
           "url": "https://github.com/apache/iggy/pull/3604",
@@ -359,6 +365,22 @@
   },
   "latestActivity": [
     {
+      "type": "issue_opened",
+      "repo": "apache/iggy",
+      "number": 3609,
+      "title": "BDD Test Coverage Roadmap",
+      "url": "https://github.com/apache/iggy/issues/3609",
+      "createdAt": "2026-07-05T03:33:42Z"
+    },
+    {
+      "type": "pr_opened",
+      "repo": "apache/iggy",
+      "number": 3608,
+      "title": "",
+      "url": "",
+      "createdAt": "2026-07-04T22:28:21Z"
+    },
+    {
       "type": "issue_comment",
       "repo": "apache/iggy",
       "number": 3419,
@@ -405,57 +427,11 @@
       "title": "feat(sdk): support client-level and per-request timeouts (default: not timeout -> 30 s)",
       "url": "https://github.com/apache/iggy/pull/3429#discussion_r3516994804",
       "createdAt": "2026-07-03T01:50:54Z"
-    },
-    {
-      "type": "issue_comment",
-      "repo": "grpc/grpc-go",
-      "number": 7406,
-      "title": "Surface response body when receiving an unexpected status code and content-type",
-      "url": "https://github.com/grpc/grpc-go/issues/7406#issuecomment-4871584175",
-      "createdAt": "2026-07-03T00:37:43Z"
-    },
-    {
-      "type": "pr_opened",
-      "repo": "grpc/grpc-go",
-      "number": 9217,
-      "title": "",
-      "url": "",
-      "createdAt": "2026-07-01T21:58:35Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 229,
+    "totalContributions": 231,
     "weeks": [
-      [
-        {
-          "date": "2025-06-29",
-          "count": 2
-        },
-        {
-          "date": "2025-06-30",
-          "count": 0
-        },
-        {
-          "date": "2025-07-01",
-          "count": 0
-        },
-        {
-          "date": "2025-07-02",
-          "count": 0
-        },
-        {
-          "date": "2025-07-03",
-          "count": 1
-        },
-        {
-          "date": "2025-07-04",
-          "count": 2
-        },
-        {
-          "date": "2025-07-05",
-          "count": 2
-        }
-      ],
       [
         {
           "date": "2025-07-06",
@@ -2013,6 +1989,12 @@
         },
         {
           "date": "2026-07-04",
+          "count": 2
+        }
+      ],
+      [
+        {
+          "date": "2026-07-05",
           "count": 0
         }
       ]
