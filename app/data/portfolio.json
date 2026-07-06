@@ -4,15 +4,15 @@
       "dateRange": "Jun 2025 — Present",
       "prs": [
         {
-          "number": 3608,
-          "title": "feat(go): add stream/topic purge API with BDD tests and fix server purge bug",
-          "url": "https://github.com/apache/iggy/pull/3608",
-          "state": "open"
-        },
-        {
           "number": 3604,
           "title": "chore(go): remove legacy example in foreign/go/samples",
           "url": "https://github.com/apache/iggy/pull/3604",
+          "state": "open"
+        },
+        {
+          "number": 3608,
+          "title": "feat(go): add stream/topic purge API with BDD tests and fix server purge bug",
+          "url": "https://github.com/apache/iggy/pull/3608",
           "state": "open"
         },
         {
@@ -430,7 +430,7 @@
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 231,
+    "totalContributions": 224,
     "weeks": [
       [
         {
@@ -1995,6 +1995,10 @@
       [
         {
           "date": "2026-07-05",
+          "count": 0
+        },
+        {
+          "date": "2026-07-06",
           "count": 0
         }
       ]
