@@ -7,7 +7,7 @@
           "number": 3604,
           "title": "chore(go): remove legacy example in foreign/go/samples",
           "url": "https://github.com/apache/iggy/pull/3604",
-          "state": "open"
+          "state": "merged"
         },
         {
           "number": 3608,
@@ -430,7 +430,7 @@
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 224,
+    "totalContributions": 225,
     "weeks": [
       [
         {
@@ -1999,6 +1999,10 @@
         },
         {
           "date": "2026-07-06",
+          "count": 1
+        },
+        {
+          "date": "2026-07-07",
           "count": 0
         }
       ]
