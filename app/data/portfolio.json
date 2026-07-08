@@ -225,6 +225,12 @@
       "dateRange": "Jul 2025 — Present",
       "prs": [
         {
+          "number": 699,
+          "title": "fix: avoid panic when post hook panic",
+          "url": "https://github.com/cucumber/godog/pull/699",
+          "state": "open"
+        },
+        {
           "number": 701,
           "title": "fix: Validate the handler function param types when registering steps.",
           "url": "https://github.com/cucumber/godog/pull/701",
@@ -234,12 +240,6 @@
           "number": 698,
           "title": "ci: use golangci lint",
           "url": "https://github.com/cucumber/godog/pull/698",
-          "state": "open"
-        },
-        {
-          "number": 699,
-          "title": "fix: avoid panic when post hook panic",
-          "url": "https://github.com/cucumber/godog/pull/699",
           "state": "open"
         },
         {
@@ -365,6 +365,30 @@
   },
   "latestActivity": [
     {
+      "type": "review_comment",
+      "repo": "apache/iggy",
+      "number": 3621,
+      "title": "feat(go): add diagnostic event subscriptions to TCP client",
+      "url": "https://github.com/apache/iggy/pull/3621#discussion_r3539594901",
+      "createdAt": "2026-07-07T20:51:51Z"
+    },
+    {
+      "type": "issue_opened",
+      "repo": "apache/iggy",
+      "number": 3630,
+      "title": "Add BDD test for event subscription",
+      "url": "https://github.com/apache/iggy/issues/3630",
+      "createdAt": "2026-07-07T22:17:38Z"
+    },
+    {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 3621,
+      "title": "feat(go): add diagnostic event subscriptions to TCP client",
+      "url": "https://github.com/apache/iggy/pull/3621#pullrequestreview-4648136145",
+      "createdAt": "2026-07-07T21:54:25Z"
+    },
+    {
       "type": "issue_opened",
       "repo": "apache/iggy",
       "number": 3609,
@@ -403,34 +427,10 @@
       "title": "fix: surface data when received non-grpc header, end stream without trailers",
       "url": "https://github.com/grpc/grpc-go/pull/9217#issuecomment-4877966707",
       "createdAt": "2026-07-03T16:18:18Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 3429,
-      "title": "feat(sdk): support client-level and per-request timeouts (default: not timeout -> 30 s)",
-      "url": "https://github.com/apache/iggy/pull/3429#issuecomment-4872283361",
-      "createdAt": "2026-07-03T03:19:48Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3429,
-      "title": "feat(sdk): support client-level and per-request timeouts (default: not timeout -> 30 s)",
-      "url": "https://github.com/apache/iggy/pull/3429#pullrequestreview-4622193240",
-      "createdAt": "2026-07-03T01:50:56Z"
-    },
-    {
-      "type": "review_comment",
-      "repo": "apache/iggy",
-      "number": 3429,
-      "title": "feat(sdk): support client-level and per-request timeouts (default: not timeout -> 30 s)",
-      "url": "https://github.com/apache/iggy/pull/3429#discussion_r3516994804",
-      "createdAt": "2026-07-03T01:50:54Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 225,
+    "totalContributions": 227,
     "weeks": [
       [
         {
@@ -2003,6 +2003,10 @@
         },
         {
           "date": "2026-07-07",
+          "count": 2
+        },
+        {
+          "date": "2026-07-08",
           "count": 0
         }
       ]
