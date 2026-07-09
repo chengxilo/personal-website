@@ -4,16 +4,16 @@
       "dateRange": "Jun 2025 — Present",
       "prs": [
         {
-          "number": 3604,
-          "title": "chore(go): remove legacy example in foreign/go/samples",
-          "url": "https://github.com/apache/iggy/pull/3604",
-          "state": "merged"
-        },
-        {
           "number": 3608,
           "title": "feat(go): add stream/topic purge API with BDD tests and fix server purge bug",
           "url": "https://github.com/apache/iggy/pull/3608",
           "state": "open"
+        },
+        {
+          "number": 3604,
+          "title": "chore(go): remove legacy example in foreign/go/samples",
+          "url": "https://github.com/apache/iggy/pull/3604",
+          "state": "merged"
         },
         {
           "number": 3590,
@@ -365,12 +365,28 @@
   },
   "latestActivity": [
     {
+      "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 3621,
+      "title": "feat(go): add diagnostic event subscriptions to TCP client",
+      "url": "https://github.com/apache/iggy/pull/3621#issuecomment-4917512322",
+      "createdAt": "2026-07-08T17:35:13Z"
+    },
+    {
       "type": "review_comment",
       "repo": "apache/iggy",
       "number": 3621,
       "title": "feat(go): add diagnostic event subscriptions to TCP client",
-      "url": "https://github.com/apache/iggy/pull/3621#discussion_r3539594901",
-      "createdAt": "2026-07-07T20:51:51Z"
+      "url": "https://github.com/apache/iggy/pull/3621#discussion_r3545529884",
+      "createdAt": "2026-07-08T16:09:25Z"
+    },
+    {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 3621,
+      "title": "feat(go): add diagnostic event subscriptions to TCP client",
+      "url": "https://github.com/apache/iggy/pull/3621#pullrequestreview-4655949882",
+      "createdAt": "2026-07-08T16:09:26Z"
     },
     {
       "type": "issue_opened",
@@ -379,14 +395,6 @@
       "title": "Add BDD test for event subscription",
       "url": "https://github.com/apache/iggy/issues/3630",
       "createdAt": "2026-07-07T22:17:38Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3621,
-      "title": "feat(go): add diagnostic event subscriptions to TCP client",
-      "url": "https://github.com/apache/iggy/pull/3621#pullrequestreview-4648136145",
-      "createdAt": "2026-07-07T21:54:25Z"
     },
     {
       "type": "issue_opened",
@@ -419,18 +427,10 @@
       "title": "",
       "url": "",
       "createdAt": "2026-07-03T19:17:07Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "grpc/grpc-go",
-      "number": 9217,
-      "title": "fix: surface data when received non-grpc header, end stream without trailers",
-      "url": "https://github.com/grpc/grpc-go/pull/9217#issuecomment-4877966707",
-      "createdAt": "2026-07-03T16:18:18Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 227,
+    "totalContributions": 229,
     "weeks": [
       [
         {
@@ -2007,6 +2007,10 @@
         },
         {
           "date": "2026-07-08",
+          "count": 2
+        },
+        {
+          "date": "2026-07-09",
           "count": 0
         }
       ]
