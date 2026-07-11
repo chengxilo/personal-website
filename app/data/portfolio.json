@@ -365,6 +365,22 @@
   },
   "latestActivity": [
     {
+      "type": "issue_opened",
+      "repo": "apache/iggy",
+      "number": 3651,
+      "title": "SDK client state conflates transport and session dimensions; Authenticated is never reached",
+      "url": "https://github.com/apache/iggy/issues/3651",
+      "createdAt": "2026-07-11T02:19:03Z"
+    },
+    {
+      "type": "issue_opened",
+      "repo": "apache/iggy",
+      "number": 3650,
+      "title": "Go SDK should support reconnect and auto login configuration",
+      "url": "https://github.com/apache/iggy/issues/3650",
+      "createdAt": "2026-07-11T02:08:09Z"
+    },
+    {
       "type": "pr_comment",
       "repo": "apache/iggy",
       "number": 3621,
@@ -411,26 +427,10 @@
       "title": "",
       "url": "",
       "createdAt": "2026-07-04T22:28:21Z"
-    },
-    {
-      "type": "issue_comment",
-      "repo": "apache/iggy",
-      "number": 3419,
-      "title": "Support per-request timeout to TCP/QUIC/WebSocket/Http clients",
-      "url": "https://github.com/apache/iggy/issues/3419#issuecomment-4880636653",
-      "createdAt": "2026-07-04T04:29:25Z"
-    },
-    {
-      "type": "pr_opened",
-      "repo": "apache/iggy",
-      "number": 3604,
-      "title": "",
-      "url": "",
-      "createdAt": "2026-07-03T19:17:07Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 229,
+    "totalContributions": 231,
     "weeks": [
       [
         {
@@ -2015,6 +2015,10 @@
         },
         {
           "date": "2026-07-10",
+          "count": 2
+        },
+        {
+          "date": "2026-07-11",
           "count": 0
         }
       ]
