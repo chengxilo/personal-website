@@ -10,6 +10,12 @@
           "state": "open"
         },
         {
+          "number": 3652,
+          "title": "refactor(go): seperate transport state and session state.",
+          "url": "https://github.com/apache/iggy/pull/3652",
+          "state": "open"
+        },
+        {
           "number": 3604,
           "title": "chore(go): remove legacy example in foreign/go/samples",
           "url": "https://github.com/apache/iggy/pull/3604",
@@ -365,6 +371,22 @@
   },
   "latestActivity": [
     {
+      "type": "issue_comment",
+      "repo": "apache/iggy",
+      "number": 3650,
+      "title": "Go SDK should support reconnect and auto login configuration",
+      "url": "https://github.com/apache/iggy/issues/3650#issuecomment-4948748491",
+      "createdAt": "2026-07-11T21:02:45Z"
+    },
+    {
+      "type": "pr_opened",
+      "repo": "apache/iggy",
+      "number": 3652,
+      "title": "",
+      "url": "",
+      "createdAt": "2026-07-11T18:05:57Z"
+    },
+    {
       "type": "issue_opened",
       "repo": "apache/iggy",
       "number": 3651,
@@ -411,57 +433,11 @@
       "title": "Add BDD test for event subscription",
       "url": "https://github.com/apache/iggy/issues/3630",
       "createdAt": "2026-07-07T22:17:38Z"
-    },
-    {
-      "type": "issue_opened",
-      "repo": "apache/iggy",
-      "number": 3609,
-      "title": "BDD Test Coverage Roadmap",
-      "url": "https://github.com/apache/iggy/issues/3609",
-      "createdAt": "2026-07-05T03:33:42Z"
-    },
-    {
-      "type": "pr_opened",
-      "repo": "apache/iggy",
-      "number": 3608,
-      "title": "",
-      "url": "",
-      "createdAt": "2026-07-04T22:28:21Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 231,
+    "totalContributions": 232,
     "weeks": [
-      [
-        {
-          "date": "2025-07-06",
-          "count": 1
-        },
-        {
-          "date": "2025-07-07",
-          "count": 0
-        },
-        {
-          "date": "2025-07-08",
-          "count": 0
-        },
-        {
-          "date": "2025-07-09",
-          "count": 1
-        },
-        {
-          "date": "2025-07-10",
-          "count": 1
-        },
-        {
-          "date": "2025-07-11",
-          "count": 1
-        },
-        {
-          "date": "2025-07-12",
-          "count": 2
-        }
-      ],
       [
         {
           "date": "2025-07-13",
@@ -2019,6 +1995,12 @@
         },
         {
           "date": "2026-07-11",
+          "count": 1
+        }
+      ],
+      [
+        {
+          "date": "2026-07-12",
           "count": 0
         }
       ]
