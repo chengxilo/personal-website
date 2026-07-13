@@ -4,15 +4,15 @@
       "dateRange": "Jun 2025 — Present",
       "prs": [
         {
-          "number": 3608,
-          "title": "feat(go): add stream/topic purge API with BDD tests and fix server purge bug",
-          "url": "https://github.com/apache/iggy/pull/3608",
+          "number": 3652,
+          "title": "refactor(go): seperate transport state and session state",
+          "url": "https://github.com/apache/iggy/pull/3652",
           "state": "open"
         },
         {
-          "number": 3652,
-          "title": "refactor(go): seperate transport state and session state.",
-          "url": "https://github.com/apache/iggy/pull/3652",
+          "number": 3608,
+          "title": "feat(go): add stream/topic purge API with BDD tests and fix server purge bug",
+          "url": "https://github.com/apache/iggy/pull/3608",
           "state": "open"
         },
         {
@@ -373,6 +373,14 @@
     {
       "type": "issue_comment",
       "repo": "apache/iggy",
+      "number": 3630,
+      "title": "Add BDD test for event subscription",
+      "url": "https://github.com/apache/iggy/issues/3630#issuecomment-4953551739",
+      "createdAt": "2026-07-13T01:05:46Z"
+    },
+    {
+      "type": "issue_comment",
+      "repo": "apache/iggy",
       "number": 3650,
       "title": "Go SDK should support reconnect and auto login configuration",
       "url": "https://github.com/apache/iggy/issues/3650#issuecomment-4948748491",
@@ -425,18 +433,10 @@
       "title": "feat(go): add diagnostic event subscriptions to TCP client",
       "url": "https://github.com/apache/iggy/pull/3621#pullrequestreview-4655949882",
       "createdAt": "2026-07-08T16:09:26Z"
-    },
-    {
-      "type": "issue_opened",
-      "repo": "apache/iggy",
-      "number": 3630,
-      "title": "Add BDD test for event subscription",
-      "url": "https://github.com/apache/iggy/issues/3630",
-      "createdAt": "2026-07-07T22:17:38Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 232,
+    "totalContributions": 226,
     "weeks": [
       [
         {
@@ -2001,6 +2001,10 @@
       [
         {
           "date": "2026-07-12",
+          "count": 0
+        },
+        {
+          "date": "2026-07-13",
           "count": 0
         }
       ]
