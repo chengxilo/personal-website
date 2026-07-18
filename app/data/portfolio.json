@@ -4,15 +4,15 @@
       "dateRange": "Jun 2025 — Present",
       "prs": [
         {
-          "number": 3608,
-          "title": "feat(go): add stream/topic purge API with BDD tests and fix server purge bug",
-          "url": "https://github.com/apache/iggy/pull/3608",
-          "state": "open"
-        },
-        {
           "number": 3652,
           "title": "refactor(go): separate transport state and session state",
           "url": "https://github.com/apache/iggy/pull/3652",
+          "state": "merged"
+        },
+        {
+          "number": 3608,
+          "title": "feat(go): add stream/topic purge API with BDD tests and fix server purge bug",
+          "url": "https://github.com/apache/iggy/pull/3608",
           "state": "open"
         },
         {
@@ -377,6 +377,14 @@
   },
   "latestActivity": [
     {
+      "type": "issue_comment",
+      "repo": "apache/iggy",
+      "number": 3630,
+      "title": "Add BDD test for event subscription",
+      "url": "https://github.com/apache/iggy/issues/3630#issuecomment-5003555268",
+      "createdAt": "2026-07-17T13:02:10Z"
+    },
+    {
       "type": "pr_comment",
       "repo": "apache/iggy",
       "number": 3608,
@@ -431,18 +439,10 @@
       "title": "refactor(go): separate transport state and session state",
       "url": "https://github.com/apache/iggy/pull/3652#discussion_r3576841217",
       "createdAt": "2026-07-14T07:23:37Z"
-    },
-    {
-      "type": "pr_opened",
-      "repo": "apache/iggy",
-      "number": 3670,
-      "title": "",
-      "url": "",
-      "createdAt": "2026-07-14T07:22:36Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 229,
+    "totalContributions": 230,
     "weeks": [
       [
         {
@@ -2027,6 +2027,10 @@
         },
         {
           "date": "2026-07-17",
+          "count": 1
+        },
+        {
+          "date": "2026-07-18",
           "count": 0
         }
       ]
