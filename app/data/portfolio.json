@@ -4,16 +4,16 @@
       "dateRange": "Jun 2025 — Present",
       "prs": [
         {
-          "number": 3652,
-          "title": "refactor(go): separate transport state and session state",
-          "url": "https://github.com/apache/iggy/pull/3652",
-          "state": "merged"
-        },
-        {
           "number": 3608,
           "title": "feat(go): add stream/topic purge API with BDD tests and fix server purge bug",
           "url": "https://github.com/apache/iggy/pull/3608",
           "state": "open"
+        },
+        {
+          "number": 3652,
+          "title": "refactor(go): separate transport state and session state",
+          "url": "https://github.com/apache/iggy/pull/3652",
+          "state": "merged"
         },
         {
           "number": 3670,
@@ -442,7 +442,7 @@
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 230,
+    "totalContributions": 216,
     "weeks": [
       [
         {
@@ -2007,6 +2007,10 @@
       [
         {
           "date": "2026-07-19",
+          "count": 0
+        },
+        {
+          "date": "2026-07-20",
           "count": 0
         }
       ]
