@@ -237,9 +237,9 @@
       "dateRange": "Jul 2025 — Present",
       "prs": [
         {
-          "number": 698,
-          "title": "ci: use golangci lint",
-          "url": "https://github.com/cucumber/godog/pull/698",
+          "number": 701,
+          "title": "fix: Validate the handler function param types when registering steps.",
+          "url": "https://github.com/cucumber/godog/pull/701",
           "state": "open"
         },
         {
@@ -249,9 +249,9 @@
           "state": "open"
         },
         {
-          "number": 701,
-          "title": "fix: Validate the handler function param types when registering steps.",
-          "url": "https://github.com/cucumber/godog/pull/701",
+          "number": 698,
+          "title": "ci: use golangci lint",
+          "url": "https://github.com/cucumber/godog/pull/698",
           "state": "open"
         },
         {
@@ -2011,6 +2011,10 @@
         },
         {
           "date": "2026-07-20",
+          "count": 0
+        },
+        {
+          "date": "2026-07-21",
           "count": 0
         }
       ]
