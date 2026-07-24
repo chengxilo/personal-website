@@ -377,6 +377,30 @@
   },
   "latestActivity": [
     {
+      "type": "pr_comment",
+      "repo": "grpc/grpc-go",
+      "number": 9217,
+      "title": "transport: surface data when received non-grpc header, end stream without trailers",
+      "url": "https://github.com/grpc/grpc-go/pull/9217#issuecomment-5066840064",
+      "createdAt": "2026-07-24T06:31:11Z"
+    },
+    {
+      "type": "review",
+      "repo": "grpc/grpc-go",
+      "number": 9217,
+      "title": "transport: surface data when received non-grpc header, end stream without trailers",
+      "url": "https://github.com/grpc/grpc-go/pull/9217#pullrequestreview-4770638172",
+      "createdAt": "2026-07-24T06:20:49Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "grpc/grpc-go",
+      "number": 9217,
+      "title": "transport: surface data when received non-grpc header, end stream without trailers",
+      "url": "https://github.com/grpc/grpc-go/pull/9217#discussion_r3643337709",
+      "createdAt": "2026-07-24T06:20:48Z"
+    },
+    {
       "type": "issue_comment",
       "repo": "apache/iggy",
       "number": 3630,
@@ -415,30 +439,6 @@
       "title": "feat(go): add diagnostic event subscriptions to TCP client",
       "url": "https://github.com/apache/iggy/pull/3621#issuecomment-4972631481",
       "createdAt": "2026-07-14T18:30:38Z"
-    },
-    {
-      "type": "review_comment",
-      "repo": "apache/iggy",
-      "number": 3621,
-      "title": "feat(go): add diagnostic event subscriptions to TCP client",
-      "url": "https://github.com/apache/iggy/pull/3621#discussion_r3576853645",
-      "createdAt": "2026-07-14T07:25:25Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3652,
-      "title": "refactor(go): separate transport state and session state",
-      "url": "https://github.com/apache/iggy/pull/3652#pullrequestreview-4691808599",
-      "createdAt": "2026-07-14T07:23:40Z"
-    },
-    {
-      "type": "review_comment",
-      "repo": "apache/iggy",
-      "number": 3652,
-      "title": "refactor(go): separate transport state and session state",
-      "url": "https://github.com/apache/iggy/pull/3652#discussion_r3576841217",
-      "createdAt": "2026-07-14T07:23:37Z"
     }
   ],
   "contributionCalendar": {
@@ -2023,6 +2023,10 @@
         },
         {
           "date": "2026-07-23",
+          "count": 0
+        },
+        {
+          "date": "2026-07-24",
           "count": 0
         }
       ]
