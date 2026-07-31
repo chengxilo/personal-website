@@ -237,15 +237,15 @@
       "dateRange": "Jul 2025 — Present",
       "prs": [
         {
-          "number": 699,
-          "title": "fix: avoid panic when post hook panic",
-          "url": "https://github.com/cucumber/godog/pull/699",
-          "state": "open"
-        },
-        {
           "number": 701,
           "title": "fix: Validate the handler function param types when registering steps.",
           "url": "https://github.com/cucumber/godog/pull/701",
+          "state": "open"
+        },
+        {
+          "number": 699,
+          "title": "fix: avoid panic when post hook panic",
+          "url": "https://github.com/cucumber/godog/pull/699",
           "state": "open"
         },
         {
@@ -2023,6 +2023,10 @@
         },
         {
           "date": "2026-07-30",
+          "count": 0
+        },
+        {
+          "date": "2026-07-31",
           "count": 0
         }
       ]
