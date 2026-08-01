@@ -281,7 +281,7 @@
           "number": 9217,
           "title": "transport: surface data when received non-grpc header, end stream without trailers",
           "url": "https://github.com/grpc/grpc-go/pull/9217",
-          "state": "open"
+          "state": "merged"
         },
         {
           "number": 8929,
@@ -442,7 +442,7 @@
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 209,
+    "totalContributions": 210,
     "weeks": [
       [
         {
@@ -2027,6 +2027,10 @@
         },
         {
           "date": "2026-07-31",
+          "count": 1
+        },
+        {
+          "date": "2026-08-01",
           "count": 0
         }
       ]
