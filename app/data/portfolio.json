@@ -378,6 +378,14 @@
   "latestActivity": [
     {
       "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 3608,
+      "title": "feat(go): add stream/topic purge API with BDD tests and fix server purge bug",
+      "url": "https://github.com/apache/iggy/pull/3608#issuecomment-5207255865",
+      "createdAt": "2026-08-06T16:03:24Z"
+    },
+    {
+      "type": "pr_comment",
       "repo": "grpc/grpc-go",
       "number": 9217,
       "title": "transport: surface data when received non-grpc header, end stream without trailers",
@@ -407,14 +415,6 @@
       "title": "Add BDD test for event subscription",
       "url": "https://github.com/apache/iggy/issues/3630#issuecomment-5003555268",
       "createdAt": "2026-07-17T13:02:10Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 3608,
-      "title": "feat(go): add stream/topic purge API with BDD tests and fix server purge bug",
-      "url": "https://github.com/apache/iggy/pull/3608#issuecomment-4973579479",
-      "createdAt": "2026-07-14T20:16:07Z"
     },
     {
       "type": "pr_comment",
@@ -2023,6 +2023,10 @@
         },
         {
           "date": "2026-08-06",
+          "count": 0
+        },
+        {
+          "date": "2026-08-07",
           "count": 0
         }
       ]
