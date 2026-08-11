@@ -377,6 +377,14 @@
   },
   "latestActivity": [
     {
+      "type": "pr_opened",
+      "repo": "Qiskit/qiskit",
+      "number": 16733,
+      "title": "",
+      "url": "",
+      "createdAt": "2026-08-11T06:11:49Z"
+    },
+    {
       "type": "pr_comment",
       "repo": "apache/iggy",
       "number": 3608,
@@ -431,18 +439,10 @@
       "title": "feat(go): add diagnostic event subscriptions to TCP client",
       "url": "https://github.com/apache/iggy/pull/3621#pullrequestreview-4689618886",
       "createdAt": "2026-07-14T18:41:49Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 3621,
-      "title": "feat(go): add diagnostic event subscriptions to TCP client",
-      "url": "https://github.com/apache/iggy/pull/3621#issuecomment-4972631481",
-      "createdAt": "2026-07-14T18:30:38Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 192,
+    "totalContributions": 198,
     "weeks": [
       [
         {
@@ -2011,7 +2011,11 @@
         },
         {
           "date": "2026-08-10",
-          "count": 1
+          "count": 5
+        },
+        {
+          "date": "2026-08-11",
+          "count": 2
         }
       ]
     ]
