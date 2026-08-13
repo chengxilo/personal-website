@@ -377,6 +377,14 @@
   },
   "latestActivity": [
     {
+      "type": "issue_comment",
+      "repo": "apache/iggy",
+      "number": 3609,
+      "title": "BDD Test Coverage Roadmap",
+      "url": "https://github.com/apache/iggy/issues/3609#issuecomment-5275528980",
+      "createdAt": "2026-08-13T03:17:21Z"
+    },
+    {
       "type": "pr_opened",
       "repo": "Qiskit/qiskit",
       "number": 16733,
@@ -431,14 +439,6 @@
       "title": "refactor(go): separate transport state and session state",
       "url": "https://github.com/apache/iggy/pull/3652#issuecomment-4973436313",
       "createdAt": "2026-07-14T19:59:41Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3621,
-      "title": "feat(go): add diagnostic event subscriptions to TCP client",
-      "url": "https://github.com/apache/iggy/pull/3621#pullrequestreview-4689618886",
-      "createdAt": "2026-07-14T18:41:49Z"
     }
   ],
   "contributionCalendar": {
@@ -2020,6 +2020,10 @@
         {
           "date": "2026-08-12",
           "count": 1
+        },
+        {
+          "date": "2026-08-13",
+          "count": 0
         }
       ]
     ]
