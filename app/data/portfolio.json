@@ -377,6 +377,30 @@
   },
   "latestActivity": [
     {
+      "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 3875,
+      "title": "test(bdd): add stream CRUD coverage for Rust and Java",
+      "url": "https://github.com/apache/iggy/pull/3875#issuecomment-5288672186",
+      "createdAt": "2026-08-14T02:20:30Z"
+    },
+    {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 3875,
+      "title": "test(bdd): add stream CRUD coverage for Rust and Java",
+      "url": "https://github.com/apache/iggy/pull/3875#pullrequestreview-4929884827",
+      "createdAt": "2026-08-13T19:05:45Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "apache/iggy",
+      "number": 3875,
+      "title": "test(bdd): add stream CRUD coverage for Rust and Java",
+      "url": "https://github.com/apache/iggy/pull/3875#discussion_r3777698221",
+      "createdAt": "2026-08-13T17:40:24Z"
+    },
+    {
       "type": "issue_comment",
       "repo": "apache/iggy",
       "number": 3609,
@@ -415,34 +439,10 @@
       "title": "transport: surface data when received non-grpc header, end stream without trailers",
       "url": "https://github.com/grpc/grpc-go/pull/9217#pullrequestreview-4770638172",
       "createdAt": "2026-07-24T06:20:49Z"
-    },
-    {
-      "type": "review_comment",
-      "repo": "grpc/grpc-go",
-      "number": 9217,
-      "title": "transport: surface data when received non-grpc header, end stream without trailers",
-      "url": "https://github.com/grpc/grpc-go/pull/9217#discussion_r3643337709",
-      "createdAt": "2026-07-24T06:20:48Z"
-    },
-    {
-      "type": "issue_comment",
-      "repo": "apache/iggy",
-      "number": 3630,
-      "title": "Add BDD test for event subscription",
-      "url": "https://github.com/apache/iggy/issues/3630#issuecomment-5003555268",
-      "createdAt": "2026-07-17T13:02:10Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 3652,
-      "title": "refactor(go): separate transport state and session state",
-      "url": "https://github.com/apache/iggy/pull/3652#issuecomment-4973436313",
-      "createdAt": "2026-07-14T19:59:41Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 199,
+    "totalContributions": 200,
     "weeks": [
       [
         {
@@ -2023,6 +2023,10 @@
         },
         {
           "date": "2026-08-13",
+          "count": 1
+        },
+        {
+          "date": "2026-08-14",
           "count": 0
         }
       ]
