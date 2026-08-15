@@ -377,6 +377,14 @@
   },
   "latestActivity": [
     {
+      "type": "issue_opened",
+      "repo": "apache/iggy",
+      "number": 3883,
+      "title": "fix(bdd): every SDK suite silently falls back to a hardcoded address/credentials when its env var is missing",
+      "url": "https://github.com/apache/iggy/issues/3883",
+      "createdAt": "2026-08-14T19:50:39Z"
+    },
+    {
       "type": "pr_comment",
       "repo": "apache/iggy",
       "number": 3875,
@@ -431,18 +439,10 @@
       "title": "transport: surface data when received non-grpc header, end stream without trailers",
       "url": "https://github.com/grpc/grpc-go/pull/9217#issuecomment-5066840064",
       "createdAt": "2026-07-24T06:31:11Z"
-    },
-    {
-      "type": "review",
-      "repo": "grpc/grpc-go",
-      "number": 9217,
-      "title": "transport: surface data when received non-grpc header, end stream without trailers",
-      "url": "https://github.com/grpc/grpc-go/pull/9217#pullrequestreview-4770638172",
-      "createdAt": "2026-07-24T06:20:49Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 200,
+    "totalContributions": 442,
     "weeks": [
       [
         {
@@ -1805,7 +1805,7 @@
         },
         {
           "date": "2026-06-23",
-          "count": 0
+          "count": 18
         },
         {
           "date": "2026-06-24",
@@ -1813,15 +1813,15 @@
         },
         {
           "date": "2026-06-25",
-          "count": 0
+          "count": 4
         },
         {
           "date": "2026-06-26",
-          "count": 0
+          "count": 12
         },
         {
           "date": "2026-06-27",
-          "count": 0
+          "count": 18
         }
       ],
       [
@@ -1831,11 +1831,11 @@
         },
         {
           "date": "2026-06-29",
-          "count": 0
+          "count": 7
         },
         {
           "date": "2026-06-30",
-          "count": 0
+          "count": 16
         },
         {
           "date": "2026-07-01",
@@ -1843,55 +1843,55 @@
         },
         {
           "date": "2026-07-02",
-          "count": 0
+          "count": 4
         },
         {
           "date": "2026-07-03",
-          "count": 1
+          "count": 7
         },
         {
           "date": "2026-07-04",
-          "count": 2
+          "count": 6
         }
       ],
       [
         {
           "date": "2026-07-05",
-          "count": 0
+          "count": 16
         },
         {
           "date": "2026-07-06",
-          "count": 1
+          "count": 7
         },
         {
           "date": "2026-07-07",
-          "count": 1
+          "count": 3
         },
         {
           "date": "2026-07-08",
-          "count": 2
+          "count": 6
         },
         {
           "date": "2026-07-09",
-          "count": 0
-        },
-        {
-          "date": "2026-07-10",
           "count": 2
         },
         {
+          "date": "2026-07-10",
+          "count": 4
+        },
+        {
           "date": "2026-07-11",
-          "count": 1
+          "count": 5
         }
       ],
       [
         {
           "date": "2026-07-12",
-          "count": 0
+          "count": 6
         },
         {
           "date": "2026-07-13",
-          "count": 1
+          "count": 5
         },
         {
           "date": "2026-07-14",
@@ -1899,19 +1899,19 @@
         },
         {
           "date": "2026-07-15",
-          "count": 0
+          "count": 4
         },
         {
           "date": "2026-07-16",
-          "count": 0
+          "count": 6
         },
         {
           "date": "2026-07-17",
-          "count": 1
+          "count": 5
         },
         {
           "date": "2026-07-18",
-          "count": 0
+          "count": 9
         }
       ],
       [
@@ -1941,13 +1941,13 @@
         },
         {
           "date": "2026-07-25",
-          "count": 0
+          "count": 8
         }
       ],
       [
         {
           "date": "2026-07-26",
-          "count": 0
+          "count": 8
         },
         {
           "date": "2026-07-27",
@@ -1997,29 +1997,29 @@
         },
         {
           "date": "2026-08-07",
-          "count": 0
+          "count": 16
         },
         {
           "date": "2026-08-08",
-          "count": 0
+          "count": 5
         }
       ],
       [
         {
           "date": "2026-08-09",
-          "count": 0
+          "count": 14
         },
         {
           "date": "2026-08-10",
-          "count": 5
+          "count": 8
         },
         {
           "date": "2026-08-11",
-          "count": 2
+          "count": 5
         },
         {
           "date": "2026-08-12",
-          "count": 1
+          "count": 22
         },
         {
           "date": "2026-08-13",
@@ -2027,7 +2027,11 @@
         },
         {
           "date": "2026-08-14",
-          "count": 0
+          "count": 5
+        },
+        {
+          "date": "2026-08-15",
+          "count": 1
         }
       ]
     ]
