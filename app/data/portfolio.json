@@ -379,6 +379,14 @@
     {
       "type": "issue_opened",
       "repo": "apache/iggy",
+      "number": 3890,
+      "title": "Server publishes its wildcard bind address as a client-facing address",
+      "url": "https://github.com/apache/iggy/issues/3890",
+      "createdAt": "2026-08-15T22:26:35Z"
+    },
+    {
+      "type": "issue_opened",
+      "repo": "apache/iggy",
       "number": 3883,
       "title": "fix(bdd): every SDK suite silently falls back to a hardcoded address/credentials when its env var is missing",
       "url": "https://github.com/apache/iggy/issues/3883",
@@ -431,49 +439,11 @@
       "title": "feat(go): add stream/topic purge API with BDD tests and fix server purge bug",
       "url": "https://github.com/apache/iggy/pull/3608#issuecomment-5207255865",
       "createdAt": "2026-08-06T16:03:24Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "grpc/grpc-go",
-      "number": 9217,
-      "title": "transport: surface data when received non-grpc header, end stream without trailers",
-      "url": "https://github.com/grpc/grpc-go/pull/9217#issuecomment-5066840064",
-      "createdAt": "2026-07-24T06:31:11Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 442,
+    "totalContributions": 446,
     "weeks": [
-      [
-        {
-          "date": "2025-08-10",
-          "count": 0
-        },
-        {
-          "date": "2025-08-11",
-          "count": 0
-        },
-        {
-          "date": "2025-08-12",
-          "count": 0
-        },
-        {
-          "date": "2025-08-13",
-          "count": 0
-        },
-        {
-          "date": "2025-08-14",
-          "count": 2
-        },
-        {
-          "date": "2025-08-15",
-          "count": 2
-        },
-        {
-          "date": "2025-08-16",
-          "count": 0
-        }
-      ],
       [
         {
           "date": "2025-08-17",
@@ -2031,7 +2001,13 @@
         },
         {
           "date": "2026-08-15",
-          "count": 1
+          "count": 5
+        }
+      ],
+      [
+        {
+          "date": "2026-08-16",
+          "count": 0
         }
       ]
     ]
