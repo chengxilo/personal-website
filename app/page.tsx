@@ -120,16 +120,7 @@ const contributedRepo = [
         tech: [TECH.TypeScript, TECH.WXT],
         date: dateFor("wxt-dev/wxt"),
         prs: prsFor("wxt-dev/wxt"),
-    },
-    {
-        owner: "schollz",
-        repo: "progressbar",
-        description: "A Go progress bar library — added scrolling detail rows, interval-based updates, and bug fixes.",
-        url: "https://github.com/schollz/progressbar",
-        tech: [TECH.Go],
-        date: dateFor("schollz/progressbar"),
-        prs: prsFor("schollz/progressbar"),
-    },
+    }
 ];
 
 export default function Home() {
@@ -207,7 +198,7 @@ export default function Home() {
                         }}>
                             <Box
                                 component="img"
-                                src="https://github.com/chengxilo/chengxilo/blob/main/asset/mouse.jpg?raw=true"
+                                src="image/mouse.jpg"
                                 alt="Chengxi Luo"
                                 sx={{
                                     width: {xs: 110, sm: 140},
