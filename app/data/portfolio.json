@@ -4,9 +4,9 @@
       "dateRange": "Jun 2025 — Present",
       "prs": [
         {
-          "number": 3901,
-          "title": "fix(server): report no address for a wildcard-bound single node",
-          "url": "https://github.com/apache/iggy/pull/3901",
+          "number": 3923,
+          "title": "fix(server)!: reject a wildcard bind with no advertised address",
+          "url": "https://github.com/apache/iggy/pull/3923",
           "state": "open"
         },
         {
@@ -385,6 +385,14 @@
     {
       "type": "pr_opened",
       "repo": "apache/iggy",
+      "number": 3923,
+      "title": "",
+      "url": "",
+      "createdAt": "2026-08-19T05:10:22Z"
+    },
+    {
+      "type": "pr_opened",
+      "repo": "apache/iggy",
       "number": 3901,
       "title": "",
       "url": "",
@@ -437,18 +445,10 @@
       "title": "BDD Test Coverage Roadmap",
       "url": "https://github.com/apache/iggy/issues/3609#issuecomment-5275528980",
       "createdAt": "2026-08-13T03:17:21Z"
-    },
-    {
-      "type": "pr_opened",
-      "repo": "Qiskit/qiskit",
-      "number": 16733,
-      "title": "",
-      "url": "",
-      "createdAt": "2026-08-11T06:11:49Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 446,
+    "totalContributions": 450,
     "weeks": [
       [
         {
@@ -2021,7 +2021,11 @@
         },
         {
           "date": "2026-08-18",
-          "count": 1
+          "count": 3
+        },
+        {
+          "date": "2026-08-19",
+          "count": 2
         }
       ]
     ]
