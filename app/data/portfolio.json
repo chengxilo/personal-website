@@ -10,6 +10,12 @@
           "state": "open"
         },
         {
+          "number": 3935,
+          "title": "fix(bdd): resolve server address and credentials only from env",
+          "url": "https://github.com/apache/iggy/pull/3935",
+          "state": "open"
+        },
+        {
           "number": 3608,
           "title": "feat(go): add stream/topic purge API with BDD tests and fix server purge bug",
           "url": "https://github.com/apache/iggy/pull/3608",
@@ -385,6 +391,14 @@
     {
       "type": "pr_opened",
       "repo": "apache/iggy",
+      "number": 3935,
+      "title": "",
+      "url": "",
+      "createdAt": "2026-08-20T18:15:00Z"
+    },
+    {
+      "type": "pr_opened",
+      "repo": "apache/iggy",
       "number": 3923,
       "title": "",
       "url": "",
@@ -437,18 +451,10 @@
       "title": "test(bdd): add stream CRUD coverage for Rust and Java",
       "url": "https://github.com/apache/iggy/pull/3875#discussion_r3777698221",
       "createdAt": "2026-08-13T17:40:24Z"
-    },
-    {
-      "type": "issue_comment",
-      "repo": "apache/iggy",
-      "number": 3609,
-      "title": "BDD Test Coverage Roadmap",
-      "url": "https://github.com/apache/iggy/issues/3609#issuecomment-5275528980",
-      "createdAt": "2026-08-13T03:17:21Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 450,
+    "totalContributions": 451,
     "weeks": [
       [
         {
@@ -2029,6 +2035,10 @@
         },
         {
           "date": "2026-08-20",
+          "count": 1
+        },
+        {
+          "date": "2026-08-21",
           "count": 0
         }
       ]
