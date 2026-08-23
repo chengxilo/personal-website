@@ -460,38 +460,8 @@
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 455,
+    "totalContributions": 456,
     "weeks": [
-      [
-        {
-          "date": "2025-08-17",
-          "count": 0
-        },
-        {
-          "date": "2025-08-18",
-          "count": 0
-        },
-        {
-          "date": "2025-08-19",
-          "count": 0
-        },
-        {
-          "date": "2025-08-20",
-          "count": 0
-        },
-        {
-          "date": "2025-08-21",
-          "count": 0
-        },
-        {
-          "date": "2025-08-22",
-          "count": 2
-        },
-        {
-          "date": "2025-08-23",
-          "count": 0
-        }
-      ],
       [
         {
           "date": "2025-08-24",
@@ -2050,6 +2020,12 @@
         {
           "date": "2026-08-22",
           "count": 0
+        }
+      ],
+      [
+        {
+          "date": "2026-08-23",
+          "count": 1
         }
       ]
     ]
