@@ -4,9 +4,9 @@
       "dateRange": "Jun 2025 — Present",
       "prs": [
         {
-          "number": 3608,
-          "title": "feat(go): add stream/topic purge API with BDD tests and fix server purge bug",
-          "url": "https://github.com/apache/iggy/pull/3608",
+          "number": 3923,
+          "title": "fix(server)!: reject a wildcard bind with no advertised address",
+          "url": "https://github.com/apache/iggy/pull/3923",
           "state": "open"
         },
         {
@@ -16,16 +16,16 @@
           "state": "open"
         },
         {
+          "number": 3608,
+          "title": "feat(go): add stream/topic purge API with BDD tests and fix server purge bug",
+          "url": "https://github.com/apache/iggy/pull/3608",
+          "state": "open"
+        },
+        {
           "number": 3943,
           "title": "ci(rust): don't fail when a DAG scope matches no tests",
           "url": "https://github.com/apache/iggy/pull/3943",
           "state": "merged"
-        },
-        {
-          "number": 3923,
-          "title": "fix(server)!: reject a wildcard bind with no advertised address",
-          "url": "https://github.com/apache/iggy/pull/3923",
-          "state": "open"
         },
         {
           "number": 3652,
@@ -395,6 +395,30 @@
   },
   "latestActivity": [
     {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 3935,
+      "title": "fix(bdd): resolve server address and credentials only from env",
+      "url": "https://github.com/apache/iggy/pull/3935#pullrequestreview-5004224131",
+      "createdAt": "2026-08-24T02:56:43Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "apache/iggy",
+      "number": 3935,
+      "title": "fix(bdd): resolve server address and credentials only from env",
+      "url": "https://github.com/apache/iggy/pull/3935#discussion_r3840415265",
+      "createdAt": "2026-08-24T02:56:42Z"
+    },
+    {
+      "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 3608,
+      "title": "feat(go): add stream/topic purge API with BDD tests and fix server purge bug",
+      "url": "https://github.com/apache/iggy/pull/3608#issuecomment-5388815047",
+      "createdAt": "2026-08-23T22:27:38Z"
+    },
+    {
       "type": "pr_opened",
       "repo": "apache/iggy",
       "number": 3943,
@@ -433,34 +457,10 @@
       "title": "Server publishes its wildcard bind address as a client-facing address",
       "url": "https://github.com/apache/iggy/issues/3890",
       "createdAt": "2026-08-15T22:26:35Z"
-    },
-    {
-      "type": "issue_opened",
-      "repo": "apache/iggy",
-      "number": 3883,
-      "title": "fix(bdd): every SDK suite silently falls back to a hardcoded address/credentials when its env var is missing",
-      "url": "https://github.com/apache/iggy/issues/3883",
-      "createdAt": "2026-08-14T19:50:39Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 3875,
-      "title": "test(bdd): add stream CRUD coverage for Rust and Java",
-      "url": "https://github.com/apache/iggy/pull/3875#issuecomment-5288672186",
-      "createdAt": "2026-08-14T02:20:30Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3875,
-      "title": "test(bdd): add stream CRUD coverage for Rust and Java",
-      "url": "https://github.com/apache/iggy/pull/3875#pullrequestreview-4929884827",
-      "createdAt": "2026-08-13T19:05:45Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 456,
+    "totalContributions": 454,
     "weeks": [
       [
         {
@@ -2026,6 +2026,10 @@
         {
           "date": "2026-08-23",
           "count": 1
+        },
+        {
+          "date": "2026-08-24",
+          "count": 0
         }
       ]
     ]
