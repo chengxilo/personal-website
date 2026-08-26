@@ -395,6 +395,30 @@
   },
   "latestActivity": [
     {
+      "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 3923,
+      "title": "fix(server)!: reject a wildcard bind with no advertised address",
+      "url": "https://github.com/apache/iggy/pull/3923#issuecomment-5419219799",
+      "createdAt": "2026-08-26T01:13:36Z"
+    },
+    {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 3923,
+      "title": "fix(server)!: reject a wildcard bind with no advertised address",
+      "url": "https://github.com/apache/iggy/pull/3923#pullrequestreview-5025779606",
+      "createdAt": "2026-08-26T01:03:32Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "apache/iggy",
+      "number": 3923,
+      "title": "fix(server)!: reject a wildcard bind with no advertised address",
+      "url": "https://github.com/apache/iggy/pull/3923#discussion_r3858814556",
+      "createdAt": "2026-08-26T01:03:31Z"
+    },
+    {
       "type": "review",
       "repo": "apache/iggy",
       "number": 3935,
@@ -433,30 +457,6 @@
       "title": "",
       "url": "",
       "createdAt": "2026-08-20T18:15:00Z"
-    },
-    {
-      "type": "pr_opened",
-      "repo": "apache/iggy",
-      "number": 3923,
-      "title": "",
-      "url": "",
-      "createdAt": "2026-08-19T05:10:22Z"
-    },
-    {
-      "type": "pr_opened",
-      "repo": "apache/iggy",
-      "number": 3901,
-      "title": "",
-      "url": "",
-      "createdAt": "2026-08-17T03:17:08Z"
-    },
-    {
-      "type": "issue_opened",
-      "repo": "apache/iggy",
-      "number": 3890,
-      "title": "Server publishes its wildcard bind address as a client-facing address",
-      "url": "https://github.com/apache/iggy/issues/3890",
-      "createdAt": "2026-08-15T22:26:35Z"
     }
   ],
   "contributionCalendar": {
@@ -2033,6 +2033,10 @@
         },
         {
           "date": "2026-08-25",
+          "count": 0
+        },
+        {
+          "date": "2026-08-26",
           "count": 0
         }
       ]
