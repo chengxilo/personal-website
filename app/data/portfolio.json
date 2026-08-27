@@ -395,6 +395,22 @@
   },
   "latestActivity": [
     {
+      "type": "review",
+      "repo": "cucumber/godog",
+      "number": 698,
+      "title": "ci: use golangci lint",
+      "url": "https://github.com/cucumber/godog/pull/698#pullrequestreview-5031725957",
+      "createdAt": "2026-08-26T14:40:27Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "cucumber/godog",
+      "number": 698,
+      "title": "ci: use golangci lint",
+      "url": "https://github.com/cucumber/godog/pull/698#discussion_r3863827785",
+      "createdAt": "2026-08-26T14:32:50Z"
+    },
+    {
       "type": "pr_comment",
       "repo": "apache/iggy",
       "number": 3923,
@@ -441,22 +457,6 @@
       "title": "feat(go): add stream/topic purge API with BDD tests and fix server purge bug",
       "url": "https://github.com/apache/iggy/pull/3608#issuecomment-5388815047",
       "createdAt": "2026-08-23T22:27:38Z"
-    },
-    {
-      "type": "pr_opened",
-      "repo": "apache/iggy",
-      "number": 3943,
-      "title": "",
-      "url": "",
-      "createdAt": "2026-08-21T07:29:31Z"
-    },
-    {
-      "type": "pr_opened",
-      "repo": "apache/iggy",
-      "number": 3935,
-      "title": "",
-      "url": "",
-      "createdAt": "2026-08-20T18:15:00Z"
     }
   ],
   "contributionCalendar": {
@@ -2037,6 +2037,10 @@
         },
         {
           "date": "2026-08-26",
+          "count": 0
+        },
+        {
+          "date": "2026-08-27",
           "count": 0
         }
       ]
