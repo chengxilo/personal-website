@@ -252,7 +252,7 @@
       ]
     },
     "cucumber/godog": {
-      "dateRange": "Jul 2025 — Present",
+      "dateRange": "Jul 2025 — May 2026",
       "prs": [
         {
           "number": 698,
@@ -395,6 +395,38 @@
   },
   "latestActivity": [
     {
+      "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 3923,
+      "title": "fix(server)!: reject a wildcard bind with no advertised address",
+      "url": "https://github.com/apache/iggy/pull/3923#issuecomment-5446436453",
+      "createdAt": "2026-08-27T23:29:03Z"
+    },
+    {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 3923,
+      "title": "fix(server)!: reject a wildcard bind with no advertised address",
+      "url": "https://github.com/apache/iggy/pull/3923#pullrequestreview-5046227264",
+      "createdAt": "2026-08-28T01:40:06Z"
+    },
+    {
+      "type": "pr_opened",
+      "repo": "apache/iggy-website",
+      "number": 68,
+      "title": "",
+      "url": "",
+      "createdAt": "2026-08-28T00:51:36Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "apache/iggy",
+      "number": 3923,
+      "title": "fix(server)!: reject a wildcard bind with no advertised address",
+      "url": "https://github.com/apache/iggy/pull/3923#discussion_r3876378305",
+      "createdAt": "2026-08-27T22:31:36Z"
+    },
+    {
       "type": "review",
       "repo": "cucumber/godog",
       "number": 698,
@@ -411,30 +443,6 @@
       "createdAt": "2026-08-26T14:32:50Z"
     },
     {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 3923,
-      "title": "fix(server)!: reject a wildcard bind with no advertised address",
-      "url": "https://github.com/apache/iggy/pull/3923#issuecomment-5419219799",
-      "createdAt": "2026-08-26T01:13:36Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3923,
-      "title": "fix(server)!: reject a wildcard bind with no advertised address",
-      "url": "https://github.com/apache/iggy/pull/3923#pullrequestreview-5025779606",
-      "createdAt": "2026-08-26T01:03:32Z"
-    },
-    {
-      "type": "review_comment",
-      "repo": "apache/iggy",
-      "number": 3923,
-      "title": "fix(server)!: reject a wildcard bind with no advertised address",
-      "url": "https://github.com/apache/iggy/pull/3923#discussion_r3858814556",
-      "createdAt": "2026-08-26T01:03:31Z"
-    },
-    {
       "type": "review",
       "repo": "apache/iggy",
       "number": 3935,
@@ -449,18 +457,10 @@
       "title": "fix(bdd): resolve server address and credentials only from env",
       "url": "https://github.com/apache/iggy/pull/3935#discussion_r3840415265",
       "createdAt": "2026-08-24T02:56:42Z"
-    },
-    {
-      "type": "pr_comment",
-      "repo": "apache/iggy",
-      "number": 3608,
-      "title": "feat(go): add stream/topic purge API with BDD tests and fix server purge bug",
-      "url": "https://github.com/apache/iggy/pull/3608#issuecomment-5388815047",
-      "createdAt": "2026-08-23T22:27:38Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 454,
+    "totalContributions": 456,
     "weeks": [
       [
         {
@@ -2041,7 +2041,11 @@
         },
         {
           "date": "2026-08-27",
-          "count": 0
+          "count": 1
+        },
+        {
+          "date": "2026-08-28",
+          "count": 1
         }
       ]
     ]
