@@ -4,15 +4,15 @@
       "dateRange": "Jun 2025 — Present",
       "prs": [
         {
-          "number": 3923,
-          "title": "fix(server)!: reject a wildcard bind with no advertised address",
-          "url": "https://github.com/apache/iggy/pull/3923",
-          "state": "open"
-        },
-        {
           "number": 3935,
           "title": "fix(bdd): resolve server address and credentials only from env",
           "url": "https://github.com/apache/iggy/pull/3935",
+          "state": "open"
+        },
+        {
+          "number": 3923,
+          "title": "fix(server)!: reject a wildcard bind with no advertised address",
+          "url": "https://github.com/apache/iggy/pull/3923",
           "state": "open"
         },
         {
@@ -395,20 +395,52 @@
   },
   "latestActivity": [
     {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 3923,
+      "title": "fix(server)!: reject a wildcard bind with no advertised address",
+      "url": "https://github.com/apache/iggy/pull/3923#pullrequestreview-5046225735",
+      "createdAt": "2026-08-29T01:22:28Z"
+    },
+    {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 3990,
+      "title": "chore(deps): Bump the go group across 2 directories with 2 updates",
+      "url": "https://github.com/apache/iggy/pull/3990#pullrequestreview-5056102838",
+      "createdAt": "2026-08-29T00:52:20Z"
+    },
+    {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 3935,
+      "title": "fix(bdd): resolve server address and credentials only from env",
+      "url": "https://github.com/apache/iggy/pull/3935#pullrequestreview-5004332131",
+      "createdAt": "2026-08-29T00:51:48Z"
+    },
+    {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 3986,
+      "title": "fix(go): tear down only the connection a request failed on",
+      "url": "https://github.com/apache/iggy/pull/3986#pullrequestreview-5056020626",
+      "createdAt": "2026-08-29T00:23:34Z"
+    },
+    {
+      "type": "pr_comment",
+      "repo": "apache/iggy",
+      "number": 3990,
+      "title": "chore(deps): Bump the go group across 2 directories with 2 updates",
+      "url": "https://github.com/apache/iggy/pull/3990#issuecomment-5458951854",
+      "createdAt": "2026-08-28T23:51:18Z"
+    },
+    {
       "type": "pr_comment",
       "repo": "apache/iggy",
       "number": 3923,
       "title": "fix(server)!: reject a wildcard bind with no advertised address",
       "url": "https://github.com/apache/iggy/pull/3923#issuecomment-5446436453",
       "createdAt": "2026-08-27T23:29:03Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3923,
-      "title": "fix(server)!: reject a wildcard bind with no advertised address",
-      "url": "https://github.com/apache/iggy/pull/3923#pullrequestreview-5046227264",
-      "createdAt": "2026-08-28T01:40:06Z"
     },
     {
       "type": "pr_opened",
@@ -425,42 +457,10 @@
       "title": "fix(server)!: reject a wildcard bind with no advertised address",
       "url": "https://github.com/apache/iggy/pull/3923#discussion_r3876378305",
       "createdAt": "2026-08-27T22:31:36Z"
-    },
-    {
-      "type": "review",
-      "repo": "cucumber/godog",
-      "number": 698,
-      "title": "ci: use golangci lint",
-      "url": "https://github.com/cucumber/godog/pull/698#pullrequestreview-5031725957",
-      "createdAt": "2026-08-26T14:40:27Z"
-    },
-    {
-      "type": "review_comment",
-      "repo": "cucumber/godog",
-      "number": 698,
-      "title": "ci: use golangci lint",
-      "url": "https://github.com/cucumber/godog/pull/698#discussion_r3863827785",
-      "createdAt": "2026-08-26T14:32:50Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3935,
-      "title": "fix(bdd): resolve server address and credentials only from env",
-      "url": "https://github.com/apache/iggy/pull/3935#pullrequestreview-5004224131",
-      "createdAt": "2026-08-24T02:56:43Z"
-    },
-    {
-      "type": "review_comment",
-      "repo": "apache/iggy",
-      "number": 3935,
-      "title": "fix(bdd): resolve server address and credentials only from env",
-      "url": "https://github.com/apache/iggy/pull/3935#discussion_r3840415265",
-      "createdAt": "2026-08-24T02:56:42Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 456,
+    "totalContributions": 458,
     "weeks": [
       [
         {
@@ -2046,6 +2046,10 @@
         {
           "date": "2026-08-28",
           "count": 1
+        },
+        {
+          "date": "2026-08-29",
+          "count": 2
         }
       ]
     ]
