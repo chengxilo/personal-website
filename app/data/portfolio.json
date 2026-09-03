@@ -395,6 +395,14 @@
   },
   "latestActivity": [
     {
+      "type": "review_comment",
+      "repo": "apache/iggy",
+      "number": 3608,
+      "title": "feat(go): add stream/topic purge API with BDD tests and fix server purge bug",
+      "url": "https://github.com/apache/iggy/pull/3608#discussion_r3908103608",
+      "createdAt": "2026-09-01T20:23:39Z"
+    },
+    {
       "type": "review",
       "repo": "apache/iggy",
       "number": 3608,
@@ -449,18 +457,10 @@
       "title": "fix(server)!: reject a wildcard bind with no advertised address",
       "url": "https://github.com/apache/iggy/pull/3923#issuecomment-5446436453",
       "createdAt": "2026-08-27T23:29:03Z"
-    },
-    {
-      "type": "pr_opened",
-      "repo": "apache/iggy-website",
-      "number": 68,
-      "title": "",
-      "url": "",
-      "createdAt": "2026-08-28T00:51:36Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 459,
+    "totalContributions": 460,
     "weeks": [
       [
         {
@@ -2037,6 +2037,10 @@
         },
         {
           "date": "2026-09-02",
+          "count": 1
+        },
+        {
+          "date": "2026-09-03",
           "count": 1
         }
       ]
