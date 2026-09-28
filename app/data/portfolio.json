@@ -425,42 +425,10 @@
       "title": "feat(server,go): prevent stale reads, add stream/topic purge APIs ",
       "url": "https://github.com/apache/iggy/pull/3608#pullrequestreview-5082715699",
       "createdAt": "2026-09-02T01:03:14Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3923,
-      "title": "fix(server)!: reject a wildcard bind with no advertised address",
-      "url": "https://github.com/apache/iggy/pull/3923#pullrequestreview-5046225735",
-      "createdAt": "2026-08-29T01:22:28Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3990,
-      "title": "chore(deps): Bump the go group across 2 directories with 2 updates",
-      "url": "https://github.com/apache/iggy/pull/3990#pullrequestreview-5056102838",
-      "createdAt": "2026-08-29T00:52:20Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3935,
-      "title": "fix(bdd): resolve server address and credentials only from env",
-      "url": "https://github.com/apache/iggy/pull/3935#pullrequestreview-5004332131",
-      "createdAt": "2026-08-29T00:51:48Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3986,
-      "title": "fix(go): tear down only the connection a request failed on",
-      "url": "https://github.com/apache/iggy/pull/3986#pullrequestreview-5056020626",
-      "createdAt": "2026-08-29T00:23:34Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 477,
+    "totalContributions": 476,
     "weeks": [
       [
         {
@@ -2025,6 +1993,10 @@
       [
         {
           "date": "2026-09-27",
+          "count": 0
+        },
+        {
+          "date": "2026-09-28",
           "count": 0
         }
       ]
