@@ -5,7 +5,7 @@
       "prs": [
         {
           "number": 3608,
-          "title": "feat(server,go): prevent stale reads, add stream/topic purge APIs ",
+          "title": "fix(server): prevent purged data returning and add Go purge APIs",
           "url": "https://github.com/apache/iggy/pull/3608",
           "state": "open"
         },
@@ -414,7 +414,7 @@
       "type": "review_comment",
       "repo": "apache/iggy",
       "number": 3608,
-      "title": "feat(server,go): prevent stale reads, add stream/topic purge APIs ",
+      "title": "fix(server): prevent purged data returning and add Go purge APIs",
       "url": "https://github.com/apache/iggy/pull/3608#discussion_r3908103608",
       "createdAt": "2026-09-01T20:23:39Z"
     },
@@ -422,7 +422,7 @@
       "type": "review",
       "repo": "apache/iggy",
       "number": 3608,
-      "title": "feat(server,go): prevent stale reads, add stream/topic purge APIs ",
+      "title": "fix(server): prevent purged data returning and add Go purge APIs",
       "url": "https://github.com/apache/iggy/pull/3608#pullrequestreview-5082715699",
       "createdAt": "2026-09-02T01:03:14Z"
     }
@@ -1997,6 +1997,10 @@
         },
         {
           "date": "2026-09-28",
+          "count": 0
+        },
+        {
+          "date": "2026-09-29",
           "count": 0
         }
       ]
