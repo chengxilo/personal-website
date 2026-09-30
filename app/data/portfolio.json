@@ -293,7 +293,7 @@
       ]
     },
     "grpc/grpc-go": {
-      "dateRange": "Feb 2026 — Present",
+      "dateRange": "Feb 2026 — Jul 2026",
       "prs": [
         {
           "number": 9217,
@@ -394,6 +394,14 @@
     }
   },
   "latestActivity": [
+    {
+      "type": "pr_comment",
+      "repo": "hku-mars/FAST_LIO",
+      "number": 454,
+      "title": "ROS2: drop non-finite Ouster points before the voxel filter (fixes aarch64 odometry run-away)",
+      "url": "https://github.com/hku-mars/FAST_LIO/pull/454#issuecomment-5896904282",
+      "createdAt": "2026-09-29T19:12:19Z"
+    },
     {
       "type": "review",
       "repo": "apache/iggy",
@@ -2001,6 +2009,10 @@
         },
         {
           "date": "2026-09-29",
+          "count": 0
+        },
+        {
+          "date": "2026-09-30",
           "count": 0
         }
       ]
