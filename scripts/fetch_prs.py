@@ -321,12 +321,101 @@ def normalize_event(ev: dict) -> dict | None:
     return None
 
 
+def graphql(query: str, variables: dict) -> dict | None:
+    body = json.dumps({"query": query, "variables": variables}).encode("utf-8")
+    req = urllib.request.Request(
+        "https://api.github.com/graphql",
+        data=body,
+        headers={**HEADERS, "Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=30) as res:
+            return json.loads(res.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        print(f"  graphql: failed ({e.code}: {e.read().decode('utf-8', errors='replace')[:200]})")
+        return None
+
+
+def fetch_contribution_activity() -> list[dict]:
+    """Past-year PRs, issues and reviews from the contributions API, as activity items.
+
+    The public events feed only covers ~30 days, so this backfills older activity.
+    Requires a token; comments aren't available here.
+    """
+    if not TOKEN:
+        print("  activity backfill: skipped (no GITHUB_TOKEN/GH_TOKEN)")
+        return []
+    query = """
+    query($login: String!) {
+      user(login: $login) {
+        contributionsCollection {
+          pullRequestContributions(last: 50) {
+            nodes { occurredAt pullRequest { number title url state mergedAt repository { nameWithOwner } } }
+          }
+          issueContributions(last: 50) {
+            nodes { occurredAt issue { number title url repository { nameWithOwner } } }
+          }
+          pullRequestReviewContributions(last: 50) {
+            nodes { occurredAt pullRequestReview { url } pullRequest { number title url state mergedAt repository { nameWithOwner } } }
+          }
+        }
+      }
+    }
+    """
+    payload = graphql(query, {"login": USER})
+    user = ((payload or {}).get("data") or {}).get("user") or {}
+    coll = user.get("contributionsCollection")
+    if not coll:
+        return []
+
+    def pr_state(pr: dict) -> str:
+        return "merged" if pr.get("mergedAt") else pr.get("state", "OPEN").lower()
+
+    out: list[dict] = []
+    for n in coll["pullRequestContributions"]["nodes"]:
+        pr = n["pullRequest"]
+        repo = pr["repository"]["nameWithOwner"]
+        _pr_state_cache[(repo, pr["number"])] = pr_state(pr)
+        base = {"repo": repo, "number": pr["number"], "title": pr["title"], "url": pr["url"]}
+        out.append({"type": "pr_opened", **base, "createdAt": n["occurredAt"]})
+        if pr.get("mergedAt"):
+            out.append({"type": "pr_merged", **base, "createdAt": pr["mergedAt"]})
+    for n in coll["issueContributions"]["nodes"]:
+        issue = n["issue"]
+        out.append({
+            "type": "issue_opened",
+            "repo": issue["repository"]["nameWithOwner"],
+            "number": issue["number"],
+            "title": issue["title"],
+            "url": issue["url"],
+            "createdAt": n["occurredAt"],
+        })
+    for n in coll["pullRequestReviewContributions"]["nodes"]:
+        pr = n["pullRequest"]
+        repo = pr["repository"]["nameWithOwner"]
+        _pr_state_cache[(repo, pr["number"])] = pr_state(pr)
+        out.append({
+            "type": "review",
+            "repo": repo,
+            "number": pr["number"],
+            "title": pr["title"],
+            "url": (n.get("pullRequestReview") or {}).get("url") or pr["url"],
+            "createdAt": n["occurredAt"],
+        })
+    return out
+
+
 def build_latest_activity() -> list[dict]:
+    events = [norm for norm in map(normalize_event, fetch_events()) if norm]
+    # Newest first; on ties the events feed wins, since it carries comment-level links.
+    candidates = sorted(events + fetch_contribution_activity(),
+                        key=lambda a: a["createdAt"], reverse=True)
+
     seen: set[tuple] = set()
     out: list[dict] = []
-    for ev in fetch_events():
-        norm = normalize_event(ev)
-        if not norm:
+    for norm in candidates:
+        if norm["repo"] in ACTIVITY_EXCLUDED_REPOS:
             continue
         # collapse repeated activity on the same PR/issue (e.g. a review thread)
         key = (norm["type"], norm["repo"], norm.get("number"))
@@ -340,6 +429,8 @@ def build_latest_activity() -> list[dict]:
         out.append(norm)
         if len(out) >= ACTIVITY_LIMIT:
             break
+    if len(out) < ACTIVITY_LIMIT:
+        print(f"  latest activity: only {len(out)} of {ACTIVITY_LIMIT} items available")
     return out
 
 
@@ -376,19 +467,8 @@ def fetch_contribution_calendar() -> dict | None:
       }
     }
     """
-    body = json.dumps({"query": query, "variables": {"login": USER}}).encode("utf-8")
-    req = urllib.request.Request(
-        "https://api.github.com/graphql",
-        data=body,
-        headers={**HEADERS, "Content-Type": "application/json"},
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=30) as res:
-            payload = json.loads(res.read().decode("utf-8"))
-    except urllib.error.HTTPError as e:
-        body_text = e.read().decode("utf-8", errors="replace")
-        print(f"  contribution calendar: failed ({e.code}: {body_text[:200]})")
+    payload = graphql(query, {"login": USER})
+    if payload is None:
         return None
     cal = (
         payload.get("data", {})
