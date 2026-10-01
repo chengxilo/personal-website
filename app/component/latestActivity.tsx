@@ -69,11 +69,13 @@ export default function LatestActivity({items}: { items: ActivityItem[] }) {
         <Stack spacing={0} sx={{borderTop: '1px solid rgba(255,255,255,0.08)'}}>
             {items.map((it, idx) => {
                 const {color, Icon, verb} = STYLE[it.type];
+                // An empty href would link back to this page, so fall back to the repo / PR on GitHub.
+                const href = it.url || `https://github.com/${it.repo}${it.number ? `/pull/${it.number}` : ''}`;
                 return (
                     <Box
                         key={`${it.type}-${it.repo}-${it.number}-${idx}`}
                         component="a"
-                        href={it.url}
+                        href={href}
                         target="_blank"
                         rel="noopener noreferrer"
                         sx={{

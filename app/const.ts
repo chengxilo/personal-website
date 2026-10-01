@@ -27,7 +27,11 @@ export const TECH = {
     Gin: 'Gin',
     Gorm: 'Gorm',
     MyBatis: 'MyBatis',
+    Redis: 'Redis',
+    Etcd: 'etcd',
     MessageQueue: 'Message Queue(MQ)',
+    WebSocket: 'WebSocket',
+    QUIC: 'QUIC',
     HTTP2: 'HTTP/2',
 
     // Data
@@ -45,6 +49,8 @@ export const TECH = {
     BDD: 'Behavior-Driven Development(BDD)',
     Test: 'Test',
     GithubWorkflow: 'Github Workflow',
+    ROS: 'ROS',
+    TDD: 'Test-Driven Development(TDD)',
 } as const;
 
 export type Tech = typeof TECH[keyof typeof TECH];
@@ -52,7 +58,7 @@ export type Tech = typeof TECH[keyof typeof TECH];
 export const SKILL_GROUPS: { title: string; items: Tech[] }[] = [
     {
         title: 'Languages',
-        items: [TECH.Go, TECH.TypeScript, TECH.JavaScript, TECH.Python, TECH.Java, TECH.Kotlin, TECH.Cpp, TECH.Rust],
+        items: [TECH.Go, TECH.Rust, TECH.TypeScript, TECH.JavaScript, TECH.Python, TECH.Java, TECH.Cpp, TECH.Kotlin],
     },
     {
         title: 'Frontend',
@@ -60,7 +66,7 @@ export const SKILL_GROUPS: { title: string; items: Tech[] }[] = [
     },
     {
         title: 'Backend',
-        items: [TECH.gRPC, TECH.SQL, TECH.SpringBoot, TECH.NodeJs, TECH.Gin, TECH.Gorm, TECH.MyBatis, TECH.MessageQueue],
+        items: [TECH.Gin, TECH.gRPC, TECH.SQL, TECH.Redis, TECH.Etcd, TECH.NodeJs, TECH.SpringBoot, TECH.Gorm, TECH.MyBatis, TECH.MessageQueue, TECH.WebSocket, TECH.QUIC],
     },
     {
         title: 'Data',
@@ -68,6 +74,10 @@ export const SKILL_GROUPS: { title: string; items: Tech[] }[] = [
     },
     {
         title: 'Tooling',
-        items: [TECH.Docker, TECH.Git, TECH.LaTeX, TECH.Apifox, TECH.Linux, TECH.Photoshop, TECH.GithubWorkflow],
+        items: [TECH.Docker, TECH.Git, TECH.Linux, TECH.GithubWorkflow, TECH.ROS, TECH.LaTeX, TECH.Apifox, TECH.Photoshop],
+    },
+    {
+        title: 'Practices',
+        items: [TECH.TDD, TECH.BDD, TECH.Test],
     },
 ];

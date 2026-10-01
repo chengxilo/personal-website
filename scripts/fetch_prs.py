@@ -35,6 +35,7 @@ CONTRIBUTED_REPOS = [
 ]
 
 OWN_REPOS = [
+    "chengxilo/serify",
     "chengxilo/countdown",
     "chengxilo/better-cuny",
     "chengxilo/robinhood-note",
@@ -169,6 +170,31 @@ def seed_title_cache(all_prs: dict[str, list[dict]]) -> None:
     for repo, prs in all_prs.items():
         for p in prs:
             _title_cache[(repo, p["number"])] = p["title"]
+            _pr_state_cache[(repo, p["number"])] = p["state"]
+
+
+_pr_state_cache: dict[tuple[str, int], str] = {}
+
+# Activity types that point at a PR (as opposed to an issue or discussion).
+PR_ACTIVITY_TYPES = {"pr_opened", "pr_comment", "review", "review_comment"}
+
+
+def lookup_pr_state(repo: str, number: int) -> str:
+    """Return 'open', 'merged' or 'closed' (closed without merge) for repo#number."""
+    key = (repo, number)
+    if key in _pr_state_cache:
+        return _pr_state_cache[key]
+    try:
+        data = fetch_json(f"https://api.github.com/repos/{repo}/pulls/{number}")
+        if data.get("merged_at"):
+            state = "merged"
+        else:
+            state = data.get("state", "open")
+        _title_cache.setdefault(key, data.get("title", "") or "")
+    except SystemExit:
+        state = "open"  # unknown: keep the item rather than hide it
+    _pr_state_cache[key] = state
+    return state
 
 
 def fetch_events() -> list[dict]:
@@ -195,7 +221,9 @@ def normalize_event(ev: dict) -> dict | None:
     if etype == "PullRequestEvent":
         pr = payload.get("pull_request") or {}
         action = payload.get("action")
-        if action == "closed":
+        if action == "merged":
+            kind = "pr_merged"
+        elif action == "closed":
             kind = "pr_merged" if pr.get("merged") else None  # skip closed-not-merged
         elif action in ("opened", "reopened"):
             kind = "pr_opened"
@@ -203,12 +231,14 @@ def normalize_event(ev: dict) -> dict | None:
             kind = None
         if not kind:
             return None
+        # The Events API sends a trimmed pull_request (no title/html_url), so fill them in.
+        number = pr.get("number")
         return {
             "type": kind,
             "repo": repo,
-            "number": pr.get("number"),
-            "title": pr.get("title", ""),
-            "url": pr.get("html_url", ""),
+            "number": number,
+            "title": pr.get("title") or lookup_title(repo, number, "pr"),
+            "url": pr.get("html_url") or (f"https://github.com/{repo}/pull/{number}" if number else ""),
             "createdAt": created,
         }
 
@@ -303,6 +333,10 @@ def build_latest_activity() -> list[dict]:
         if key in seen:
             continue
         seen.add(key)
+        # Skip activity on PRs that were closed without being merged.
+        if (norm["type"] in PR_ACTIVITY_TYPES and norm.get("number")
+                and lookup_pr_state(norm["repo"], norm["number"]) == "closed"):
+            continue
         out.append(norm)
         if len(out) >= ACTIVITY_LIMIT:
             break

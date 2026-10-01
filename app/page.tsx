@@ -29,6 +29,14 @@ const dateFor = (repo: string): string | undefined =>
 const myOpenSourceRepo = [
     {
         owner: "chengxilo",
+        repo: "serify",
+        description: "Cross-language serialization conformance framework — verifies byte-identical output across 9 language implementations from a single YAML schema, and detects mutation, non-determinism, and buffer aliasing.",
+        url: "https://github.com/chengxilo/serify",
+        tech: [TECH.Go, TECH.Test],
+        date: dateFor("chengxilo/serify") ?? "Jul 2026 — Present",
+    },
+    {
+        owner: "chengxilo",
         repo: "countdown",
         description: "A GitHub Action that generates a themed countdown SVG for your GitHub profile README.",
         url: "https://github.com/chengxilo/countdown",
@@ -38,7 +46,7 @@ const myOpenSourceRepo = [
     {
         owner: "chengxilo",
         repo: "better-cuny",
-        description: "Open-source browser extension providing additional features and quality-of-life improvements for CUNY websites.",
+        description: "Open-source browser extension for CUNY websites — one-click schedule export to Google Calendar, with 511+ installs.",
         url: "https://github.com/chengxilo/better-cuny",
         tech: [TECH.TypeScript, TECH.WXT, TECH.React, TECH.MUI],
         date: dateFor("chengxilo/better-cuny"),
@@ -69,8 +77,8 @@ const myOpenSourceRepo = [
     {
         owner: "private",
         repo: "hold-cloud-desktop",
-        description: "Cloud desktop service platform built on Docker with gRPC — final-year project at Changsha University of Science and Technology.",
-        tech: [TECH.Docker, TECH.gRPC, TECH.Go, TECH.Gin, TECH.SQL, TECH.Linux],
+        description: "Cloud desktop service platform built on Docker with gRPC — container desktop management, VNC access, and distributed VM monitoring across Tencent Cloud and Alibaba Cloud.",
+        tech: [TECH.Docker, TECH.gRPC, TECH.Go, TECH.Gin, TECH.SQL, TECH.Redis, TECH.Linux],
         date: "Jan 2024 — Apr 2024",
     },
 ];
@@ -79,7 +87,7 @@ const contributedRepo = [
     {
         owner: "apache",
         repo: "iggy",
-        description: "Apache Iggy: hyper-efficient persistent message streaming platform. Contributor & reviewer on the Go SDK — built the BDD framework, leader redirection, binary reader/writer, and publish workflow.",
+        description: "Apache Iggy: hyper-efficient persistent message streaming platform. Committer — 40+ merged PRs and 30+ reviews across the Go SDK, Rust server, and test infra; built leader redirection, the TCP connection lifecycle, the BDD suite, and the publish workflow.",
         url: "https://github.com/apache/iggy",
         tech: [TECH.Go, TECH.Rust, TECH.MessageQueue, TECH.BDD, TECH.GithubWorkflow],
         date: dateFor("apache/iggy"),
@@ -155,7 +163,7 @@ export default function Home() {
                                     fontSize: 13,
                                     color: 'text.secondary',
                                 }}>
-                                    New York City
+                                    Buffalo, NY
                                 </Typography>
                             </Stack>
                         </Stack>
@@ -216,9 +224,10 @@ export default function Home() {
                             <Typography component="p">
                                 Hi! I&apos;m Chengxi Luo, an undergraduate student majoring in Computer
                                 Science. I began my studies in Software Engineering at Changsha
-                                University of Science and Technology in China, and later transferred
-                                to Bernard M. Baruch College in the U.S., where I&apos;m currently
-                                continuing my education in New York City.
+                                University of Science and Technology in China, transferred to
+                                Bernard M. Baruch College in New York City, and am now continuing my
+                                education at the University at Buffalo, where I&apos;m also a research
+                                assistant in the DRONES lab. I&apos;m a committer on Apache Iggy.
                             </Typography>
                             <Typography component="p">
                                 I&apos;m passionate about learning new technologies and building
@@ -244,14 +253,14 @@ export default function Home() {
                             <TimelineItem
                                 time="2026 — Present"
                                 title="University at Buffalo"
-                                subtitle="Computer Science"
-                                location="New York, USA"
+                                subtitle="B.S. Computer Science · Expected May 2028"
+                                location="Buffalo, NY, USA"
                             />
                             <TimelineItem
                                 time="2025 — 2026"
                                 title="CUNY Bernard M. Baruch College"
-                                subtitle="Computer Science"
-                                location="New York, USA"
+                                subtitle="Computer Science · Dean's List · GPA 3.91"
+                                location="New York, NY, USA"
                             />
                             <TimelineItem
                                 time="2022 — 2024"
@@ -268,6 +277,31 @@ export default function Home() {
                     <SectionHeader eyebrow="03 / work"/>
 
                     <Box sx={{mb: {xs: 3, sm: 5}}}>
+                        <Typography sx={{
+                            fontFamily: `'JetBrains Mono', monospace`,
+                            fontSize: 12,
+                            letterSpacing: '0.1em',
+                            textTransform: 'uppercase',
+                            color: 'text.secondary',
+                            mb: 2,
+                        }}>
+                            Experience
+                        </Typography>
+                        <Stack spacing={0} sx={{mb: 5}}>
+                            <TimelineItem
+                                time="Sep 2026 — Present"
+                                title="Research Assistant"
+                                subtitle="University at Buffalo, DRONES lab — Fast-LIO localization & ROS motion control"
+                                location="Buffalo, NY"
+                            />
+                            <TimelineItem
+                                time="Jun 2025 — Present"
+                                title="Committer"
+                                subtitle="Apache Iggy (Apache Software Foundation)"
+                                last
+                            />
+                        </Stack>
+
                         <Typography sx={{
                             fontFamily: `'JetBrains Mono', monospace`,
                             fontSize: 12,
