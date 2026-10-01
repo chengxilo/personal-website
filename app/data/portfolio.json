@@ -380,6 +380,9 @@
     }
   },
   "own": {
+    "chengxilo/serify": {
+      "dateRange": "Jun 2026 — Present"
+    },
     "chengxilo/countdown": {
       "dateRange": "Apr 2026 — Present"
     },
@@ -419,12 +422,12 @@
       "createdAt": "2026-09-26T22:37:49Z"
     },
     {
-      "type": "review_comment",
-      "repo": "apache/iggy",
-      "number": 3608,
-      "title": "fix(server): prevent purged data returning and add Go purge APIs",
-      "url": "https://github.com/apache/iggy/pull/3608#discussion_r3908103608",
-      "createdAt": "2026-09-01T20:23:39Z"
+      "type": "pr_merged",
+      "repo": "apache/iggy-website",
+      "number": 68,
+      "title": "chore(docs): provide detail for new configuration",
+      "url": "https://github.com/apache/iggy-website/pull/68",
+      "createdAt": "2026-09-03T07:23:25Z"
     },
     {
       "type": "review",
@@ -433,10 +436,34 @@
       "title": "fix(server): prevent purged data returning and add Go purge APIs",
       "url": "https://github.com/apache/iggy/pull/3608#pullrequestreview-5082715699",
       "createdAt": "2026-09-02T01:03:14Z"
+    },
+    {
+      "type": "review_comment",
+      "repo": "apache/iggy",
+      "number": 3608,
+      "title": "fix(server): prevent purged data returning and add Go purge APIs",
+      "url": "https://github.com/apache/iggy/pull/3608#discussion_r3908103608",
+      "createdAt": "2026-09-01T20:23:39Z"
+    },
+    {
+      "type": "pr_merged",
+      "repo": "apache/iggy",
+      "number": 3935,
+      "title": "fix(bdd): resolve server address and credentials only from env",
+      "url": "https://github.com/apache/iggy/pull/3935",
+      "createdAt": "2026-08-31T10:33:30Z"
+    },
+    {
+      "type": "pr_merged",
+      "repo": "apache/iggy",
+      "number": 3923,
+      "title": "fix(server)!: reject a wildcard bind with no advertised address",
+      "url": "https://github.com/apache/iggy/pull/3923",
+      "createdAt": "2026-08-31T08:47:14Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 476,
+    "totalContributions": 480,
     "weeks": [
       [
         {
@@ -2017,7 +2044,7 @@
         },
         {
           "date": "2026-10-01",
-          "count": 0
+          "count": 4
         }
       ]
     ]
