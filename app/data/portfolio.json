@@ -296,15 +296,9 @@
       "dateRange": "Feb 2026 — Jul 2026",
       "prs": [
         {
-          "number": 9217,
-          "title": "transport: surface data when received non-grpc header, end stream without trailers",
-          "url": "https://github.com/grpc/grpc-go/pull/9217",
-          "state": "merged"
-        },
-        {
-          "number": 8929,
-          "title": "transport: surface subsequent data when receiving non-gRPC header",
-          "url": "https://github.com/grpc/grpc-go/pull/8929",
+          "number": 8909,
+          "title": "xds: replace net with netip in `xds/xdsclient` and `xds/server`",
+          "url": "https://github.com/grpc/grpc-go/pull/8909",
           "state": "merged"
         },
         {
@@ -314,9 +308,15 @@
           "state": "merged"
         },
         {
-          "number": 8909,
-          "title": "xds: replace net with netip in `xds/xdsclient` and `xds/server`",
-          "url": "https://github.com/grpc/grpc-go/pull/8909",
+          "number": 9217,
+          "title": "transport: surface data when received non-grpc header, end stream without trailers",
+          "url": "https://github.com/grpc/grpc-go/pull/9217",
+          "state": "merged"
+        },
+        {
+          "number": 8929,
+          "title": "transport: surface subsequent data when receiving non-gRPC header",
+          "url": "https://github.com/grpc/grpc-go/pull/8929",
           "state": "merged"
         }
       ]
@@ -430,14 +430,6 @@
       "createdAt": "2026-09-03T07:23:25Z"
     },
     {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3608,
-      "title": "fix(server): prevent purged data returning and add Go purge APIs",
-      "url": "https://github.com/apache/iggy/pull/3608#pullrequestreview-5082715699",
-      "createdAt": "2026-09-02T01:03:14Z"
-    },
-    {
       "type": "review_comment",
       "repo": "apache/iggy",
       "number": 3608,
@@ -460,6 +452,14 @@
       "title": "fix(server)!: reject a wildcard bind with no advertised address",
       "url": "https://github.com/apache/iggy/pull/3923",
       "createdAt": "2026-08-31T08:47:14Z"
+    },
+    {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 3990,
+      "title": "chore(deps): Bump the go group across 2 directories with 2 updates",
+      "url": "https://github.com/apache/iggy/pull/3990#pullrequestreview-5056102838",
+      "createdAt": "2026-08-29T00:52:19Z"
     }
   ],
   "contributionCalendar": {
@@ -2045,6 +2045,10 @@
         {
           "date": "2026-10-01",
           "count": 4
+        },
+        {
+          "date": "2026-10-02",
+          "count": 0
         }
       ]
     ]
