@@ -430,14 +430,6 @@
       "createdAt": "2026-09-03T07:23:25Z"
     },
     {
-      "type": "review_comment",
-      "repo": "apache/iggy",
-      "number": 3608,
-      "title": "fix(server): prevent purged data returning and add Go purge APIs",
-      "url": "https://github.com/apache/iggy/pull/3608#discussion_r3908103608",
-      "createdAt": "2026-09-01T20:23:39Z"
-    },
-    {
       "type": "pr_merged",
       "repo": "apache/iggy",
       "number": 3935,
@@ -460,6 +452,14 @@
       "title": "chore(deps): Bump the go group across 2 directories with 2 updates",
       "url": "https://github.com/apache/iggy/pull/3990#pullrequestreview-5056102838",
       "createdAt": "2026-08-29T00:52:19Z"
+    },
+    {
+      "type": "review",
+      "repo": "apache/iggy",
+      "number": 3986,
+      "title": "fix(go): tear down only the connection a request failed on",
+      "url": "https://github.com/apache/iggy/pull/3986#pullrequestreview-5056020626",
+      "createdAt": "2026-08-29T00:23:33Z"
     }
   ],
   "contributionCalendar": {
@@ -2048,6 +2048,10 @@
         },
         {
           "date": "2026-10-02",
+          "count": 0
+        },
+        {
+          "date": "2026-10-03",
           "count": 0
         }
       ]
