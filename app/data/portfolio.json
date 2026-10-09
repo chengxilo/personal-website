@@ -4,12 +4,6 @@
       "dateRange": "Jun 2025 — Present",
       "prs": [
         {
-          "number": 3608,
-          "title": "fix(server): prevent purged data returning and add Go purge APIs",
-          "url": "https://github.com/apache/iggy/pull/3608",
-          "state": "open"
-        },
-        {
           "number": 3935,
           "title": "fix(bdd): resolve server address and credentials only from env",
           "url": "https://github.com/apache/iggy/pull/3935",
@@ -255,6 +249,12 @@
       "dateRange": "Jul 2025 — May 2026",
       "prs": [
         {
+          "number": 747,
+          "title": "feat: support optional arguments for int/uint/float types",
+          "url": "https://github.com/cucumber/godog/pull/747",
+          "state": "open"
+        },
+        {
           "number": 701,
           "title": "fix: Validate the handler function param types when registering steps.",
           "url": "https://github.com/cucumber/godog/pull/701",
@@ -270,12 +270,6 @@
           "number": 699,
           "title": "fix: avoid panic when post hook panic",
           "url": "https://github.com/cucumber/godog/pull/699",
-          "state": "open"
-        },
-        {
-          "number": 747,
-          "title": "feat: support optional arguments for int/uint/float types",
-          "url": "https://github.com/cucumber/godog/pull/747",
           "state": "open"
         },
         {
@@ -2044,6 +2038,10 @@
         },
         {
           "date": "2026-10-08",
+          "count": 0
+        },
+        {
+          "date": "2026-10-09",
           "count": 0
         }
       ]
