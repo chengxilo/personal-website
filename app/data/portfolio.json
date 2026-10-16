@@ -249,15 +249,15 @@
       "dateRange": "Jul 2025 — May 2026",
       "prs": [
         {
-          "number": 747,
-          "title": "feat: support optional arguments for int/uint/float types",
-          "url": "https://github.com/cucumber/godog/pull/747",
-          "state": "open"
-        },
-        {
           "number": 701,
           "title": "fix: Validate the handler function param types when registering steps.",
           "url": "https://github.com/cucumber/godog/pull/701",
+          "state": "open"
+        },
+        {
+          "number": 747,
+          "title": "feat: support optional arguments for int/uint/float types",
+          "url": "https://github.com/cucumber/godog/pull/747",
           "state": "open"
         },
         {
@@ -2038,6 +2038,10 @@
         },
         {
           "date": "2026-10-15",
+          "count": 0
+        },
+        {
+          "date": "2026-10-16",
           "count": 0
         }
       ]
