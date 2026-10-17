@@ -249,6 +249,12 @@
       "dateRange": "Jul 2025 — May 2026",
       "prs": [
         {
+          "number": 699,
+          "title": "fix: avoid panic when post hook panic",
+          "url": "https://github.com/cucumber/godog/pull/699",
+          "state": "open"
+        },
+        {
           "number": 701,
           "title": "fix: Validate the handler function param types when registering steps.",
           "url": "https://github.com/cucumber/godog/pull/701",
@@ -264,12 +270,6 @@
           "number": 698,
           "title": "ci: use golangci lint",
           "url": "https://github.com/cucumber/godog/pull/698",
-          "state": "open"
-        },
-        {
-          "number": 699,
-          "title": "fix: avoid panic when post hook panic",
-          "url": "https://github.com/cucumber/godog/pull/699",
           "state": "open"
         },
         {
@@ -392,6 +392,14 @@
   },
   "latestActivity": [
     {
+      "type": "issue_comment",
+      "repo": "apache/iggy",
+      "number": 3651,
+      "title": "SDK client state conflates transport and session dimensions; Authenticated is never reached",
+      "url": "https://github.com/apache/iggy/issues/3651#issuecomment-6201952736",
+      "createdAt": "2026-10-15T20:47:41Z"
+    },
+    {
       "type": "pr_comment",
       "repo": "hku-mars/FAST_LIO",
       "number": 454,
@@ -446,14 +454,6 @@
       "title": "chore(deps): Bump the go group across 2 directories with 2 updates",
       "url": "https://github.com/apache/iggy/pull/3990#pullrequestreview-5056102838",
       "createdAt": "2026-08-29T00:52:19Z"
-    },
-    {
-      "type": "review",
-      "repo": "apache/iggy",
-      "number": 3986,
-      "title": "fix(go): tear down only the connection a request failed on",
-      "url": "https://github.com/apache/iggy/pull/3986#pullrequestreview-5056020626",
-      "createdAt": "2026-08-29T00:23:33Z"
     }
   ],
   "contributionCalendar": {
@@ -2042,6 +2042,10 @@
         },
         {
           "date": "2026-10-16",
+          "count": 0
+        },
+        {
+          "date": "2026-10-17",
           "count": 0
         }
       ]
