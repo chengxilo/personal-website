@@ -400,14 +400,6 @@
       "createdAt": "2026-10-20T22:20:44Z"
     },
     {
-      "type": "issue_comment",
-      "repo": "apache/iggy",
-      "number": 3651,
-      "title": "SDK client state conflates transport and session dimensions; Authenticated is never reached",
-      "url": "https://github.com/apache/iggy/issues/3651#issuecomment-6201952736",
-      "createdAt": "2026-10-15T20:47:41Z"
-    },
-    {
       "type": "review",
       "repo": "apache/iggy",
       "number": 4305,
@@ -454,10 +446,18 @@
       "title": "fix(go): tear down only the connection a request failed on",
       "url": "https://github.com/apache/iggy/pull/3986#pullrequestreview-5056020626",
       "createdAt": "2026-08-29T00:23:33Z"
+    },
+    {
+      "type": "pr_opened",
+      "repo": "apache/iggy-website",
+      "number": 68,
+      "title": "chore(docs): provide detail for new configuration",
+      "url": "https://github.com/apache/iggy-website/pull/68",
+      "createdAt": "2026-08-28T00:51:36Z"
     }
   ],
   "contributionCalendar": {
-    "totalContributions": 480,
+    "totalContributions": 479,
     "weeks": [
       [
         {
@@ -2022,6 +2022,10 @@
       [
         {
           "date": "2026-11-15",
+          "count": 0
+        },
+        {
+          "date": "2026-11-16",
           "count": 0
         }
       ]
