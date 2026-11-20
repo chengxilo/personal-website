@@ -392,14 +392,6 @@
   },
   "latestActivity": [
     {
-      "type": "pr_comment",
-      "repo": "cucumber/godog",
-      "number": 747,
-      "title": "feat: support optional arguments for int/uint/float types",
-      "url": "https://github.com/cucumber/godog/pull/747#issuecomment-6303071542",
-      "createdAt": "2026-10-20T22:20:44Z"
-    },
-    {
       "type": "review",
       "repo": "apache/iggy",
       "number": 4305,
@@ -454,6 +446,14 @@
       "title": "chore(docs): provide detail for new configuration",
       "url": "https://github.com/apache/iggy-website/pull/68",
       "createdAt": "2026-08-28T00:51:36Z"
+    },
+    {
+      "type": "pr_merged",
+      "repo": "apache/iggy",
+      "number": 3943,
+      "title": "ci(rust): don't fail when a DAG scope matches no tests",
+      "url": "https://github.com/apache/iggy/pull/3943",
+      "createdAt": "2026-08-21T09:27:39Z"
     }
   ],
   "contributionCalendar": {
@@ -2038,6 +2038,10 @@
         },
         {
           "date": "2026-11-19",
+          "count": 0
+        },
+        {
+          "date": "2026-11-20",
           "count": 0
         }
       ]
